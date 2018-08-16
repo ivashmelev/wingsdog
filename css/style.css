@@ -1,0 +1,49 @@
+@font-face{
+    font-family: 'Rewi';
+    src: url('/font/REWI_M.TTF');
+} 
+
+html{
+    width: 100%;
+}
+
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.wrapper{
+    width: 100%;
+}
+
+.header__background{
+    width: 100%;
+    height: 50vh;
+    background-image: url('/img/back_header.jpg');
+    background-size: cover;
+    box-shadow:0 0 0 5000px rgba(0, 0, 0, 0.120) inset;
+}
+
+.header__logo{
+    width: 100px;
+    height: 100px;
+    background-image: url('/img/logo_white.png');
+    background-size: cover;
+    margin: 15px;
+}
+
+.header__text{
+    margin-top: 35px;
+}
+
+.text_phone{
+    text-align: right;
+    margin-right: 15px;
+}
+
+.head-text{
+    font-family: Rewi;
+    font-size: 1.25vmax;
+    color: #fff;
+    margin-bottom: 0;
+}
