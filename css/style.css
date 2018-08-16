@@ -47,3 +47,40 @@ html{
     color: #fff;
     margin-bottom: 0;
 }
+
+.head-h2{
+    font-family: 'Rewi';
+    color: #002a56;
+    font-size: 40px;
+}
+
+.text-p{
+    font-family: 'Rewi';
+    color: #363636;
+    font-size: 20px;
+}
+/* news.php Блок новостей */
+.news-block{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.news-image{
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.news-block-text{
+    width: 500px;
+    max-height: 400px;
+    height: 100%;
+    margin-left: -100px;
+}
+
+.text-p-news{
+    margin-left: 10px;
+}
+
+/* ---------------------- */
