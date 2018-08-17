@@ -1,0 +1,162 @@
+.block-menu .container-fluid{
+    width: 100%;
+    height: 75px;
+    background-color: #002a56;
+}
+
+.menu{
+    width: 100%;
+    height: 60px;
+    position: relative;
+    display: inline-block;
+}
+
+
+.menu-links{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 10;
+}
+
+.menu-item{
+    width: 15%;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer; 
+    line-height: 60px;	
+    color: #ffffff;	
+    font-family: Roboto;	
+    font-size: 18px;	
+    letter-spacing: 0.2px;
+}
+
+.menu-item:hover{
+    /* color: #002a56; */
+    background-color: #ffffff;
+}
+.menu:after{
+    content: "";
+    width: 76%;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 12%;
+    /* background-color: #ffffff; */
+    border-bottom: 3px solid #ffffff
+}
+.menu-item:hover a{
+    color: #002a56;
+}
+
+.menu-item a{
+    display: block;
+    padding: 30px auto;
+    text-decoration: none;
+    line-height: 60px;	
+    color: #ffffff;	
+    font-family: 'Rewi';	
+    font-size: 20px;	
+    letter-spacing: 0.2px;
+    /* text-align: right; */
+    position: relative;
+}
+
+.menu-icon label{
+    width: 40px;
+    height: 5px;
+    background-color: #ffffff;
+    display: block;
+    margin: 7px;
+}
+
+.menu-icon{
+    float: left;
+    margin-left: 82.5%;
+    margin-top: 15px;
+}
+
+.menu-icon label{
+    width: 0;
+}
+
+@media only screen and (max-width: 930px){
+    .menu:after{
+        display: none;
+    }
+    .menu-links{
+        width: 100%;
+        margin-top: 60px;
+    }
+
+    .menu-item{
+        display: none;
+    }
+
+    .show{
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+
+    .menu-icon label{
+        width: 40px;
+        height: 5px;
+        background-color: #ffffff;
+        display: block;
+        margin: 7px;
+    }
+
+    .menu-icon label:nth-child(1){
+        transition: .2s;
+    }
+
+    .menu-icon label:nth-child(2){
+        margin-bottom: 0px;
+        transition: .5s;
+        
+    }
+    .menu-icon label:nth-child(3){
+        transition: .5s;
+        margin-top: -5px;
+    }
+
+    
+    .menu-icon label:nth-child(4){
+        transition: .2s;
+    }
+
+
+    .menu-icon.open label:nth-child(1){
+        opacity: 0; 
+    }
+
+    .menu-icon.open label:nth-child(2){
+        transform: rotate(45deg);
+        transition: .5s;
+    }
+
+    .menu-icon.open label:nth-child(3){
+        transform: rotate(-45deg);
+        transition: .5s;
+    }
+
+    .menu-icon.open label:nth-child(4){
+        opacity: 0;
+    }
+
+    .block-menu{
+        height: 60px;
+        transition:  .5s;
+    }
+
+    .block-menu.open{
+        height: 360px;
+        transition: .5s;
+        background-color: #002a56;
+        color: #ffffff;
+    }
+}

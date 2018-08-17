@@ -11,13 +11,14 @@
     <script src="js/script.js"></script>
     <script src="js/map.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/photo.js"></script>
     <!-- <link rel="icon" href=​img/favicon.ico type="image/x-icon" /> -->
     <!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" /> -->
     <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU"> </script>
     <link rel="stylesheet" href="css/style.css"  type="text/css">
     <link rel="stylesheet" href="css/adaptiv.css"  type="text/css">
     <link rel="stylesheet" href="css/menu.css"  type="text/css">
-    <title>"Крылатый Пёс"</title>
+    <title>Фотоальбом</title>
 </head>
 <body>
     <div class="wrappre">
@@ -74,9 +75,40 @@
                 </div>
             </div>
         </div>
-        <div class="content">
+        <div class="content-photo">
             <div class="container-fluid">
-                
+                <div class="photo-galary">
+                    <div class="block-photo">
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="photo">
+                                    <img src="/img/news1.jpg" alt="">
+                                </div>
+                                <img class="zoom" src="/img/zoom.png" alt="">
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="photo">
+                                    <img src="/img/news1.jpg" alt="">
+                                </div>
+                                <img class="zoom" src="/img/zoom.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-photo">
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="photo">
+                                    <img src="/img/news1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="photo">
+                                    <img src="/img/news1.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="footer">
