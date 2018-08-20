@@ -1,37 +1,37 @@
 window.onload = function(){
     // function initMap() {
       
-        jQuery("#geo").text(ymaps.geolocation.city);
-        jQuery("#user-region").text(ymaps.geolocation.region);
-        jQuery("#user-country").text(ymaps.geolocation.country);
-        var g=ymaps.geolocation.region;
+        // jQuery("#geo").text(ymaps.geolocation.city);
+        // jQuery("#user-region").text(ymaps.geolocation.region);
+        // jQuery("#user-country").text(ymaps.geolocation.country);
+        // var g=ymaps.geolocation.region;
         
-        if (g=="Нижегородская область")
-        {
-          var uluru = {lat: 56.300216, lng: 43.934316};
-        jQuery("#geo").text(" г. Нижний Новгород ул. Варварская д. 7, офис 9");
-        jQuery("#footer-num").text(" 8-831-235-01-73 ");
-        jQuery("#geo-mail").text("nn@1ditis.ru");
-        }
-        else if (g=="Республика Коми")
-        {
-          var uluru = {lat: 61.6499039, lng: 50.8385643};
-          jQuery("#geo").text(" г. Сыктывкар ул. Гаражная дом 9, офис 221");
-          jQuery("#footer-num").text(" 8-8212-400-922 ");
-          jQuery("#geo-mail").text("mail@1ditis.ru");
-        }
-        else
-        {
-          var uluru = {lat: 61.6499039, lng: 50.8385643};
-          jQuery("#geo").text(" г. Нижний Новгород ул. Варварская д. 7, офис 9 ");
-          jQuery("#geo-2").text(" г. Сыктывкар ул. Гаражная дом 9, офис 221");
-          jQuery("#footer-num").text(" 8-831-235-01-73 ");
-          jQuery("#footer-num-2").text(" 8-8212-400-922 ");
-          jQuery("#geo-mail").text(" nn@1ditis.ru ");
-          jQuery("#geo-mail-2").text(" mail@1ditis.ru ");
-        }
-      
-        
+        // if (g=="Нижегородская область")
+        // {
+        //   var uluru = {lat: 56.300216, lng: 43.934316};
+        // jQuery("#geo").text(" г. Нижний Новгород ул. Варварская д. 7, офис 9");
+        // jQuery("#footer-num").text(" 8-831-235-01-73 ");
+        // jQuery("#geo-mail").text("nn@1ditis.ru");
+        // }
+        // else if (g=="Республика Коми")
+        // {
+        //   var uluru = {lat: 61.6499039, lng: 50.8385643};
+        //   jQuery("#geo").text(" г. Сыктывкар ул. Гаражная дом 9, офис 221");
+        //   jQuery("#footer-num").text(" 8-8212-400-922 ");
+        //   jQuery("#geo-mail").text("mail@1ditis.ru");
+        // }
+        // else
+        // {
+          //   jQuery("#geo").text(" г. Нижний Новгород ул. Варварская д. 7, офис 9 ");
+          //   jQuery("#geo-2").text(" г. Сыктывкар ул. Гаражная дом 9, офис 221");
+          //   jQuery("#footer-num").text(" 8-831-235-01-73 ");
+          //   jQuery("#footer-num-2").text(" 8-8212-400-922 ");
+          //   jQuery("#geo-mail").text(" nn@1ditis.ru ");
+          //   jQuery("#geo-mail-2").text(" mail@1ditis.ru ");
+          // }
+          
+          
+        var uluru = {lat: 61.6499039, lng: 50.8385643};
         var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 10,
         center: uluru,
@@ -205,11 +205,14 @@ window.onload = function(){
             }
           ]
         });
-        // var marker = new google.maps.Marker({
-        // position: uluru,
-        // map: map
-        
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+          icon:"img/vk.png"
+        });
+        marker.setMap(map);
         // });
     // }
     // console.log("script run");
 }
+// }
