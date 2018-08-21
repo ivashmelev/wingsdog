@@ -1,0 +1,25 @@
+.wrapper{
+    background-color: white;
+}
+
+.team-block{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.team-photo{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #002a56;
+}
+
+.person{
+    margin-top: 30px
+}
+
+@media only screen and (max-width: 930px){
+    .team-block{
+        width: 100%;
+    }
+}
