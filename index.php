@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/style.css"  type="text/css">
     <link rel="stylesheet" href="css/adaptiv.css"  type="text/css">
     <link rel="stylesheet" href="css/menu.css"  type="text/css">
+    <link rel="stylesheet" href="css/index.css"  type="text/css">
     <title>Крылатый Пёс</title>
 </head>
 <body>
@@ -76,7 +77,80 @@
         </div>
         <div class="content">
             <div class="container-fluid">
-                
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h2 class="head-h2" style="text-align: center">О кинологической площадке</h2>
+                    </div>
+                </div>
+                <div class="content-text">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-3 col-lg-3 col-md-8 ">
+                            <div class="text-photo">
+                                
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-8 order-lg-first">
+                            <p class="text-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus laborum id earum sint, quod, praesentium maxime magni dolores corrupti ut obcaecati placeat. Deleniti commodi debitis hic quo, eum sequi! Officia.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-text">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-3 col-lg-3 col-md-8">
+                            <div class="text-photo">
+
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-8">
+                            <p class="text-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus laborum id earum sint, quod, praesentium maxime magni dolores corrupti ut obcaecati placeat. Deleniti commodi debitis hic quo, eum sequi! Officia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-back">
+            <div class="content-back-txt">
+                <div class="margin-text mt-up">
+                    <p class="text-back">Тренировка собак</p>
+                </div>
+                <div class="margin-text mt-down">
+                    <p class="text-back">В экстримальных условиях</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h2 class="head-h2" style="text-align: center">Развитие навыков и соревнования</h2>
+                    </div>
+                </div>
+                <div class="content-text">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-3 col-lg-3 col-md-8 ">
+                            <div class="text-photo">
+                                
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-8 order-lg-first">
+                            <p class="text-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus laborum id earum sint, quod, praesentium maxime magni dolores corrupti ut obcaecati placeat. Deleniti commodi debitis hic quo, eum sequi! Officia.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-text">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-3 col-lg-3 col-md-8">
+                            <div class="text-photo">
+
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-8">
+                            <p class="text-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus laborum id earum sint, quod, praesentium maxime magni dolores corrupti ut obcaecati placeat. Deleniti commodi debitis hic quo, eum sequi! Officia.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="footer">
