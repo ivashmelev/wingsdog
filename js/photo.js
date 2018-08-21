@@ -6,12 +6,16 @@ $(document).ready(function(){
 
     $(".photo").click(function(){
         $(".carousel").toggleClass("carousel-open");
+        $(".wrapper").toggleClass("open");
+        // $(".wrapper").before("<div class='wrapper-carousel'></div>");
         // $(".wrapper-carousel").toggleClass("carousel-open");
-        $(".photo").css({display:"none"});
+        // $(".photo").css({display:"none"});
     });
-    $(".wrapper-carousel").click(function(){
-        $(".photo").css({display:"block"});
-        $(".carousel").removeClass("carousel-open");
-        console.log(this);
+    $(".carousel-close").click(function(){
+            // $(".photo").css({display:"block"});
+            $(".carousel").removeClass("carousel-open");
+            $(".wrapper").toggleClass("open");
+
+            console.log(this);
     });
 });
