@@ -31,7 +31,7 @@
                     <div class="col-lg-12">
                         <div class="header__background">
                             <div class="row">
-                                <div class="col-lg-1 col-md-2 col-sm-3">
+                                <div class="col-xl-1 col-lg-2 col-md-2 col-sm-3">
                                     <div class="header__logo">
 
                                     </div>
@@ -41,11 +41,11 @@
                                         <p class="head-text">Нижегородская региональная общественная организация кинологический клуб "Крылатый Пёс"</p>
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
-                                </div>
-                                <div class="col-lg-3">
+                                <!-- <div class="col-lg-3">
+                                </div> -->
+                                <div class="col">
                                     <div class="header__text text_phone">
-                                        <p class="head-text">тел. 8 (831) 298 14 88</p>
+                                        <p class="head-text">тел.&nbsp;8&nbsp;(831)&nbsp;298&nbsp;14&nbsp;88</p>
                                         <p class="head-text">e-mail: info@mysite.ru</p>
                                     </div>
                                 </div>
@@ -112,13 +112,25 @@
                                 <div class="photo">
                                     <img src="/img/news1.jpg" alt="">
                                 </div>
-                                <img class="zoom" src="/img/zoom.png" alt="">
                             </div>
                             <div class="col-lg-6">
                                 <div class="photo">
                                     <img src="/img/news1.jpg" alt="">
                                 </div>
-                                <img class="zoom" src="/img/zoom.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-photo">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="photo">
+                                    <img src="/img/news1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="photo">
+                                    <img src="/img/news1.jpg" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>

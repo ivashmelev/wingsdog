@@ -208,7 +208,7 @@ window.onload = function(){
         var marker = new google.maps.Marker({
           position: uluru,
           map: map,
-          icon:"img/vk.png"
+          icon:"img/icon2.png"
         });
         marker.setMap(map);
         // });
