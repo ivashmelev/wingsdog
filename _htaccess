@@ -1,0 +1,5 @@
+Options All -Indexes
+RewriteEngine on
+RewriteCond %{admin} !-f
+RewriteCond %{admin} !-d
+RewriteRule admin/*$ /admin/auth.php
