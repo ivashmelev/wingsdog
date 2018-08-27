@@ -18,7 +18,7 @@
 .content-back{
     width: 100%;
     height: 100vh;
-    background-image: url('/img/back-dog.jpg');
+    background-image: url('../img/back-dog.jpg');
     background-size: cover;
     /* background-position: center center; */
     box-shadow:0 0 0 5000px rgba(0, 0, 0, 0.120) inset;

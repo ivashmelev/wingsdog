@@ -110,26 +110,12 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="photo">
-                                    <img src="/img/news1.jpg" alt="">
+                                    <img src="img/news1.jpg" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="photo">
-                                    <img src="/img/news1.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="block-photo">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="photo">
-                                    <img src="/img/news1.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="photo">
-                                    <img src="/img/news1.jpg" alt="">
+                                    <img src="img/news1.jpg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -138,12 +124,26 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="photo">
-                                    <img src="/img/news1.jpg" alt="">
+                                    <img src="img/news1.jpg" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="photo">
-                                    <img src="/img/news1.jpg" alt="">
+                                    <img src="img/news1.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-photo">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="photo">
+                                    <img src="img/news1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="photo">
+                                    <img src="img/news1.jpg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -165,7 +165,7 @@
                                     </div>
                                 </div>
                                 <div class="social">
-                                    <img src="/img/vk.png" alt="vk.com">
+                                    <img src="img/vk.png" alt="vk.com">
                                 </div>
                             </div>                                
                             <div class="row justify-content-center">

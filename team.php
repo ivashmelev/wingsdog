@@ -158,7 +158,7 @@
                                     </div>
                                 </div>
                                 <div class="social">
-                                    <img src="/img/vk.png" alt="vk.com">
+                                    <img src="img/vk.png" alt="vk.com">
                                 </div>
                             </div>                                
                             <div class="row justify-content-center">
