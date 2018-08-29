@@ -1,0 +1,28 @@
+.menu{
+    margin: 20px;
+}
+
+.menu a{
+    padding: 5px;
+}
+
+.news{
+    padding: 10px;
+    border: none;
+    border-top: 1px solid #00000032;
+    border-bottom: 1px solid #00000032;
+}
+
+.news:hover{
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+}
+
+.news a:hover{
+    text-decoration: none;
+}
+
+.btn-danger{
+    float: right;
+    margin-top: -7px;
+}

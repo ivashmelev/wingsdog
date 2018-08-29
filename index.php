@@ -185,5 +185,18 @@
             </div>
         </div>
     </div>
+    <!-- <div class="container-fluid">
+    <form>
+        <div class="form-row">
+            <div class="form-group col-lg-3">
+                <label for="search-form">Поиск по договору или клиенту</label>
+                <div class="input-group">
+                    <input type="search" class="form-control" id="search-form">
+                    <div class="input-group-append">
+                        <button type="button" class="btn btn-danger">X</button>
+                    </div>
+                </div>
+            </div> -->
+            
 </body>
 </html>

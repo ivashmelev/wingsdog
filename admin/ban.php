@@ -9,7 +9,7 @@ if($_GET['token']==$_SESSION['token']){ //Разблокировка стран�
     header("Location: ./auth.php");
 }
 
-echo $send_to=$_SESSION['mail'];
+$send_to=$_SESSION['mail'];
 $mail_header="Message head";
 $mail_content="Message content ".$_SESSION['token'];
 
