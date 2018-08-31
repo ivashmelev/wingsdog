@@ -1,3 +1,23 @@
+@font-face{
+    font-family: 'Rewi';
+    src: url('../font/REWI_M.TTF');
+}
+
+@font-face{
+    font-family: "Roboto";
+    src: url('../font/Roboto/Roboto-Regular.ttf');
+}
+
+@font-face{
+    font-family: "Roboto Bold";
+    src: url('../font/Roboto/Roboto-Bold.ttf')
+}
+
+@font-face{
+    font-family: "Roboto Italic";
+    src: url('../font/Roboto/Roboto-Italic.ttf');
+}
+
 .menu{
     margin: 20px;
 }
@@ -22,7 +42,96 @@
     text-decoration: none;
 }
 
-.btn-danger{
+.btn-right{
     float: right;
     margin-top: -7px;
+}
+
+.adm-head-h2{
+    font-family: "Roboto Bold";
+}
+
+.adm-text-p{
+    font-family: "Roboto";
+    font-size: 18px;
+}
+
+.adm-subtext{
+    font-family: "Roboto Italic";
+    font-size: 16px;
+    color: #808080b6;
+}
+
+.adm-path-text{
+    font-family: "Roboto Italic";
+    font-size: 14px;
+    color: #808080b6;
+    float: right;
+    margin-top: 7px;
+}
+
+.adm-element-head{
+    font-family: "Roboto Bold";
+    font-size: 18px;
+    text-decoration: none;
+
+}
+
+
+
+.btn-edit{
+    background-image: url('../img/ico/document-sheet.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+}
+
+.btn-add{
+    background-image: url('../img/ico/add-file-button.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+}
+
+.btn-del{
+    background-image: url('../img/ico/close-button.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+}
+
+.btn-back{
+    background-image: url('../img/ico/back-track.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+}
+
+.btn-exit{
+    background-image: url('../img/ico/emergency-exit.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+}
+
+.btn-ok{
+    background-image: url('../img/ico/work-done.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+}
+
+.btn{
+    margin-left:15px;
+}
+
+.disabled{
+    opacity: .4;
+    pointer-events: none;
 }

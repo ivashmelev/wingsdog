@@ -1,3 +1,4 @@
+<? require_once ("/admin/query_mysql.php"); require_once ("/admin/news/include_news.php");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -130,5 +131,19 @@
             </div>
         </div>
     </div>
+    <script>
+        function genNews(count=0, header='Header', date='date', img='img', text='text'){
+            for(i=0; i<count; i++){
+                block_news=$(".content-news");
+                content='<div class="news-block"><div class="row"><div class="col-xl-6"><h2 class="head-h2">'+header[i]+'</h2></div></div><div class="row"><div class="col-xl-6"><p class="text-p text-p-news">'+date[i]+'</p></div></div><div class="row"><div class="col-xl-6"><img class="news-image" src="img/'+img[i]+'"></div><div class="col-xl-6"><div class="news-block-text"><p class="text-p">'+text[i]+'</p></div></div</div></div>';
+                // $(".content-news").append('<div class="news-block"></div>');
+                block_news.append(content);
+                // block_news.append(content);
+            }
+        console.log(count, header, date, img, text);
+    }
+    </script>
+
+    <?echo  "<script> genNews($count_rows, $data_header, $data_date, $data_img, $data_text);</script>"?>
 </body>
 </html>

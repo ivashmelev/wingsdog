@@ -25,7 +25,7 @@ if(!$_SESSION['auth']){ //Если не прошла авторизация, т�
         <a href="/photo.php">Фотоальбом</a>
         <a href="/team.php">Команда</a>
         <a href="/contacts.php">Контакты</a>
-        <button type="button" class="btn btn-danger">Выход</button>
+        <button type="button" class="btn btn-danger btn-right">Выход</button>
     </div>
     <div class="functional">
         <div class="container-fluid">
