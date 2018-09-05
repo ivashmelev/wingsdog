@@ -1,4 +1,4 @@
-<? require_once ("/admin/query_mysql.php"); require_once ("/admin/news/include_news.php");?>
+<? require_once ("admin/query_mysql.php"); require_once ("admin/news/include_news.php");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

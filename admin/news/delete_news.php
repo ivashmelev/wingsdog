@@ -1,9 +1,10 @@
 <?
-session_start();
+//session_start();
 if(!$_SESSION['auth']){ //Если не прошла авторизация, то переносит на форму авторизации
-    header("Location: ./auth.php");
+    header("Location: ../auth.php");
 }
 require_once ("../query_mysql.php");
+
 
 $id=strip_tags(htmlentities(($_GET['id'])));
 $img=strip_tags(htmlentities(($_GET['img'])));

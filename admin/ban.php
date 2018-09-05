@@ -1,8 +1,8 @@
 <?
-session_start();
+//session_start();
 require_once ("send_mail.php");
 if($_SESSION['limit']<10){ //Защита от случайного захода на страницу
-    header("Location: ./auth.php");
+    header("Location: ../../auth.php");
 }
 if($_GET['token']==$_SESSION['token']){ //Разблокировка страницы по полученному в письме токену
     session_destroy();

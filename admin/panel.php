@@ -1,6 +1,6 @@
 <?
 //Панель администратора
-session_start();
+//session_start();
 if(!$_SESSION['auth']){ //Если не прошла авторизация, то переносит на форму авторизации
     header("Location: ./auth.php");
 }
@@ -14,7 +14,7 @@ if(!$_SESSION['auth']){ //Если не прошла авторизация, т�
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="icon" href=​img/favicon.ico type="image/x-icon" />
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="../css/admin.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <!-- <script src="news/adm_news.js"></script> -->
     <title>Панель администратора</title>
@@ -49,6 +49,16 @@ if(!$_SESSION['auth']){ //Если не прошла авторизация, т�
                 </div>
             </div>
         </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="news">
+                        <h5><a href="team/adm_team.php">Команда</a></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 </body>
 </html>

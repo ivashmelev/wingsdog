@@ -1,3 +1,4 @@
+<? require_once ("admin/query_mysql.php"); require_once ("admin/team/include_team.php");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

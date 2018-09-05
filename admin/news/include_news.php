@@ -1,8 +1,8 @@
 <?
-session_start();
-if(!$_SESSION['auth']){ //Если не прошла авторизация, то переносит на форму авторизации
-    header("Location: ./auth.php");
-}
+//session_start();
+//if(!$_SESSION['auth']){ //Если не прошла авторизация, то переносит на форму авторизации
+//    header("Location: ./auth.php");
+//}
 
     $query=queryMySQL("SELECT * FROM news ORDER BY id DESC");
     $count_rows=mysqli_num_rows($query);

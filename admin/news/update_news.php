@@ -1,7 +1,7 @@
 <?
-session_start();
+//session_start();
 if(!$_SESSION['auth']){ //Если не прошла авторизация, то переносит на форму авторизации
-    header("Location: ./auth.php");
+    header("Location: ../auth.php");
 }
 require_once ("../query_mysql.php");
 // require_once ("include_news.php");
@@ -12,6 +12,10 @@ $header=strip_tags(htmlentities($_POST['header']));
 $date=strip_tags(htmlentities($_POST['date']));
 // $img=strip_tags(htmlentities($_POST['img']));
 $text=strip_tags(htmlentities($_POST['text']));
+
+$date;
+$date=explode("-", $date);
+$date="$date[2].$date[1].$date[0]";
 
 $path="../../img/";
 $ext=array_pop(explode('.', $_FILES['img']['name']));

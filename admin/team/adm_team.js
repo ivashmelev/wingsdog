@@ -2,15 +2,15 @@ $(function(){
     loc=document.title;
     switch(loc){
         case "Главная": $("a:nth-child(1)").addClass("underline");
-        break;
+            break;
         case "Мероприятия": $("a:nth-child(2)").addClass("underline");
-        break;
+            break;
         case "Фотоальбом": $("a:nth-child(3)").addClass("underline");
-        break;
+            break;
         case "Команда": $("a:nth-child(4)").addClass("underline");
-        break;
+            break;
         case "Контакты": $("a:nth-child(5)").addClass("underline");
-        break;
+            break;
     }
 
     // function genNews(count=0){
@@ -20,10 +20,10 @@ $(function(){
     //         block_news.append(content);
     //     }
     //     console.log(count);
-    // }   
+    // }
 
     function clickEdit(id=0, url, header='header', date='date', img='img', text='text'){
-        content='<div class="card-body"> <div class="container-fluid"> <div class="element-news"> <div class="row"> <div class="col-lg-4"> <form method="POST" action="'+url+'" enctype="multipart/form-data"> <div class="form-group"> <label for="InputHeader1">Заголовок</label> <input type="hidden" name="id" value="'+id+'"><input type="text" class="form-control" name="header" id="InputHeader1" aria-describedby="headerHelp" placeholder="Введите заголовок. . ." required> <div class="valid-feedback">Good!</div> <div class="invalid-feedback">Bad!</div> </div> <div class="form-group col-lg-6" style="padding-left: 0px;"> <label for="InputDate1">Дата</label> <input type="date" name="date" class="form-control" id="InputDate1" placeholder="Password" required> <div class="valid-feedback">Good!</div> <div class="invalid-feedback">Bad!</div> </div> <div class="form-group"> <label for="InputImg">Изображение</label> <div class="input-group"> <div class="custom-file"> <input type="file" class="custom-file-input" name="img" id="InputImg" required> <label class="custom-file-label" for="inputGroupFile04">Выберите файл. . .</label> <div class="valid-feedback">Good!</div> <div class="invalid-feedback">Bad!</div> </div> <div class="input-group-append"> <button class="btn btn-outline-secondary" style="margin-left:0px;" type="button">Загрузить</button> </div> </div> </div> <div class="form-group"> <label for="InputText1">Текст</label> <textarea class="form-control" name="text" id="InputText1" rows="9" placeholder="Введите текст. . ." required></textarea> <div class="valid-feedback">Good!</div> <div class="invalid-feedback">Bad!</div> </div> <button type="submit" class="btn btn-primary" style="margin-left:0px;"> <div class="btn-ok"></div> </button> <button type="button" id="btn-close-edit" class="btn btn-danger" onclick="clickClose()")> <div class="btn-del" ></div> </button> </form> </div> </div> </div> </div> </div>';
+        content='<div class="card-body"> <div class="container-fluid"> <div class="element-team"> <div class="row"> <div class="col-lg-4"> <form method="POST" action="'+url+'" enctype="multipart/form-data"> <div class="form-group"> <label for="InputHeader1">Заголовок</label> <input type="hidden" name="id" value="'+id+'"><input type="text" class="form-control" name="header" id="InputHeader1" aria-describedby="headerHelp" placeholder="Введите заголовок. . ." required> <div class="valid-feedback">Good!</div> <div class="invalid-feedback">Bad!</div> </div> <div class="form-group col-lg-6" style="padding-left: 0px;"> <label for="InputDate1">Дата</label> <input type="date" name="date" class="form-control" id="InputDate1" placeholder="Password" required> <div class="valid-feedback">Good!</div> <div class="invalid-feedback">Bad!</div> </div> <div class="form-group"> <label for="InputImg">Изображение</label> <div class="input-group"> <div class="custom-file"> <input type="file" class="custom-file-input" name="img" id="InputImg" required> <label class="custom-file-label" for="inputGroupFile04">Выберите файл. . .</label> <div class="valid-feedback">Good!</div> <div class="invalid-feedback">Bad!</div> </div> <div class="input-group-append"> <button class="btn btn-outline-secondary" style="margin-left:0px;" type="button">Загрузить</button> </div> </div> </div> <div class="form-group"> <label for="InputText1">Текст</label> <textarea class="form-control" name="text" id="InputText1" rows="9" placeholder="Введите текст. . ." required></textarea> <div class="valid-feedback">Good!</div> <div class="invalid-feedback">Bad!</div> </div> <button type="submit" class="btn btn-primary" style="margin-left:0px;"> <div class="btn-ok"></div> </button> <button type="button" id="btn-close-edit" class="btn btn-danger" onclick="clickClose()")> <div class="btn-del" ></div> </button> </form> </div> </div> </div> </div> </div>';
         return content;
     }
 
@@ -32,7 +32,7 @@ $(function(){
         num=id.split("-");
         localStorage.setItem("id", parseInt(num[num.length-1]));
         $(".card").addClass("disabled");
-        $("#accordion-"+num[num.length-1]+"").append(clickEdit(localStorage.getItem("id"), "update_news.php"));
+        $("#accordion-"+num[num.length-1]+"").append(clickEdit(localStorage.getItem("id"), "update_team.php"));
     });
 
     $(".btn-add").click(function(){
@@ -40,7 +40,7 @@ $(function(){
         num=id.split("-");
         localStorage.setItem("id", parseInt(num[num.length-1])+1);
         console.log(num[num.length-1]);
-        $("#accordion").append(clickEdit(localStorage.getItem('id'), "add_news.php"));
+        $("#accordion").append(clickEdit(localStorage.getItem('id'), "add_team.php"));
 
     });
 
@@ -49,7 +49,7 @@ $(function(){
         id=$(this).prop("id");
         num=id.split("-");
         localStorage.setItem("id", parseInt(num[num.length-1]));
-        location.href="../news/delete_news.php?id="+localStorage.getItem('id')+"&img=img-"+localStorage.getItem('id');
+        location.href="../team/delete_team.php?id="+localStorage.getItem('id')+"&img=img-"+localStorage.getItem('id');
     });
 
     $(".btn-back").click(function(){
@@ -60,8 +60,8 @@ $(function(){
         location.href="../exit.php";
     });
 
-    
 
-    
+
+
 
 });
