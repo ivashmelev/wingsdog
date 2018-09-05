@@ -1,7 +1,11 @@
 <?
 //Страница авторизации
-if(session_id() == '') {
-    session_start();
+// if(session_id() == '') {
+// }
+session_start();
+// $_SESSION['auth']=false;
+if($_SESSION['auth']==true){
+    header('Location: panel.php');
 }
 require_once ("send_mail.php");
 //session_start();

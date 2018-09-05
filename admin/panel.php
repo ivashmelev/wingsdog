@@ -16,23 +16,34 @@ if(!$_SESSION['auth']){ //Если не прошла авторизация, т�
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="/css/admin.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- <script src="news/adm_news.js"></script> -->
     <title>Панель администратора</title>
 </head>
 <body>
-    <div class="menu">
-        <a href="/index.php">Главная</a>
-        <a href="/news.php">Мероприятия</a>
-        <a href="/photo.php">Фотоальбом</a>
-        <a href="/team.php">Команда</a>
-        <a href="/contacts.php">Контакты</a>
-        <button type="button" class="btn btn-danger btn-right">Выход</button>
+<div class="container-fluid">
+        <div class="menu">
+            <div class="row">
+                <div class="col-lg-6">
+                    <a class="menu-a" href="/index.php">Главная</a>
+                    <a class="menu-a" href="/news.php">Мероприятия</a>
+                    <a class="menu-a" href="/photo.php">Фотоальбом</a>
+                    <a class="menu-a" href="/team.php">Команда</a>
+                    <a class="menu-a" href="/contacts.php">Контакты</a>
+                </div>
+                <div class="col-lg-6">
+                    <button type="button" class="btn btn-danger btn-right">
+                        <div class="btn-exit"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="functional">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
                         <div class="news">
-                            <h5><a href="news/add_news.php">Мероприятия</a></h5>
+                            <h5><a href="news/adm_news.php">Мероприятия</a></h5>
                         </div>
                     </div>
                 </div>

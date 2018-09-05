@@ -18,12 +18,22 @@
     src: url('../font/Roboto/Roboto-Italic.ttf');
 }
 
+
+
 .menu{
     margin: 20px;
 }
 
+.menu-a{
+    padding: 10px;
+    font-family: "Roboto";
+    text-decoration: none;
+    color: #002a56;
+    border: 2px solid rgba(255, 255, 255, 0);
+}
+
 .menu a{
-    padding: 5px;
+    text-decoration: none;
 }
 
 .news{
@@ -74,7 +84,7 @@
     font-family: "Roboto Bold";
     font-size: 18px;
     text-decoration: none;
-
+    color: #002a56;
 }
 
 
@@ -135,3 +145,35 @@
     opacity: .4;
     pointer-events: none;
 }
+
+
+
+.btn:hover, .btn, .btn:focus {
+    text-decoration: none;
+}
+
+.underline{
+    background-color: #002a56;
+    color: white;
+    padding: 10px;
+    transition: 0.5s;
+    font-weight: bold; 
+    font-family: "Roboto Bold";
+}
+
+.menu-a:hover{
+    border: 2px solid #002a56;
+    background-color: white;
+    color: #002a56;
+    /* font-weight: bold; */
+    /* font-family: "Roboto Bold"; */
+    transition: 0.3s;
+}
+
+.form-control{
+    border-color: #002a56;
+    border-radius: 0;
+}
+
+
+
