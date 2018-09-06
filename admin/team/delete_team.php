@@ -17,8 +17,8 @@ $img=strip_tags(htmlentities(($_GET['img'])));
 
 // }
 
-$delete=queryMySQL("DELETE FROM news WHERE id='$id'");
+$delete=queryMySQL("DELETE FROM team WHERE id='$id'");
 
-header("Location: adm_news.php");
+header("Location: adm_team.php");
 
 ?>

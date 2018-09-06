@@ -79,28 +79,26 @@
         <div class="content-team">
             <div class="container-fluid">
                 <div class="team-block">
-                    <div class="person">
+                    <!-- <div class="person">
                         <div class="row justify-content-center">
                             <div class="col-xl-3 col-lg-4 col-md-8">
-                                <div class="team-photo">
-
-                                </div>
+                                <div style="background-image: url('img/<?echo $data_img[$i];?>'); background-size: cover;" class="team-photo"></div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-8">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-12">
-                                        <h2 class="head-h2">Иванов Иван Иванович</h2>
+                                        <h2 class="head-h2"><?=$data_header[$i];?></h2>
                                     </div>
                                 </div>
                                 <div class="row justify-content-center">
                                     <div class="col-lg-12">
-                                    <p class="text-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus laborum id earum sint, quod, praesentium maxime magni dolores corrupti ut obcaecati placeat. Deleniti commodi debitis hic quo, eum sequi! Officia.</p>
+                                    <p class="text-p"><?=$data_text[$i];?></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="person">
+                    </div> -->
+                    <!-- <div class="person">
                         <div class="row justify-content-center">
                             <div class="col-xl-3 col-lg-4 col-md-8">
                                 <div class="team-photo">
@@ -141,7 +139,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>    
+                    </div>     -->
                 </div>
             </div>
         </div>
@@ -177,5 +175,18 @@
             </div>
         </div>
     </div>
+    <script>
+        function genTeam(count=0, header='Header', img='img', text='text'){
+            for(i=0; i<count; i++){
+                block_team=$(".team-block");
+                content='<div class="person"> <div class="row justify-content-center"> <div class="col-xl-3 col-lg-4 col-md-8"> <div style="background-image: url(img/'+img[i]+'); background-size: cover;" class="team-photo"></div> </div> <div class="col-xl-6 col-lg-6 col-md-8"> <div class="row justify-content-center"> <div class="col-lg-12"> <h2 class="head-h2">'+header[i]+'</h2> </div> </div> <div class="row justify-content-center"> <div class="col-lg-12"> <p class="text-p">'+text[i]+'</p> </div> </div> </div> </div> </div>';
+                // $(".content-news").append('<div class="news-block"></div>');
+                block_team.append(content);
+                // block_news.append(content);
+            }
+        console.log(count, header, img, text);
+    }
+    </script>
+    <?echo  "<script> genTeam($count_rows, $data_header, $data_img, $data_text);</script>"?>
 </body>
 </html>
