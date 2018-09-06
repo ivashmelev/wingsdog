@@ -22,7 +22,7 @@
 }
 
 .menu-item{
-    width: 15%;
+    width: 12%;
     height: 100%;
     display: inline-block;
     text-align: center;
@@ -40,11 +40,11 @@
 }
 .menu:after{
     content: "";
-    width: 76%;
+    width: 80%;
     height: 60px;
     position: absolute;
     top: 0;
-    left: 12%;
+    left: 10%;
     /* background-color: #ffffff; */
     border-bottom: 3px solid #ffffff
 }
@@ -83,7 +83,7 @@
     width: 0;
 }
 
-@media only screen and (max-width: 930px){
+@media only screen and (max-width: 990px){
     .menu:after{
         display: none;
     }
@@ -154,7 +154,7 @@
     }
 
     .block-menu.open{
-        height: 360px;
+        height: 490px;
         transition: .5s;
         background-color: #002a56;
         color: #ffffff;

@@ -33,9 +33,9 @@
 
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-5 col-sm-9">
+                                <div class="col-lg-6 col-md-8 col-sm-9">
                                     <div class="header__text">
-                                        <p class="head-text">Нижегородская региональная общественная организация кинологический клуб "Крылатый Пёс"</p>
+                                        <p class="head-text">Нижегородская региональная общественная организация<br>кинологический клуб "Крылатый Пёс"</p>
                                     </div>
                                 </div>
                                 <!-- <div class="col-lg-3">
@@ -60,8 +60,10 @@
                             <nav class="menu-links">
                                 <div class="menu-item "><a href="index.php" class="menu-links-item ">Главная</a></div>
                                 <div class="menu-item "><a href="news.php" class="menu-links-item ">Мероприятия</a></div>
-                                <div class="menu-item "><a href="photo.php" class="menu-links-item ">Фотоальбом</a></div>
                                 <div class="menu-item "><a href="team.php" class="menu-links-item ">Команда</a></div>
+                                <div class="menu-item "><a href="#" class="menu-links-item ">Достижения</a></div>
+                                <div class="menu-item "><a href="#" class="menu-links-item ">Передержка</a></div>
+                                <div class="menu-item "><a href="photo.php" class="menu-links-item ">Фотоальбом</a></div>
                                 <div class="menu-item "><a href="contacts.php" class="menu-links-item ">Контакты</a></div>
                             </nav>
                             <div class="menu-icon">

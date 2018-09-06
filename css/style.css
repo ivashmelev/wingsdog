@@ -48,8 +48,8 @@ html{
 }
 
 .header__logo{
-    width: 100px;
-    height: 100px;
+    width: 125px;
+    height: 125px;
     /* height: 100%; */
     background-image: url('../img/logo_white.png');
     background-size: cover;
@@ -57,7 +57,7 @@ html{
 }
 
 .header__text{
-    margin-top: 35px;
+    margin-top: 45px;
 }
 
 .text_phone{
