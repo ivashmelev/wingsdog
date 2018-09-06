@@ -1,4 +1,3 @@
-<? require_once ("admin/query_mysql.php"); require_once ("admin/team/include_team.php");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,8 +17,9 @@
     <link rel="stylesheet" href="css/style.css"  type="text/css">
     <link rel="stylesheet" href="css/adaptiv.css"  type="text/css">
     <link rel="stylesheet" href="css/menu.css"  type="text/css">
+    <link rel="stylesheet" href="css/index.css"  type="text/css">
     <link rel="stylesheet" href="css/team.css"  type="text/css">
-    <title>Команда</title>
+    <title>Достижения</title>
 </head>
 <body>
     <div class="wrapper">
@@ -34,9 +34,9 @@
 
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-5 col-sm-9">
+                                <div class="col-lg-6 col-md-8 col-sm-9">
                                     <div class="header__text">
-                                        <p class="head-text">Нижегородская региональная общественная организация кинологический клуб "Крылатый Пёс"</p>
+                                        <p class="head-text">Нижегородская региональная общественная организация<br>кинологический клуб "Крылатый Пёс"</p>
                                     </div>
                                 </div>
                                 <!-- <div class="col-lg-3">
@@ -59,7 +59,7 @@
                     <div class="col-lg-12">
                         <div class="menu">
                             <nav class="menu-links">
-                            <div class="menu-item "><a href="index.php" class="menu-links-item ">Главная</a></div>
+                                <div class="menu-item "><a href="index.php" class="menu-links-item ">Главная</a></div>
                                 <div class="menu-item "><a href="news.php" class="menu-links-item ">Мероприятия</a></div>
                                 <div class="menu-item "><a href="team.php" class="menu-links-item ">Команда</a></div>
                                 <div class="menu-item "><a href="attainment.php" class="menu-links-item ">Достижения</a></div>
@@ -100,7 +100,7 @@
                             </div>
                         </div>
                     </div> -->
-                    <!-- <div class="person">
+                    <div class="person">
                         <div class="row justify-content-center">
                             <div class="col-xl-3 col-lg-4 col-md-8">
                                 <div class="team-photo">
@@ -110,7 +110,7 @@
                             <div class="col-xl-6 col-lg-6 col-md-8">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-12">
-                                        <h2 class="head-h2">Лукашина Светлана Евгеньевна</h2>
+                                        <h2 class="head-h2">Чаки</h2>
                                     </div>
                                 </div>
                                 <div class="row justify-content-center">
@@ -131,7 +131,7 @@
                             <div class="col-xl-6 col-lg-6 col-md-8">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-12">
-                                        <h2 class="head-h2">Лепилина Юлия Юрьевна</h2>
+                                        <h2 class="head-h2">Рекс</h2>
                                     </div>
                                 </div>
                                 <div class="row justify-content-center">
@@ -141,7 +141,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>     -->
+                    </div>    
                 </div>
             </div>
         </div>
@@ -177,18 +177,18 @@
             </div>
         </div>
     </div>
-    <script>
-        function genTeam(count=0, header='Header', img='img', text='text'){
-            for(i=0; i<count; i++){
-                block_team=$(".team-block");
-                content='<div class="person"> <div class="row justify-content-center"> <div class="col-xl-3 col-lg-4 col-md-8"> <div style="background-image: url(img/'+img[i]+'); background-size: cover;" class="team-photo"></div> </div> <div class="col-xl-6 col-lg-6 col-md-8"> <div class="row justify-content-center"> <div class="col-lg-12"> <h2 class="head-h2">'+header[i]+'</h2> </div> </div> <div class="row justify-content-center"> <div class="col-lg-12"> <p class="text-p">'+text[i]+'</p> </div> </div> </div> </div> </div>';
-                // $(".content-news").append('<div class="news-block"></div>');
-                block_team.append(content);
-                // block_news.append(content);
-            }
-        console.log(count, header, img, text);
-    }
-    </script>
-    <?echo  "<script> genTeam($count_rows, $data_header, $data_img, $data_text);</script>"?>
+    <!-- <div class="container-fluid">
+    <form>
+        <div class="form-row">
+            <div class="form-group col-lg-3">
+                <label for="search-form">Поиск по договору или клиенту</label>
+                <div class="input-group">
+                    <input type="search" class="form-control" id="search-form">
+                    <div class="input-group-append">
+                        <button type="button" class="btn btn-danger">X</button>
+                    </div>
+                </div>
+            </div> -->
+            
 </body>
 </html>
