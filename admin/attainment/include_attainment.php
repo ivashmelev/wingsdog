@@ -1,4 +1,4 @@
-<?
+<?php
 $query=queryMySQL("SELECT * FROM attainment ORDER BY id DESC");
 $count_rows=mysqli_num_rows($query);
 $count_fields=mysqli_num_fields($query);

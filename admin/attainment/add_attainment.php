@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 if(!$_SESSION['auth']){ //Если не прошла авторизация, то переносит на форму авторизации
     header("Location: ../admin/auth.php");

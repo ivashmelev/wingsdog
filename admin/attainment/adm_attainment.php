@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 if(!$_SESSION['auth']){ //Если не прошла авторизация, то переносит на форму авторизации
     header("Location: ../auth.php");
@@ -41,7 +41,7 @@ require_once ("include_attainment.php");
                     <div class="btn-exit"></div>
                 </button>
                 <button type="button" class="btn btn-success btn-right">
-                    <? $id=json_decode($data_id);?>
+                    <?php $id=json_decode($data_id);?>
                     <div class="btn-add" id="btn-add-<?echo $id[0];?>"></div>
                 </button>
                 <button type="button" class="btn btn-primary btn-right">
@@ -135,6 +135,6 @@ require_once ("include_attainment.php");
     }
 </script>
 
-<?echo  "<script> genAttainment($data_id ,$count_rows, $data_header, $data_img, $data_text);</script>"?>
+<?php echo  "<script> genAttainment($data_id ,$count_rows, $data_header, $data_img, $data_text);</script>"?>
 </body>
 </html>

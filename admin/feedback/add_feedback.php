@@ -1,4 +1,4 @@
-<?
+<?php
 require_once ("../query_mysql.php");
 
 $name=strip_tags(htmlentities($_POST['name']));

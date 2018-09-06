@@ -1,4 +1,4 @@
-<? require_once ("admin/query_mysql.php"); require_once ("admin/news/include_news.php");?>
+<?php require_once ("admin/query_mysql.php"); require_once ("admin/news/include_news.php");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -146,6 +146,6 @@
     }
     </script>
 
-    <?echo  "<script> genNews($count_rows, $data_header, $data_date, $data_img, $data_text);</script>"?>
+    <?php echo  "<script> genNews($count_rows, $data_header, $data_date, $data_img, $data_text);</script>"?>
 </body>
 </html>

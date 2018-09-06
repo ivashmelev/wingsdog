@@ -1,4 +1,4 @@
-<? require_once ("admin/query_mysql.php"); require_once ("admin/team/include_team.php");?>
+<?php require_once ("admin/query_mysql.php"); require_once ("admin/team/include_team.php");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,17 +84,17 @@
                     <!-- <div class="person">
                         <div class="row justify-content-center">
                             <div class="col-xl-3 col-lg-4 col-md-8">
-                                <div style="background-image: url('img/<?echo $data_img[$i];?>'); background-size: cover;" class="team-photo"></div>
+                                <div style="background-image: url('img/<?//echo $data_img[$i];?>'); background-size: cover;" class="team-photo"></div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-8">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-12">
-                                        <h2 class="head-h2"><?=$data_header[$i];?></h2>
+                                        <h2 class="head-h2"><?//=$data_header[$i];?></h2>
                                     </div>
                                 </div>
                                 <div class="row justify-content-center">
                                     <div class="col-lg-12">
-                                    <p class="text-p"><?=$data_text[$i];?></p>
+                                    <p class="text-p"><?//=$data_text[$i];?></p>
                                     </div>
                                 </div>
                             </div>
@@ -189,6 +189,6 @@
         console.log(count, header, img, text);
     }
     </script>
-    <?echo  "<script> genTeam($count_rows, $data_header, $data_img, $data_text);</script>"?>
+    <?php echo  "<script> genTeam($count_rows, $data_header, $data_img, $data_text);</script>"?>
 </body>
 </html>

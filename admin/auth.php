@@ -1,4 +1,4 @@
-<?
+<?php
 //Страница авторизации
 // if(session_id() == '') {
 // }
@@ -74,14 +74,14 @@ if($_GET['token_password']==$_SESSION['token_password']){
 </head>
 <body>
     <form action="auth.php" method="POST">
-        <p><?//echo $_SESSION['token_password'];?></p>
+        <p></p>
         <p>Логин</p>
         <input type="text" name="login">
         <br>
         <p>Пароль</p>
         <input type="password" name="password">
         <br>
-        <a href=<?echo "?send_token_password=".bin2hex(openssl_random_pseudo_bytes(10));?>>Change password</a>
+        <a href=<?php echo "?send_token_password=".bin2hex(openssl_random_pseudo_bytes(10));?>>Change password</a>
         <br>
         <input type="submit">
     </form>

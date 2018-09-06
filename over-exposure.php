@@ -1,4 +1,4 @@
-<? require_once ("admin/query_mysql.php"); require_once ("admin/feedback/include_feedback.php");?>
+<?php require_once ("admin/query_mysql.php"); require_once ("admin/feedback/include_feedback.php");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -264,6 +264,6 @@
         console.log(count, header, img, text);
     }
     </script>
-    <?echo  "<script> genFeedback($count_rows, $data_name, $data_text);</script>"?>
+    <?php echo  "<script> genFeedback($count_rows, $data_name, $data_text);</script>"?>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 if(!$_SESSION['registration']){ //Если не прошла авторизация, то переносит на форму авторизации
     header("Location: ./auth.php");
@@ -36,7 +36,7 @@ else{
 </head>
 <body>
     <form action="registration.php" method="POST">
-        <p><?//echo $_SESSION['token_password'];?></p>
+        <p></p>
         <p>Новый Логин</p>
         <input type="text" name="login">
         <br>

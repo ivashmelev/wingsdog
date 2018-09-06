@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 require_once ("send_mail.php");
 if($_SESSION['limit']<10){ //Защита от случайного захода на страницу
