@@ -14,7 +14,7 @@ $(function(){
         break;
         case "Фотоальбом": $(menu_links[5]).css({color:"#002a56", backgroundColor: "white"});
         break;
-        case "Контакты": $(menu_links[5]).css({color:"#002a56", backgroundColor: "white"});
+        case "Контакты": $(menu_links[6]).css({color:"#002a56", backgroundColor: "white"});
         break;
     }
 });
