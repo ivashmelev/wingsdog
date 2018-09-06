@@ -9,7 +9,6 @@ require_once ("../query_mysql.php");
 // require_once ("update_news.php");
 $id=strip_tags(htmlentities($_POST['id']));
 $header=strip_tags(htmlentities($_POST['header']));
-$date=strip_tags(htmlentities($_POST['date']));
 // $img=strip_tags(htmlentities($_POST['img']));
 $text=strip_tags(htmlentities($_POST['text']));
 
@@ -24,10 +23,10 @@ $full_path=$path.$new_name;
 
 if($_FILES['img']['error']==0){
     if(move_uploaded_file($_FILES['img']['tmp_name'], $full_path)){
-        $update=queryMySQL("UPDATE news SET id='$id', header='$header', date='$date', img='$new_name', text='$text' WHERE id='$id'");
+        $update=queryMySQL("UPDATE team SET id='$id', header='$header', img='$new_name', text='$text' WHERE id='$id'");
     }
 }
 
 
-header("Location: adm_news.php");
+header("Location: adm_team.php");
 ?>
