@@ -61,10 +61,12 @@
                     <div class="col-lg-12">
                         <div class="menu">
                             <nav class="menu-links">
-                                <div class="menu-item "><a href="index.php" class="menu-links-item ">Главная</a></div>
+                            <div class="menu-item "><a href="index.php" class="menu-links-item ">Главная</a></div>
                                 <div class="menu-item "><a href="news.php" class="menu-links-item ">Мероприятия</a></div>
-                                <div class="menu-item "><a href="photo.php" class="menu-links-item ">Фотоальбом</a></div>
                                 <div class="menu-item "><a href="team.php" class="menu-links-item ">Команда</a></div>
+                                <div class="menu-item "><a href="attainment.php" class="menu-links-item ">Достижения</a></div>
+                                <div class="menu-item "><a href="#" class="menu-links-item ">Передержка</a></div>
+                                <div class="menu-item "><a href="photo.php" class="menu-links-item ">Фотоальбом</a></div>
                                 <div class="menu-item "><a href="contacts.php" class="menu-links-item ">Контакты</a></div>
                             </nav>
                             <div class="menu-icon">

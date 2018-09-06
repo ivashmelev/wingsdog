@@ -154,7 +154,7 @@
     }
 
     .block-menu.open{
-        height: 490px;
+        height: 500px;
         transition: .5s;
         background-color: #002a56;
         color: #ffffff;
