@@ -1,3 +1,4 @@
+<? require_once ("admin/query_mysql.php"); require_once ("admin/attainment/include_attainment.php");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,7 +101,7 @@
                             </div>
                         </div>
                     </div> -->
-                    <div class="person">
+                    <!-- <div class="person">
                         <div class="row justify-content-center">
                             <div class="col-xl-3 col-lg-4 col-md-8">
                                 <div class="team-photo">
@@ -141,7 +142,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>    
+                    </div>     -->
                 </div>
             </div>
         </div>
@@ -189,6 +190,20 @@
                     </div>
                 </div>
             </div> -->
+    <script>
+        function genAttainment(count=0, header='Header', img='img', text='text'){
+            for(i=0; i<count; i++){
+                block_team=$(".team-block");
+                content='<div class="person"> <div class="row justify-content-center"> <div class="col-xl-3 col-lg-4 col-md-8"> <div style="background-image: url(img/'+img[i]+'); background-size: cover;" class="team-photo"></div> </div> <div class="col-xl-6 col-lg-6 col-md-8"> <div class="row justify-content-center"> <div class="col-lg-12"> <h2 class="head-h2">'+header[i]+'</h2> </div> </div> <div class="row justify-content-center"> <div class="col-lg-12"> <p class="text-p">'+text[i]+'</p> </div> </div> </div> </div> </div>';
+                // $(".content-news").append('<div class="news-block"></div>');
+                block_team.append(content);
+                // block_news.append(content);
+            }
+        console.log(count, header, img, text);
+    }
+    </script>
+
+    <?echo  "<script> genAttainment($count_rows, $data_header, $data_img, $data_text);</script>"?>
             
 </body>
 </html>

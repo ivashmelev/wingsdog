@@ -1,3 +1,4 @@
+<? require_once ("admin/query_mysql.php"); require_once ("admin/feedback/include_feedback.php");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +36,7 @@
                                 </div>
                                 <div class="col-lg-4 col-md-5 col-sm-9">
                                     <div class="header__text">
-                                        <p class="head-text">Нижегородская региональная общественная организация кинологический клуб "Крылатый Пёс"</p>
+                                        <p class="head-text">Нижегородская региональная общественная организация <br>кинологический клуб "Крылатый Пёс"</p>
                                     </div>
                                 </div>
                                 <!-- <div class="col-lg-3">
@@ -95,7 +96,41 @@
                             </div>
                         </div>
                         <div class="row justify-content-center">
-                            <div class="col-xl-12 col-lg-12 col-md-8">
+                            <div class="col-xl-6 col-lg-6 col-md-8">
+                                <h2 class="head-h2" align="center" style="margin-bottom: 50px;">Отзывы клиентов</h2>
+                                <div class="out-feedback-block">
+                                    <div class="inner-feedback-block">
+                                        <!-- <div class="element-feedback">
+                                            <p class="head-h2">Head</p>
+                                            <p class="text-p">content</p>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="form-feedback">
+                                    <button class="form-block-submit" id="button-feedback">Оставить отзыв</button>
+                                    <!-- <form action="over-exposure.php" method="POST" style="margin-left:0 auto;">
+                                        <label class="text-p" for="name">Имя</label>
+                                        <br>
+                                        <input class="form-block-input" type="text" name="name" id="name">
+                                        <br>
+                                        <label class="text-p" for="feed_mail">Почта</label>
+                                        <br>
+                                        <input class="form-block-input" type="email" name="feed_mail" id="feed_mail">
+                                        <br>
+                                        <label class="text-p" for="mess">Сообщение</label>
+                                        <br>
+                                        <textarea class="form-block-input" rows="6" type="text" name="mess" id="mess"></textarea>
+                                        <br>
+                                        <br>
+                                        <input type="submit" class="form-block-submit" name="submit" value="Отправить">
+                                    </form> -->
+                                </div>
+                            </div>
+                        <!-- <div class="row justify-content-center"> -->
+                            <!-- <div class="col-xl-6 col-lg-6 col-md-8"> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                            <div class="col-xl-6 col-lg-6 col-md-8">
                                 <h2 class="head-h2" align="center" style="margin-bottom: 50px;">Запись на передержку</h2>
                                         <form align="center" action="over-exposure.php" method="POST" style="margin-left:0 auto;">
                                             <label class="text-p" for="species">Порода</label>
@@ -217,4 +252,18 @@
             </div>
         </div>
     </div>
+    <script>
+        function genFeedback(count=0, name='Name', text='text'){
+            for(i=0; i<count; i++){
+                block_feedback=$(".inner-feedback-block");
+                content='<div class="element-feedback"> <p class="head-h2" style="font-size:24px;">'+name[i]+'</p> <p class="text-p" style="font-size:18px;">'+text[i]+'</p> </div>';
+                // $(".content-news").append('<div class="news-block"></div>');
+                block_feedback.append(content);
+                // block_news.append(content);
+            }
+        console.log(count, header, img, text);
+    }
+    </script>
+    <?echo  "<script> genFeedback($count_rows, $data_name, $data_text);</script>"?>
 </body>
+</html>

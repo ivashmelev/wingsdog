@@ -358,3 +358,36 @@ html{
 }
 
 /* -------------------------- */
+
+/* over-exposure.php */
+
+.out-feedback-block{
+    /* max-width: 500px; */
+    width: 80%;
+    height: 800px;
+    overflow-y: auto;
+    margin: 0 auto;
+    /* box-shadow: 0 0 100px rgba(255, 255, 255, 0.5) inset; */
+}
+
+.inner-feedback-block{
+    padding: 20px;
+    /* box-shadow: 0 0 100px 10px rgba(0, 0, 0, 0.068) inset; */
+    /* background-color: pink; */
+    max-width: 700px;
+    width: 80%;
+    height: 1000px;
+    margin: 0 auto;
+}
+
+.element-feedback{
+    border-bottom: 3px dashed #002a567a;
+}
+
+.form-feedback{
+    margin: 0 auto;
+    max-width: 300px;
+    width: 100%;
+}
+
+/* ---------------- */

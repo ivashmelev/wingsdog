@@ -26,8 +26,10 @@ if(!$_SESSION['auth']){ //Если не прошла авторизация, т�
                 <div class="col-lg-6">
                     <a class="menu-a" href="/index.php">Главная</a>
                     <a class="menu-a" href="/news.php">Мероприятия</a>
+                    <a class="menu-a" href="/team.php" >Команда</a>
+                    <a class="menu-a" href="/attainment.php">Достижения</a>
+                    <a class="menu-a" href="/over-exposure.php">Передержка</a>
                     <a class="menu-a" href="/photo.php">Фотоальбом</a>
-                    <a class="menu-a" href="/team.php">Команда</a>
                     <a class="menu-a" href="/contacts.php">Контакты</a>
                 </div>
                 <div class="col-lg-6">
@@ -54,6 +56,15 @@ if(!$_SESSION['auth']){ //Если не прошла авторизация, т�
                 <div class="col-lg-12">
                     <div class="news">
                         <h5><a href="team/adm_team.php">Команда</a></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="news">
+                        <h5><a href="attainment/adm_attainment.php">Достижения</a></h5>
                     </div>
                 </div>
             </div>
