@@ -87,24 +87,30 @@
                 <div class="content-text">
                     <div class="row justify-content-center">
                         <div class="col-xl-3 col-lg-3 col-md-8 ">
-                            <div class="text-photo">
+                            <div class="text-photo" id="main_img1">
                                 
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-8 order-lg-first">
-                            <p class="text-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus laborum id earum sint, quod, praesentium maxime magni dolores corrupti ut obcaecati placeat. Deleniti commodi debitis hic quo, eum sequi! Officia.</p>
+                            <p class="text-p">Наша площадка начала свою деятельность в августе 2017 года. 
+Местонахождение: Нижегородская область, поселок Большое Козино. 
+Площадка оборудована всеми необходимыми снарядами, для подготовки к нормативам, 
+имеет ограждение, подъездные пути, туалет.</p>
                         </div>
                     </div>
                 </div>
                 <div class="content-text">
                     <div class="row justify-content-center">
                         <div class="col-xl-3 col-lg-3 col-md-8">
-                            <div class="text-photo">
+                            <div class="text-photo" id="main_img2">
 
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-8">
-                            <p class="text-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus laborum id earum sint, quod, praesentium maxime magni dolores corrupti ut obcaecati placeat. Deleniti commodi debitis hic quo, eum sequi! Officia.</p>
+                            <p class="text-p">Основные направления деятельности:<br> 
+- Проведение кинологических мероприятий<br> 
+- Дрессировка собак по разным дисциплинам <br>
+- Передержка собак</p>
                         </div>
                     </div>
                 </div>
@@ -132,24 +138,36 @@
                 <div class="content-text">
                     <div class="row justify-content-center">
                         <div class="col-xl-3 col-lg-3 col-md-8 ">
-                            <div class="text-photo">
+                            <div class="text-photo" id="main_img3">
                                 
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-8 order-lg-first">
-                            <p class="text-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus laborum id earum sint, quod, praesentium maxime magni dolores corrupti ut obcaecati placeat. Deleniti commodi debitis hic quo, eum sequi! Officia.</p>
+                            <p class="text-p">Мероприятия и дрессировка<br>
+ - соревнования<br>
+ - выставки<br>
+ - семинары <br>
+ - тренинги</p>
                         </div>
                     </div>
                 </div>
                 <div class="content-text">
                     <div class="row justify-content-center">
                         <div class="col-xl-3 col-lg-3 col-md-8">
-                            <div class="text-photo">
+                            <div class="text-photo" id="main_img4">
 
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-8">
-                            <p class="text-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus laborum id earum sint, quod, praesentium maxime magni dolores corrupti ut obcaecati placeat. Deleniti commodi debitis hic quo, eum sequi! Officia.</p>
+                            <p class="text-p">- общий курс дрессировки (ОКД)<br> 
+- защитно-караульная служба (ЗКС) <br>
+- международный стандарт BH(собака-компаньон)<br> 
+- международный вид спорта мондьоринг (послушание+защита+прыжки)<br> 
+- курс «Управляемая собака» <br>
+- защита хозяина (собака-телохранитель)<br> 
+- охрана территории <br>
+- коррекция нежелательного поведения собак<br> 
+- игровые виды спорта</p>
                         </div>
                     </div>
                 </div>

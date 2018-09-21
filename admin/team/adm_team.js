@@ -13,6 +13,19 @@ $(function(){
             break;
     }
 
+
+    $("textarea").text("text");
+
+    $("textarea").keydown(function(event){
+        console.log("run");
+        $(this).text($(this).text() + '-br-');
+        if(event.keyCode == 13){
+            console.log(event.keyCode+ "1");
+            event.preventDefault();
+            return false;
+        }
+    });
+
     // function genNews(count=0){
     //     for(i=0; i<count; i++){
     //         block_news=$("body");

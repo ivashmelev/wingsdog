@@ -15,6 +15,26 @@
     background-color: #002a56;
 }
 
+#main_img1{
+    background-image: url("/img/main_img1.jpg");
+    background-size: cover;
+}
+
+#main_img2{
+    background-image: url("/img/main_img2.jpg");
+    background-size: cover;
+}
+
+#main_img3{
+    background-image: url("/img/main_img3.jpg");
+    background-size: cover;
+}
+
+#main_img4{
+    background-image: url("/img/main_img4.jpg");
+    background-size: cover;
+}
+
 .content-back{
     width: 100%;
     height: 100vh;

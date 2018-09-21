@@ -23,6 +23,22 @@ $(function(){
         $(".out-feedback-block").html('<form action="admin/feedback/add_feedback.php" method="POST" style="margin-left:0 auto;"> <label class="text-p" for="name">Имя</label> <br> <input class="form-block-input" type="text" name="name" id="name"> <br> <label class="text-p" for="feed_mail">Почта</label> <br> <input class="form-block-input" type="email" name="feed_mail" id="feed_mail"> <br> <label class="text-p" for="mess">Сообщение</label> <br> <textarea class="form-block-input" rows="6" type="text" name="mess" id="mess"></textarea> <br> <br> <input type="submit" class="form-block-submit" name="submit" value="Отправить"> </form>');
         $(this).hide();
     });
+
+    
+    
+    // console.log(text);
+    // console.log(text.indexOf("|findme|"));
+
+    // if(text.indexOf("|findme|")==0){
+    //     new_text=text.replace("|findme|", "<111>");
+    //     console.log(true);
+    //     console.log(new_text);
+    //     $(".head-text").text(new_text);
+    // }
+    // else{
+    //     console.log(false);
+    // }
+
 });
 function showMenu(){
     menu= document.getElementById('menu');

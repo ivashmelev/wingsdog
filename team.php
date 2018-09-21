@@ -36,7 +36,7 @@
                                 </div>
                                 <div class="col-lg-4 col-md-5 col-sm-9">
                                     <div class="header__text">
-                                        <p class="head-text">Нижегородская региональная общественная организация <br>кинологический клуб "Крылатый Пёс"</p>
+                                        <p class="head-text">|findme| Нижегородская региональная общественная организация <br>кинологический клуб "Крылатый Пёс"</p>
                                     </div>
                                 </div>
                                 <!-- <div class="col-lg-3">
@@ -186,9 +186,26 @@
                 block_team.append(content);
                 // block_news.append(content);
             }
+            replaceForHead();
         console.log(count, header, img, text);
-    }
+        }
+
+        function replaceForHead(){
+            let text;
+            let arr_text=[]; 
+            arr_text=Array.from($(".text-p"));
+            console.log($(arr_text[1]).text());
+
+            for(i=0; i<arr_text.length; i++){
+                while($(arr_text[i]).text().indexOf("-br-")!=-1){
+                    new_text=$(arr_text[i]).text().replace("-br-", "<br>");
+                    $(arr_text[i]).html("<p>"+new_text+"</p>");
+                    console.log(false);
+                }
+            }
+        }
+        
     </script>
-    <?php echo  "<script> genTeam($count_rows, $data_header, $data_img, $data_text);</script>"?>
+    <?php echo  "<script> genTeam($count_rows, $data_header, $data_img, $data_text); </script>"?>
 </body>
 </html>
