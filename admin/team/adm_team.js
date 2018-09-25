@@ -7,24 +7,24 @@ $(function(){
             break;
         case "Фотоальбом": $("a:nth-child(3)").addClass("underline");
             break;
-        case "Команда": $("a:nth-child(4)").addClass("underline");
+        case "Инструктора": $("a:nth-child(4)").addClass("underline");
             break;
         case "Контакты": $("a:nth-child(5)").addClass("underline");
             break;
     }
 
 
-    $("textarea").text("text");
+    
 
-    $("textarea").keydown(function(event){
-        console.log("run");
-        $(this).text($(this).text() + '-br-');
-        if(event.keyCode == 13){
-            console.log(event.keyCode+ "1");
-            event.preventDefault();
-            return false;
-        }
-    });
+    // $("textarea").keydown(function(event){
+    //     console.log("run");
+    //     $(this).text($(this).text() + '-br-');
+    //     if(event.keyCode == 13){
+    //         console.log(event.keyCode+ "1");
+    //         event.preventDefault();
+    //         return false;
+    //     }
+    // });
 
     // function genNews(count=0){
     //     for(i=0; i<count; i++){

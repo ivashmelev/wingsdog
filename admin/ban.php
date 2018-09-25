@@ -17,5 +17,6 @@ if($_SESSION['limit_send']){ //Проперка на лими отпраки
     smtpmail("Крылатый пес",$send_to, $mail_header, $mail_content);
     $_SESSION['limit_send']=false;
 }
+echo $_SESSION['limit'];
 ?>
 <h1>over limit</h1>

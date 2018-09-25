@@ -1,8 +1,8 @@
 <?php
 session_start();
-if(!$_SESSION['registration']){ //Если не прошла авторизация, то переносит на форму авторизации
-    header("Location: ./auth.php");
-}
+// if(!$_SESSION['registration']){ //Если не прошла авторизация, то переносит на форму авторизации
+//     header("Location: ./auth.php");
+// }
 
 $login=strip_tags(htmlentities($_POST['login']));
 $password=md5(strip_tags(htmlentities($_POST['password'])));

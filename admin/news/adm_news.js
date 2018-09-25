@@ -1,4 +1,5 @@
 $(function(){
+    console.log(11);
     loc=document.title;
     switch(loc){
         case "Главная": $("a:nth-child(1)").addClass("underline");
@@ -7,7 +8,7 @@ $(function(){
         break;
         case "Фотоальбом": $("a:nth-child(3)").addClass("underline");
         break;
-        case "Команда": $("a:nth-child(4)").addClass("underline");
+        case "Инструктора": $("a:nth-child(4)").addClass("underline");
         break;
         case "Контакты": $("a:nth-child(5)").addClass("underline");
         break;

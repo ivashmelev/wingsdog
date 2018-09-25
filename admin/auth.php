@@ -2,67 +2,68 @@
 //Страница авторизации
 // if(session_id() == '') {
 // }
-session_start();
+// session_start();
 // $_SESSION['auth']=false;
-if($_SESSION['auth']==true){
+// if($_SESSION['auth']==true){
     header('Location: panel.php');
-}
-require_once ("send_mail.php");
-//session_start();
-$login=strip_tags(htmlentities($_POST['login']));
-$password=strip_tags(htmlentities($_POST['password']));
-$_SESSION['send_token_password']=bin2hex(openssl_random_pseudo_bytes(10));
-if(isset($_SESSION['token_password'])){
+// }
+// require_once ("send_mail.php");
+// //session_start();
+// $login=strip_tags(htmlentities($_POST['login']));
+// $password=strip_tags(htmlentities($_POST['password']));
+// $_SESSION['send_token_password']=bin2hex(openssl_random_pseudo_bytes(10));
+// if(isset($_SESSION['token_password'])){
 
-}
-else{
-    $_SESSION['token_password']=bin2hex(openssl_random_pseudo_bytes(10));
-}
+// }
+// else{
+//     $_SESSION['token_password']=bin2hex(openssl_random_pseudo_bytes(10));
+// }
 
     
 
-function queryMySQL($query){ //Метод отправки запроса в MySQL
-    require_once ("connection.php");
-    $link=mysqli_connect($host, $user, $password, $database) or die("Error".mysqli_error($link));
-    mysqli_set_charset($link, 'utf8');
-    $send_mysql=mysqli_query($link, $query) or die("Error".mysqli_error($link));
-    $result=mysqli_fetch_array($send_mysql);
-    return $result;
-}
+// function queryMySQL($query){ //Метод отправки запроса в MySQL
+//     require_once ("connection.php");
+//     $link=mysqli_connect($host, $user, $password, $database) or die("Error".mysqli_error($link));
+//     mysqli_set_charset($link, 'utf8');
+//     $send_mysql=mysqli_query($link, $query) or die("Error".mysqli_error($link));
+//     $result=mysqli_fetch_array($send_mysql);
+//     return $result;
+// }
 
-$answer=queryMySQL("SELECT * FROM auth");
-$_SESSION['mail']=$answer['mail'];
+// $answer=queryMySQL("SELECT * FROM auth");
+// $_SESSION['mail']=$answer['mail'];
 
-if($answer['login']==$login && $answer['password']==md5($password)){ //Проверка на валидность пары логин-пароль
-    $_SESSION['auth']=true;
-    $_SESSION['limit']=0;
-    header('Location: ./panel.php');
-}
-else{
-    $_SESSION['auth']=false;
-    $_SESSION['limit']++;
-    header('Location: ');
-}
+// if($answer['login']==$login && $answer['password']==md5($password)){ //Проверка на валидность пары логин-пароль
+//     $_SESSION['auth']=true;
+//     $_SESSION['limit']=0;
+//     header('Location: ./panel.php');
+// }
+// else{
+//     $_SESSION['auth']=false;
+//     $_SESSION['limit']++;
+//     header('Location: ');
+// }
 
-if($_SESSION['limit']>10){ //Проверка на количество попыток авторизации
-    $_SESSION['token'] = bin2hex(openssl_random_pseudo_bytes(10)); //Формирование токена для разблокировки
-    $_SESSION['limit_send']=true; //Лимит отправки писем
-    header('Location: ./ban.php'); 
-}
+// if($_SESSION['limit']>15){ //Проверка на количество попыток авторизации
+//     $_SESSION['token'] = bin2hex(openssl_random_pseudo_bytes(10)); //Формирование токена для разблокировки
+//     $_SESSION['limit_send']=true; //Лимит отправки писем
+//     header('Location: ./ban.php'); 
+// }
 
-if(isset($_GET['send_token_password'])){
+// if(isset($_GET['send_token_password'])){
     
-    $send_to=$answer['mail'];
-    $mail_header="Message head";
-    $mail_content="Message token password [token_password]".$_SESSION['token_password'];
-    smtpmail("Крылатый пес", $send_to, $mail_header, $mail_content);
-    header("Location: ./auth.php");
-}
+//     $send_to=$answer['mail'];
+//     $mail_header="Message head";
+//     $mail_content="Message token password [token_password]".$_SESSION['token_password'];
+//     smtpmail("Крылатый пес", $send_to, $mail_header, $mail_content);
+//     header("Location: ./auth.php");
+// }
 
-if($_GET['token_password']==$_SESSION['token_password']){
-    $_SESSION['registration']=true;
-    header("Location: ./registration.php");
-}
+// if($_GET['token_password']==$_SESSION['token_password']){
+//     $_SESSION['registration']=true;
+//     header("Location: ./registration.php");
+// }
+// echo $_SESSION['limit'];
 ?>
 <!DOCTYPE html>
 <html lang="en">

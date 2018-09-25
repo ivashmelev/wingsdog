@@ -1,9 +1,9 @@
 <?php
 //Панель администратора
-session_start();
-if(!$_SESSION['auth']){ //Если не прошла авторизация, то переносит на форму авторизации
-    header("Location: ./auth.php");
-}
+// session_start();
+// if(!$_SESSION['auth']){ //Если не прошла авторизация, то переносит на форму авторизации
+//     header("Location: ./auth.php");
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +26,7 @@ if(!$_SESSION['auth']){ //Если не прошла авторизация, т�
                 <div class="col-lg-6">
                     <a class="menu-a" href="/index.php">Главная</a>
                     <a class="menu-a" href="/news.php">Мероприятия</a>
-                    <a class="menu-a" href="/team.php" >Команда</a>
+                    <a class="menu-a" href="/team.php" >Инструктора</a>
                     <a class="menu-a" href="/attainment.php">Достижения</a>
                     <a class="menu-a" href="/over-exposure.php">Передержка</a>
                     <a class="menu-a" href="/photo.php">Фотоальбом</a>
@@ -55,7 +55,7 @@ if(!$_SESSION['auth']){ //Если не прошла авторизация, т�
             <div class="row">
                 <div class="col-lg-12">
                     <div class="news">
-                        <h5><a href="team/adm_team.php">Команда</a></h5>
+                        <h5><a href="team/adm_team.php">Инструктора</a></h5>
                     </div>
                 </div>
             </div>

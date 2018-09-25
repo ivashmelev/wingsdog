@@ -1,8 +1,8 @@
 <?php
 session_start();
-if(!$_SESSION['auth']){ //Если не прошла авторизация, то переносит на форму авторизации
-    header("Location: ../auth.php");
-}
+// if(!$_SESSION['auth']){ //Если не прошла авторизация, то переносит на форму авторизации
+//     header("Location: ../auth.php");
+// }
 require_once ("../query_mysql.php"); 
 require_once ("include_news.php");
 ?>
@@ -33,7 +33,7 @@ require_once ("include_news.php");
                     <a class="menu-a" href="../../index.php">Главная</a>
                     <a class="menu-a" href="../../news.php">Мероприятия</a>
                     <a class="menu-a" href="../../photo.php">Фотоальбом</a>
-                    <a class="menu-a" href="../../team.php">Команда</a>
+                    <a class="menu-a" href="../../team.php">Инструктора</a>
                     <a class="menu-a" href="../../contacts.php">Контакты</a>
                 </div>
                 <div class="col-lg-6">

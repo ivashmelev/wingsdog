@@ -61,7 +61,7 @@
                             <nav class="menu-links">
                                 <div class="menu-item "><a href="index.php" class="menu-links-item ">Главная</a></div>
                                 <div class="menu-item "><a href="news.php" class="menu-links-item ">Мероприятия</a></div>
-                                <div class="menu-item "><a href="team.php" class="menu-links-item ">Команда</a></div>
+                                <div class="menu-item "><a href="team.php" class="menu-links-item ">Инструктора</a></div>
                                 <div class="menu-item "><a href="attainment.php" class="menu-links-item ">Достижения</a></div>
                                 <div class="menu-item "><a href="over-exposure.php" class="menu-links-item ">Передержка</a></div>
                                 <div class="menu-item "><a href="photo.php" class="menu-links-item ">Фотоальбом</a></div>
@@ -90,7 +90,14 @@
                                 
                                 <div class="row justify-content-center">
                                     <div class="col-lg-8">
-                                    <p class="text-p" align="center" style="margin: 40px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nemo rem et necessitatibus accusantium, id, reiciendis hic veniam, doloremque quidem expedita nam sint non harum unde reprehenderit magni! Exercitationem, omnis?</p>
+                                    <p class="text-p" align="center" style="margin: 40px;">ПЕРЕДЕРЖКА СОБАК
+в вольерах и помещении.
+<br>Основные правила передачи: собака старше 3-х месяцев должна быть:
+<br>-вакцинирована не ранее, чем за 21 день и не позднее, чем за 1 год до принятия на передержку;
+<br>-дегельминтизирована не менее, чем за 10 дней;
+<br>-обработана от эктопаразитов не ранее 3-х дней.
+<br>Доставка до места передержки
+(при необходимости).</p>
                                     </div>
                                 </div>
                             </div>
@@ -253,10 +260,10 @@
         </div>
     </div>
     <script>
-        function genFeedback(count=0, name='Name', text='text'){
+        function genFeedback(count=0, name='Name', date="-", text='text'){
             for(i=0; i<count; i++){
                 block_feedback=$(".inner-feedback-block");
-                content='<div class="element-feedback"> <p class="head-h2" style="font-size:24px;">'+name[i]+'</p> <p class="text-p" style="font-size:18px;">'+text[i]+'</p> </div>';
+                content='<div class="element-feedback"> <p class="head-h2" style="font-size:24px;">'+name[i]+' <span class="text-p" style="font-size:14px; "><i>Запись: </i>'+date[i]+'</span> </p><p class="text-p" style="font-size:18px;">'+text[i]+'</p> </div>';
                 // $(".content-news").append('<div class="news-block"></div>');
                 block_feedback.append(content);
                 // block_news.append(content);
@@ -264,6 +271,6 @@
         console.log(count, header, img, text);
     }
     </script>
-    <?php echo  "<script> genFeedback($count_rows, $data_name, $data_text);</script>"?>
+    <?php echo  "<script> genFeedback($count_rows, $data_name, $data_date, $data_text);</script>"?>
 </body>
 </html>

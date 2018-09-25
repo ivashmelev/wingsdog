@@ -1,8 +1,8 @@
 <?php
-session_start();
-if(!$_SESSION['auth']){ //Если не прошла авторизация, то переносит на форму авторизации
-    header("Location: ../admin/auth.php");
-}
+// session_start();
+// if(!$_SESSION['auth']){ //Если не прошла авторизация, то переносит на форму авторизации
+//     header("Location: ../admin/auth.php");
+// }
 require_once ("../query_mysql.php");
 
 $id=strip_tags(htmlentities($_POST['id']));

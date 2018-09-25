@@ -6,7 +6,7 @@ $(function(){
         break;
         case "Мероприятия": $(menu_links[1]).css({color:"#002a56", backgroundColor: "white"});
         break;
-        case "Команда": $(menu_links[2]).css({color:"#002a56", backgroundColor: "white"});
+        case "Инструктора": $(menu_links[2]).css({color:"#002a56", backgroundColor: "white"});
         break;
         case "Достижения": $(menu_links[3]).css({color:"#002a56", backgroundColor: "white"});
         break;

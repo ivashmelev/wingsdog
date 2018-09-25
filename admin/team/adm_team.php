@@ -1,8 +1,8 @@
 <?php
 session_start();
-if(!$_SESSION['auth']){ //Если не прошла авторизация, то переносит на форму авторизации
-    header("Location: ../auth.php");
-}
+// if(!$_SESSION['auth']){ //Если не прошла авторизация, то переносит на форму авторизации
+//     header("Location: ../auth.php");
+// }
 require_once ("../query_mysql.php");
 require_once ("include_team.php");
 ?>
@@ -23,7 +23,7 @@ require_once ("include_team.php");
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="adm_team.js"></script>
-    <title>Команда</title>
+    <title>Инструктора</title>
 </head>
 <body>
 <div class="container-fluid">
@@ -33,7 +33,7 @@ require_once ("include_team.php");
                 <a class="menu-a" href="../../index.php">Главная</a>
                 <a class="menu-a" href="../../news.php">Мероприятия</a>
                 <a class="menu-a" href="../../photo.php">Фотоальбом</a>
-                <a class="menu-a" href="../../team.php">Команда</a>
+                <a class="menu-a" href="../../team.php">Инструктора</a>
                 <a class="menu-a" href="../../contacts.php">Контакты</a>
             </div>
             <div class="col-lg-6">
@@ -135,6 +135,6 @@ require_once ("include_team.php");
     }
 </script>
 
-<?php echo  "<script> genTeam($data_id ,$count_rows, $data_header, $data_img, $data_text);</script>"?>
+<?php echo  "<script> genTeam($data_id ,$count_rows, $data_header, $data_img, $data_text); console.log($('textarea').text());</script>"?>
 </body>
 </html>
