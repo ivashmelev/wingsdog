@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.3
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Хост: 127.0.0.1:3306
--- Время создания: Сен 06 2018 г., 15:48
--- Версия сервера: 5.6.37
--- Версия PHP: 5.5.38
+-- Хост: 127.0.0.1
+-- Время создания: Сен 25 2018 г., 20:32
+-- Версия сервера: 10.1.35-MariaDB
+-- Версия PHP: 7.2.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `Wingsdog_db`
+-- База данных: `wingsdog_db`
 --
 
 -- --------------------------------------------------------
@@ -40,9 +40,7 @@ CREATE TABLE `attainment` (
 --
 
 INSERT INTO `attainment` (`id`, `header`, `img`, `text`) VALUES
-(1, 'header1', 'img1', 'text1'),
-(2, 'header2', 'img2', 'text2'),
-(3, 'he123', 'img3', 'text3');
+(5, 'Достижение1', 'img-NaN.jpg', 'Текст1');
 
 -- --------------------------------------------------------
 
@@ -73,6 +71,7 @@ INSERT INTO `auth` (`id`, `login`, `password`, `mail`) VALUES
 CREATE TABLE `feedback` (
   `id` int(11) NOT NULL,
   `name` text,
+  `date` text NOT NULL,
   `text` text,
   `mail` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -81,12 +80,10 @@ CREATE TABLE `feedback` (
 -- Дамп данных таблицы `feedback`
 --
 
-INSERT INTO `feedback` (`id`, `name`, `text`, `mail`) VALUES
-(1, '111', '1111', NULL),
-(2, '222', '2222', NULL),
-(3, 'ИВан', 'mail@mail.ru', 'Hello world'),
-(4, 'Сергей', 'Отличный сайт! Просто Десяточка, все предельно понятно и удобно, сотворено чудо', ''),
-(5, 'Артур Пиндосов', 'Заебато, и фотогалерея пиздатая, без тупых альбомов как в вк! Респектую, и мама Артема тоже', 'pindosfuckmom@gamil.gnom');
+INSERT INTO `feedback` (`id`, `name`, `date`, `text`, `mail`) VALUES
+(73, 'name1', '25/09/2018 в 20:45', '1', '1@mail.ru'),
+(74, 'name2', '25/09/2018 в 20:45', 'new2', '1@mail.ru'),
+(75, '', '25/09/2018 в 22:21', '', '');
 
 -- --------------------------------------------------------
 
@@ -107,10 +104,7 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `header`, `date`, `img`, `text`) VALUES
-(1, '456456', '6456-05-04', 'img-1.jpg', '56'),
-(2, 'header 2', 'date 2', 'back-dog.jpg', 'text 2'),
-(16, '12312', '12321-02-13', 'img-16.jpg', '1323'),
-(17, '123', '12.03.3123', 'img-17.jpg', '123');
+(19, 'Мероприятие1', '25.09.2018', 'img-NaN.jpg', 'Текст');
 
 -- --------------------------------------------------------
 
@@ -130,9 +124,8 @@ CREATE TABLE `team` (
 --
 
 INSERT INTO `team` (`id`, `header`, `img`, `text`) VALUES
-(1, 'header1', 'img1', 'text1'),
-(2, 'header2', 'img2', 'text2'),
-(3, 'header3', 'img-17.jpg', 'text3');
+(5, 'Дмитриев Юрий Алексеевич', 'img-5.jpg', 'Действующий инструктор, в кинологии с 1996г., фигурант РКФ - Специалист по рабочим качествам РКФ N3334, помощник судьи в защитном разделе; Подготовка собак по нормативу ЗКС; Постановка на охрану хозяина и территории; Бытовое послушание собак; Корректировка поведения собак.'),
+(6, 'Варначева Елена Андреевна', 'img-6.jpg', 'инструктор-кинолог (спортивное послушание), действующий спортсмен по ОКД и международному нормативу Мондьоринг Личные собаки: малинуа Шерри - дипломы ОКД-1; ВН; квалификация по международному нормативу мондьоринг: - под судейством мадам Доминик Дюпперрэ, Щвейцария, 4 место, 177 баллов - под судейством Williiam Langlois, Франция, 2 место, 196 баллов - под судейством И.Аверин/И.Овсянников, Россия, Гранд При Чемпионата Рссии, 3 место, 196 баллов чемпион УС (полный балл); чемпион КЛЗ; чемпион собака-телохранитель; участник и победитель игровых видов спорта; стаффордширский терьер Макс - участник и призер соревнований УС; неоднократный победитель норматива КЛЗ');
 
 --
 -- Индексы сохранённых таблиц
@@ -176,27 +169,32 @@ ALTER TABLE `team`
 -- AUTO_INCREMENT для таблицы `attainment`
 --
 ALTER TABLE `attainment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT для таблицы `auth`
 --
 ALTER TABLE `auth`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT для таблицы `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
+
 --
 -- AUTO_INCREMENT для таблицы `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
 --
 -- AUTO_INCREMENT для таблицы `team`
 --
 ALTER TABLE `team`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
