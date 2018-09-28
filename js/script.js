@@ -38,6 +38,7 @@ $(function(){
     // else{
     //     console.log(false);
     // }
+    
 
 });
 function showMenu(){

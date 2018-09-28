@@ -14,7 +14,14 @@ $(function(){
     }
 
 
-    
+    $("#accordion").keydown(function(event){
+        let areaText;
+        if(event.keyCode == 13){
+            console.log(event.keyCode);
+            textArea=document.getElementById("InputText1");
+            textArea.value += '<br>';
+        }
+    });
 
     // $("textarea").keydown(function(event){
     //     console.log("run");

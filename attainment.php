@@ -200,7 +200,22 @@
                 // block_news.append(content);
             }
         console.log(count, header, img, text);
+        replaceForHead();
     }
+    function replaceForHead(){
+            let text;
+            let arr_text=[]; 
+            arr_text=Array.from($(".text-p"));
+            console.log($(arr_text[1]).text());
+
+            for(i=0; i<arr_text.length; i++){
+                while($(arr_text[i]).text().indexOf("<br>")!=-1){
+                    new_text=$(arr_text[i]).text();//.//replace("-n-");
+                    $(arr_text[i]).html("<p>"+new_text+"</p>");
+                    console.log(false);
+                }
+            }
+        }
     </script>
 
     <?php echo  "<script> genAttainment($count_rows, $data_header, $data_img, $data_text);</script>"?>

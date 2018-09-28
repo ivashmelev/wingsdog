@@ -14,6 +14,14 @@ $(function(){
         break;
     }
 
+    $("#accordion").keydown(function(event){
+        if(event.keyCode == 13){
+            console.log(event.keyCode);
+            textArea=document.getElementById("InputText1");
+            textArea.value += '<br>';
+        }
+    });
+
     // function genNews(count=0){
     //     for(i=0; i<count; i++){
     //         block_news=$("body");

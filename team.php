@@ -197,8 +197,8 @@
             console.log($(arr_text[1]).text());
 
             for(i=0; i<arr_text.length; i++){
-                while($(arr_text[i]).text().indexOf("-br-")!=-1){
-                    new_text=$(arr_text[i]).text().replace("-br-", "<br>");
+                while($(arr_text[i]).text().indexOf("<br>")!=-1){
+                    new_text=$(arr_text[i]).text();//.//replace("-n-");
                     $(arr_text[i]).html("<p>"+new_text+"</p>");
                     console.log(false);
                 }
