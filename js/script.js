@@ -1,4 +1,11 @@
 $(function(){
+    // $(window).scroll(function(){
+    //     $(".text-p, .text-photo").css({opacity:1});
+    // });
+
+    $(".text-p").animate({opacity:1}, 1000);
+
+
     loc=document.title;
     menu_links=Array.from($(".menu-links-item"));
     switch(loc){

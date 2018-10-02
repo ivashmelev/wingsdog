@@ -32,10 +32,13 @@
     font-family: Roboto;	
     font-size: 18px;	
     letter-spacing: 0.2px;
+    transition: 0.5s;
+
 }
 
 .menu-item:hover{
     /* color: #002a56; */
+    transition: 0.5s;
     background-color: #ffffff;
 }
 .menu:after{

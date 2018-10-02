@@ -14,6 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/news.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/script.js"></script>
     <title>Мероприятия</title>
 </head>
 <body>
