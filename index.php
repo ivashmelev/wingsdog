@@ -132,18 +132,18 @@
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
-                        <h2 class="head-h2" style="text-align: center">Развитие навыков и соревнования</h2>
+                        <h2 class="head-h2" style="text-align: center">Мероприятия и дрессировка</h2>
                     </div>
                 </div>
                 <div class="content-text">
                     <div class="row justify-content-center">
                         <div class="col-xl-3 col-lg-3 col-md-8 ">
-                            <div class="text-photo" id="main_img3">
+                            <div class="text-photo" id="main_img4">
                                 
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-8 order-lg-first">
-                            <p class="text-p">Мероприятия и дрессировка<br>
+                            <p class="text-p">
  - соревнования<br>
  - выставки<br>
  - семинары <br>
@@ -154,7 +154,7 @@
                 <div class="content-text">
                     <div class="row justify-content-center">
                         <div class="col-xl-3 col-lg-3 col-md-8">
-                            <div class="text-photo" id="main_img4">
+                            <div class="text-photo" id="main_img3">
 
                             </div>
                         </div>

@@ -30,10 +30,10 @@ window.onload = function(){
           //   jQuery("#geo-mail-2").text(" mail@1ditis.ru ");
           // }
           
-          
-        var uluru = {lat: 61.6499039, lng: 50.8385643};
+          // 56.4048441,43.6863186,13.75z
+        var uluru = {lat: 56.4048441, lng: 43.7193186};
         var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 10,
+        zoom: 13,
         center: uluru,
         styles:[
             {

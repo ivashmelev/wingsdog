@@ -35,7 +35,7 @@
         
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 col-md-5 col-sm-9">
+                                        <div class="col-lg-6 col-md-8 col-sm-9">
                                             <div class="header__text">
                                                 <p class="head-text">Нижегородская региональная общественная организация <br>кинологический клуб "Крылатый Пёс"</p>
                                             </div>
