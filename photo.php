@@ -80,7 +80,7 @@
                 </div>
             </div>
         </div>
-        <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
+        <!-- <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
                 <div class="carousel-close">
                     <label class="carousel-label"></label>
                     <label class="carousel-label"></label>
@@ -104,34 +104,33 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
+        </div> -->
+        <div class="carousel-photo">
+            <div class="carousel_content">
+                <!-- <div class="carousel_content-photo">
+                    <img src="img/img1.jpg" alt="">
+                </div>-->
             </div>
+            <div class="carousel_button-close" id="button-close"></div>
+            <div class="carousel_button button-left" id="button-left"></div>
+            <div class="carousel_button button-right" id="button-right"></div>
+        </div>
+
         <div class="content-photo">
             <div class="container-fluid">
                 <div class="photo-galary">
                     <div class="block-photo">
                         <div class="row">
                             <div class="col-lg-6">
-                                <div class="photo">
-                                    <img src="img/news1.jpg" alt="">
+                                <div class="photo" id="album-1">
+                                    <img src="new/img/img1.jpg" alt="">
+                                    <div class="context">Альбом</div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="photo">
-                                    <img src="img/news1.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="block-photo">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="photo">
-                                    <img src="img/news1.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="photo">
-                                    <img src="img/news1.jpg" alt="">
+                                <div class="photo" id="album-2">
+                                    <img src="new/img/img2.jpg" alt="">
+                                    <div class="context">Альбом</div>
                                 </div>
                             </div>
                         </div>
@@ -139,13 +138,15 @@
                     <div class="block-photo">
                         <div class="row">
                             <div class="col-lg-6">
-                                <div class="photo">
-                                    <img src="img/news1.jpg" alt="">
+                                <div class="photo" id="album-3">
+                                    <img src="new/img/img3.jpg" alt="">
+                                    <div class="context">Альбом</div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="photo">
-                                    <img src="img/news1.jpg" alt="">
+                                <div class="photo" id="album-4">
+                                    <img src="new/img/img4.jpg" alt="">
+                                    <div class="context">Альбом</div>
                                 </div>
                             </div>
                         </div>
