@@ -69,6 +69,15 @@
                 </div>
             </div>
         </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="news">
+                        <h5><a href="photo/index.php">Фотоальбом</a></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 </body>
