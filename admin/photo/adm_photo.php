@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once ("../query_mysql.php"); 
-require_once ("include_albom.php");
+require_once ("include_photo.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -50,37 +50,26 @@ require_once ("include_albom.php");
         </div>
         <div class="content">
           <div class="row" id="content">
-            
-
             <!-- <div class="col-xl-3 col-lg-4 col-md-6">
-              <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
+              <div class="photo">
+                <img src="../../img/img-5.jpg">
               </div>
             </div> -->
           </div>
         </div>
         <script>
-          function genAlbom(id=0, count=0, name="", text=""){
-            for(i=0; i<count; i++){
-              block_albom = $("#content");
-              content = `<div class="col-xl-3 col-lg-4 col-md-6">
-                          <div class="card" style="width: 18rem;">
-                            <div class="card-body" id="`+id[i]+`">
-                              <h5 class="card-title">`+name[i]+`</h5>
-                              <p class="card-text">`+text[i]+`</p>
-                              <a href="adm_photo.php?id=`+id[i]+`&albom=`+name[i]+`" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                          </div>
-                        </div>`;
-              block_albom.append(content);
+            function genPhoto(id=0, count=0, path=""){
+                for(i=0; i<count; i++){
+                    block_photo = $("#content");
+                    content = `<div class="col-xl-3 col-lg-4 col-md-6">
+                                    <div class="photo-adm" id="photo-`+id[i]+`">
+                                        <img src="`+path[i]+`">
+                                    </div>
+                                </div>`;
+                    block_photo.append(content);
+                }
             }
-          }
         </script>
 
-        <?php echo "<script> genAlbom($data_id, $count_rows, $data_name, $data_text); </script>";?>
+        <?php echo "<script> genPhoto($data_id, $count_rows, $data_path);</script>" ?>
     </div>
