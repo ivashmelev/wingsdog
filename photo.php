@@ -1,3 +1,48 @@
+<?php
+require_once ("admin/query_mysql.php");
+require_once ("connection.php");
+
+$link=mysqli_connect($host, $user, $password, $database) or die("Error".mysqli_error($link));
+
+$query_albom = mysqli_query($link, "SELECT * FROM albom") or die("Error".mysqli_error($link));
+$query_photo = mysqli_query($link, "SELECT * FROM photo") or die("Error".mysqli_error($link));
+
+$data_albom_id=array();
+$data_albom_name=array();
+$data_albom_text=array();
+$data_photo_id=array();
+$data_photo_name=array();
+$data_photo_path=array();
+
+$count_albom_rows=mysqli_num_rows($query_albom);
+$count_albom_fields=mysqli_num_fields($query_albom);
+$count_photo_rows=mysqli_num_rows($query_photo);
+$count_photo_fields=mysqli_num_fields($query_photo);
+
+while ($row_albom = mysqli_fetch_array($query_albom)){
+  array_push($data_albom_id, $row_albom["id"]);
+  array_push($data_albom_name, $row_albom["name"]);
+  array_push($data_albom_text, $row_albom['text']);
+}
+
+while ($row_photo = mysqli_fetch_array($query_photo)){
+    array_push($data_photo_id, $row_photo["id"]);
+    array_push($data_photo_name, $row_photo["name"]);
+    array_push($data_photo_path, $row_photo['path']);
+}
+
+$data_albom_id=json_encode($data_albom_id);
+$data_albom_name=json_encode($data_albom_name);
+$data_albom_text=json_encode($data_albom_path);
+$data_photo_id=json_encode($data_photo_id);
+$data_photo_name=json_encode($data_photo_name);
+$data_photo_path=json_encode($data_photo_path);
+
+// $count_albom = ceil($count_albom_rows/2);
+$count_albom = ceil($count_albom_rows/2);
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -119,8 +164,8 @@
         <div class="content-photo">
             <div class="container-fluid">
                 <div class="photo-galary">
-                    <div class="block-photo">
-                        <div class="row">
+                    <!-- <div class="block-photo"> -->
+                        <!-- <div class="row">
                             <div class="col-lg-6">
                                 <div class="photo" id="album-1">
                                     <img src="new/img/img1.jpg" alt="">
@@ -133,10 +178,10 @@
                                     <div class="context">Альбом</div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="block-photo">
-                        <div class="row">
+                        </div> -->
+                    <!-- </div> -->
+                    <!-- <div class="block-photo"> -->
+                        <!-- <div class="row">
                             <div class="col-lg-6">
                                 <div class="photo" id="album-3">
                                     <img src="new/img/img3.jpg" alt="">
@@ -149,8 +194,8 @@
                                     <div class="context">Альбом</div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </div> -->
+                    <!-- </div> -->
                 </div>
             </div>
         </div>
@@ -186,5 +231,29 @@
             </div>
         </div>
     </div>
+    <script>
+        function genPhoto(countAlbom, data_albom_name){
+            photoGalary = $(".photo-galary");
+            for(i=0; i<countAlbom; i++){
+                content=`<div class="col-lg-6">
+                                    <div class="photo" id="`+data_albom_name[i]+`">
+                                        <img src="new/img/img1.jpg" alt="">
+                                        <div class="context">Альбом</div>
+                                    </div>
+                                </div>`;
+                $(photoGalary).append("<div class='row' id=row-"+i+"></div>");
+                // if(i%2){
+                    for(j=0; j<=2; j++){
+                        $("#row-"+j).append(content);
+                    }
+                // }
+            }
+            
+            
+        }
+    </script>
 </body>
 </html>
+<?php
+    echo "<script> genPhoto($count_albom, $data_albom_name); </script>";
+?>
