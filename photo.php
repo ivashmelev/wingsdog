@@ -33,13 +33,13 @@ while ($row_photo = mysqli_fetch_array($query_photo)){
 
 $data_albom_id=json_encode($data_albom_id);
 $data_albom_name=json_encode($data_albom_name);
-$data_albom_text=json_encode($data_albom_path);
+$data_albom_text=json_encode($data_albom_text);
 $data_photo_id=json_encode($data_photo_id);
 $data_photo_name=json_encode($data_photo_name);
 $data_photo_path=json_encode($data_photo_path);
 
 // $count_albom = ceil($count_albom_rows/2);
-$count_albom = ceil($count_albom_rows/2);
+$count_albom = $count_albom_rows;
 
 
 ?>
@@ -232,28 +232,35 @@ $count_albom = ceil($count_albom_rows/2);
         </div>
     </div>
     <script>
-        function genPhoto(countAlbom, data_albom_name){
-            photoGalary = $(".photo-galary");
+        function genPhoto(countAlbom, dataAlbomName, dataAlbomText){
+
+            let photoGalary = $(".photo-galary");
             for(i=0; i<countAlbom; i++){
                 content=`<div class="col-lg-6">
-                                    <div class="photo" id="`+data_albom_name[i]+`">
+                                    <div class="photo" id="`+dataAlbomName[i]+`">
                                         <img src="new/img/img1.jpg" alt="">
-                                        <div class="context">Альбом</div>
+                                        <div class="context">
+                                            <b>`+dataAlbomName[i]+`</b>
+                                            <p style="font-size:11px;"><i>`+dataAlbomText[i]+`</i></p>
+                                        </div>
                                     </div>
                                 </div>`;
                 $(photoGalary).append("<div class='row' id=row-"+i+"></div>");
-                // if(i%2){
-                    for(j=0; j<=2; j++){
-                        $("#row-"+j).append(content);
-                    }
-                // }
+                if(i%2==0){
+                    $("#row-"+i).append(content);
+                }else{
+                    j=i-1;
+                    $("#row-"+j).append(content);
+                }
             }
-            
-            
         }
     </script>
 </body>
 </html>
 <?php
-    echo "<script> genPhoto($count_albom, $data_albom_name); </script>";
+    echo "<script>
+        let dataAlbomName = $data_albom_name;
+        let dataPhotoName = $data_photo_name;
+        genPhoto($count_albom, $data_albom_name, $data_albom_text); 
+    </script>";
 ?>
