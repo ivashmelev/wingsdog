@@ -21,7 +21,8 @@ $(document).ready(function(){
         $("#"+dataAlbomName[i]).click(function(e){
             index=$(this).prop("id");
             console.log(index);
-            startCarousel(index, dataPhotoName);        
+            console.log(dataPhotoName);
+            startCarousel(index, dataPhotoName[index]);        
         });
     }
 

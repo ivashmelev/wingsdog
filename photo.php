@@ -232,13 +232,14 @@ $count_albom = $count_albom_rows;
         </div>
     </div>
     <script>
-        function genPhoto(countAlbom, dataAlbomName, dataAlbomText){
+        function genPhoto(countAlbom, dataAlbomName, dataAlbomText, preview){
 
             let photoGalary = $(".photo-galary");
+            console.log(preview);
             for(i=0; i<countAlbom; i++){
                 content=`<div class="col-lg-6">
                                     <div class="photo" id="`+dataAlbomName[i]+`">
-                                        <img src="new/img/img1.jpg" alt="">
+                                        <img src="img/album-`+dataAlbomName[i]+`/`+preview[dataAlbomName[i]][0]+`" alt="">
                                         <div class="context">
                                             <b>`+dataAlbomName[i]+`</b>
                                             <p style="font-size:11px;"><i>`+dataAlbomText[i]+`</i></p>
@@ -259,8 +260,22 @@ $count_albom = $count_albom_rows;
 </html>
 <?php
     echo "<script>
-        let dataAlbomName = $data_albom_name;
-        let dataPhotoName = $data_photo_name;
-        genPhoto($count_albom, $data_albom_name, $data_albom_text); 
+    let dataAlbomName = $data_albom_name;
+    let dataPhotoPath = $data_photo_path;
     </script>";
-?>
+    
+    $data_albom_name = json_decode($data_albom_name);
+    $mass = array();
+    for($i=0; $i<count($data_albom_name); $i++){
+        $mass[$data_albom_name[$i]]=scandir("img/album-$data_albom_name[$i]");
+        $mass[$data_albom_name[$i]]=array_slice($mass[$data_albom_name[$i]], 2);
+    }
+
+    $mass = json_encode($mass);
+    $data_albom_name=json_encode($data_albom_name);
+
+    echo "<script> 
+    let dataPhotoName = $mass;
+    genPhoto($count_albom, $data_albom_name, $data_albom_text, $mass); 
+    </script>";
+    ?>
