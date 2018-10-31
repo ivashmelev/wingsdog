@@ -54,7 +54,13 @@ require_once ("include_albom.php");
 
             <!-- <div class="col-xl-3 col-lg-4 col-md-6">
               <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="row">
+                  <div class="col-xl-6 col-lg-6 col-md-6">
+                    <button type="button" class="btn btn-danger">
+                        <div class="btn-del"></div>
+                    </button>
+                  </div>
+                </div>
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -70,10 +76,16 @@ require_once ("include_albom.php");
               block_albom = $("#content");
               content = `<div class="col-xl-3 col-lg-4 col-md-6">
                           <div class="card" style="width: 18rem;">
+                              <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-6">
+                                  <button type="button" class="btn btn-danger">
+                                      <div class="btn-del" id="btn-del-`+id[i]+`"></div>
+                                  </button>
+                                </div>
                             <div class="card-body" id="`+id[i]+`">
                               <h5 class="card-title">`+name[i]+`</h5>
                               <p class="card-text">`+text[i]+`</p>
-                              <a href="adm_photo.php?id=`+id[i]+`&albom=`+name[i]+`" class="btn btn-primary">Go somewhere</a>
+                              <a style="text-align: center;" href="adm_photo.php?id=`+id[i]+`&albom=`+name[i]+`" class="btn btn-primary">Просмотреть</a>
                             </div>
                           </div>
                         </div>`;

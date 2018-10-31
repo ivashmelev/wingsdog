@@ -201,6 +201,8 @@ html{
     position: relative;
     cursor: pointer;
     margin: 15px;
+    overflow: hidden;
+    height: 240px;
 }
 
 .photo:hover .context{
@@ -312,8 +314,8 @@ html{
 }
 
 .carousel_content-photo img{
-    max-width: 1280px;
-    width: 100%;
+    /* max-width: 1280px;
+    width: 100%; */
     position: absolute;
     top: 0;
     bottom: 0;

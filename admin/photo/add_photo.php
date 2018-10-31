@@ -16,7 +16,7 @@ $text=strip_tags(htmlentities($_POST['text']));
 // $date=explode("-", $date);
 // $date="$date[2].$date[1].$date[0]";
 
-$path="../../img/album-$albom/";
+$path="../../img/album-$id/";
 $time = time();
 $ext=array_pop(explode('.', $_FILES['img']['name']));
 $new_name="img-$time.$ext";

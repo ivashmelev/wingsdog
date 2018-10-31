@@ -112,7 +112,19 @@
     background-size: cover;
     width: 24px;
     height: 24px;
+    
 }
+/* .btn-danger{
+    box-shadow: 0px 4px 0px 0px #7e222b;
+}
+
+.btn-primary{
+    box-shadow: 0px 4px 0px 0px #0157b3;
+}
+
+.btn-success{
+    box-shadow: 0px 4px 0px 0px #1c7531;
+} */
 
 .btn-back{
     background-image: url('../img/ico/back-track.svg');
@@ -176,5 +188,19 @@
     border-radius: 0;
 }
 
+.card-title{
+    line-height: 38px;
+    text-align: center;
+    font-family: "Rewi";
+}
+
+.card-text{
+    
+    text-align: center;
+}
+
+.card-body{
+
+}
 
 

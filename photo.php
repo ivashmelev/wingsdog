@@ -232,14 +232,14 @@ $count_albom = $count_albom_rows;
         </div>
     </div>
     <script>
-        function genPhoto(countAlbom, dataAlbomName, dataAlbomText, preview){
+        function genPhoto(countAlbom, dataAlbomId, dataAlbomName, dataAlbomText, preview){
 
             let photoGalary = $(".photo-galary");
-            console.log(preview);
+            console.log(countAlbom);
             for(i=0; i<countAlbom; i++){
                 content=`<div class="col-lg-6">
-                                    <div class="photo" id="`+dataAlbomName[i]+`">
-                                        <img src="img/album-`+dataAlbomName[i]+`/`+preview[dataAlbomName[i]][0]+`" alt="">
+                                    <div class="photo" id="`+dataAlbomId[i]+`">
+                                        <img src="img/album-`+dataAlbomId[i]+`/`+preview[dataAlbomId[i][0]]+`" alt="">
                                         <div class="context">
                                             <b>`+dataAlbomName[i]+`</b>
                                             <p style="font-size:11px;"><i>`+dataAlbomText[i]+`</i></p>
@@ -262,20 +262,21 @@ $count_albom = $count_albom_rows;
     echo "<script>
     let dataAlbomName = $data_albom_name;
     let dataPhotoPath = $data_photo_path;
+    let dataAlbomId = $data_albom_id;
     </script>";
     
-    $data_albom_name = json_decode($data_albom_name);
+    $data_albom_id = json_decode($data_albom_id);
     $mass = array();
     for($i=0; $i<count($data_albom_name); $i++){
-        $mass[$data_albom_name[$i]]=scandir("img/album-$data_albom_name[$i]");
-        $mass[$data_albom_name[$i]]=array_slice($mass[$data_albom_name[$i]], 2);
+        $mass[$data_albom_id[$i]]=scandir("img/album-$data_albom_id[$i]");
+        $mass[$data_albom_id[$i]]=array_slice($mass[$data_albom_id[$i]], 2);
     }
 
     $mass = json_encode($mass);
-    $data_albom_name=json_encode($data_albom_name);
+    $data_albom_id=json_encode($data_albom_id);
 
     echo "<script> 
     let dataPhotoName = $mass;
-    genPhoto($count_albom, $data_albom_name, $data_albom_text, $mass); 
+    genPhoto($count_albom, $data_albom_id, $data_albom_name, $data_albom_text, $mass); 
     </script>";
     ?>

@@ -2,6 +2,11 @@
 session_start();
 require_once ("../query_mysql.php"); 
 require_once ("include_photo.php");
+if($_GET["id"]!=null && $_GET["albom"]!=null){
+
+}else{
+    header("Location: index.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

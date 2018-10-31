@@ -17,8 +17,8 @@ $(document).ready(function(){
     }
 
     console.log(dataPhotoName);
-    for(i in dataAlbomName){
-        $("#"+dataAlbomName[i]).click(function(e){
+    for(i in dataAlbomId){
+        $("#"+dataAlbomId[i]).click(function(e){
             index=$(this).prop("id");
             console.log(index);
             console.log(dataPhotoName);
