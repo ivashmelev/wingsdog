@@ -46,6 +46,19 @@ $(function(){
     //     console.log(false);
     // }
     
+    
+    $("right").replaceWith(function(){
+        return `<p class="text-p" style="opacity:1;" align="right">`+$(this).text()+`</p>`;
+    });
+    $("center").replaceWith(function(){
+        return `<p class="text-p" style="opacity:1;" align="center">`+$(this).text()+`</p>`;
+    });
+    $("left").replaceWith(function(){
+        return `<p class="text-p" style="opacity:1;" align="left">`+$(this).text()+`</p>`;
+    });
+    $("justify").replaceWith(function(){
+        return `<p class="text-p" style="opacity:1;" align="justify">`+$(this).text()+`</p>`;
+    });
 
 });
 function showMenu(){
@@ -58,5 +71,6 @@ function showMenu(){
     }
 
 }
+
 
 

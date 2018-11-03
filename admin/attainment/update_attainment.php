@@ -10,8 +10,9 @@ require_once ("../query_mysql.php");
 $id=strip_tags(htmlentities($_POST['id']));
 $header=strip_tags(htmlentities($_POST['header']));
 // $img=strip_tags(htmlentities($_POST['img']));
-$text=strip_tags(htmlentities($_POST['text']));
-
+// </b><i><u><left><center><right><justify>
+$text=strip_tags($_POST['text'], "<b><i><u><left><center><right><justify>");
+// $text=$_POST["text"];
 $date;
 $date=explode("-", $date);
 $date="$date[2].$date[1].$date[0]";

@@ -9,7 +9,8 @@ $id=strip_tags(htmlentities($_POST['id']));
 $header=strip_tags(htmlentities($_POST['header']));
 $date=strip_tags(htmlentities($_POST['date']));
 // $img=strip_tags(htmlentities($_POST['img']));
-$text=strip_tags(htmlentities($_POST['text']));
+// $text=strip_tags(htmlentities($_POST['text']));
+$text=strip_tags($_POST['text'], "<b><i><u><left><center><right><justify>");
 
 $date;
 $date=explode("-", $date);

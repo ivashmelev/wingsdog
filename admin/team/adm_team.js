@@ -14,14 +14,14 @@ $(function(){
     }
 
 
-    $("#accordion").keydown(function(event){
-        let areaText;
-        if(event.keyCode == 13){
-            console.log(event.keyCode);
-            textArea=document.getElementById("InputText1");
-            textArea.value += '<br>';
-        }
-    });
+    // $("#accordion").keydown(function(event){
+    //     let areaText;
+    //     if(event.keyCode == 13){
+    //         console.log(event.keyCode);
+    //         textArea=document.getElementById("InputText1");
+    //         textArea.value += '<br>';
+    //     }
+    // });
 
     // $("textarea").keydown(function(event){
     //     console.log("run");
@@ -55,7 +55,12 @@ $(function(){
     });
 
     function clickEdit(id=0, url, header='header', date='date', img='img', text='text'){
-        content='<div class="card-body"> <div class="container-fluid"> <div class="element-team"> <div class="row"> <div class="col-lg-4"> <form method="POST" action="'+url+'" enctype="multipart/form-data"> <div class="form-group"> <label for="InputHeader1">Заголовок</label> <input type="hidden" name="id" value="'+id+'"><input type="text" class="form-control" name="header" id="InputHeader1" aria-describedby="headerHelp" placeholder="Введите заголовок. . ." value='+localStorage.getItem("head")+' size=50 required> <div class="valid-feedback">Good!</div> <div class="invalid-feedback">Bad!</div> </div> <div class="form-group col-lg-6" style="padding-left: 0px;"> <label for="InputImg">Изображение</label> <div class="input-group"> <div class="custom-file"> <input type="file" class="custom-file-input" name="img" id="InputImg" required> <label class="custom-file-label" for="inputGroupFile04">Выберите файл. . .</label> <div class="valid-feedback">Good!</div> <div class="invalid-feedback">Bad!</div> </div> <div class="input-group-append"> <button class="btn btn-outline-secondary" style="margin-left:0px;" type="button">Загрузить</button> </div> </div> </div> <div class="form-group"> <label for="InputText1">Текст</label> <textarea class="form-control" name="text" id="InputText1" rows="9" placeholder="Введите текст. . ." required>'+localStorage.getItem("text")+'</textarea> <div class="valid-feedback">Good!</div> <div class="invalid-feedback">Bad!</div> </div> <button type="submit" class="btn btn-primary" style="margin-left:0px;"> <div class="btn-ok"></div> </button> <button type="button" id="btn-close-edit" class="btn btn-danger" onclick="clickClose()")> <div class="btn-del" ></div> </button> </form> </div> </div> </div> </div> </div>';
+        content='<div class="card-body"> <div class="container-fluid"> <div class="element-team"> <div class="row"> <div class="col-lg-8 col-xl-8"> <form method="POST" action="'+url+'" enctype="multipart/form-data"> <div class="form-group"> <label for="InputHeader1">Заголовок</label> <input type="hidden" name="id" value="'+id+'"><input type="text" class="form-control" name="header" id="InputHeader1" aria-describedby="headerHelp" placeholder="Введите заголовок. . ." value='+localStorage.getItem("head")+' size=50 required> <div class="valid-feedback">Good!</div> <div class="invalid-feedback">Bad!</div> </div> <div class="form-group col-lg-6" style="padding-left: 0px;"> <label for="InputImg">Изображение</label> <div class="input-group"> <div class="custom-file"> <input type="file" class="custom-file-input" name="img" id="InputImg" required> <label class="custom-file-label" for="inputGroupFile04">Выберите файл. . .</label> <div class="valid-feedback">Good!</div> <div class="invalid-feedback">Bad!</div> </div> <div class="input-group-append"> <button class="btn btn-outline-secondary" style="margin-left:0px;" type="button">Загрузить</button> </div> </div> </div> <div class="form-group"> <label for="InputText1">Текст</label> <textarea class="form-control" name="text" id="InputText1" rows="9" placeholder="Введите текст. . ." required>'+localStorage.getItem("text")+'</textarea> <div class="valid-feedback">Good!</div> <div class="invalid-feedback">Bad!</div> </div> <button type="submit" class="btn btn-primary" style="margin-left:0px;"> <div class="btn-ok"></div> </button> <button type="button" id="btn-close-edit" class="btn btn-danger" onclick="clickClose()")> <div class="btn-del" ></div> </button> </form> </div> </div> </div> </div> </div>';
+        return content;
+    }
+
+    function clickAdd(id=0, url, header='header', date='date', img='img', text='text'){
+        content='<div class="card-body"> <div class="container-fluid"> <div class="element-team"> <div class="row"> <div class="col-lg-8 col-xl-8"> <form method="POST" action="'+url+'" enctype="multipart/form-data"> <div class="form-group"> <label for="InputHeader1">Заголовок</label> <input type="hidden" name="id" value="'+id+'"><input type="text" class="form-control" name="header" id="InputHeader1" aria-describedby="headerHelp" placeholder="Введите заголовок. . ." size=50 required> <div class="valid-feedback">Good!</div> <div class="invalid-feedback">Bad!</div> </div> <div class="form-group col-lg-6" style="padding-left: 0px;"> <label for="InputImg">Изображение</label> <div class="input-group"> <div class="custom-file"> <input type="file" class="custom-file-input" name="img" id="InputImg" required> <label class="custom-file-label" for="inputGroupFile04">Выберите файл. . .</label> <div class="valid-feedback">Good!</div> <div class="invalid-feedback">Bad!</div> </div> <div class="input-group-append"> <button class="btn btn-outline-secondary" style="margin-left:0px;" type="button">Загрузить</button> </div> </div> </div> <div class="form-group"> <label for="InputText1">Текст</label> <textarea class="form-control" name="text" id="InputText1" rows="9" placeholder="Введите текст. . ." required></textarea> <div class="valid-feedback">Good!</div> <div class="invalid-feedback">Bad!</div> </div> <button type="submit" class="btn btn-primary" style="margin-left:0px;"> <div class="btn-ok"></div> </button> <button type="button" id="btn-close-edit" class="btn btn-danger" onclick="clickClose()")> <div class="btn-del" ></div> </button> </form> </div> </div> </div> </div> </div>';
         return content;
     }
 
@@ -72,7 +77,7 @@ $(function(){
         num=id.split("-");
         localStorage.setItem("id", parseInt(num[num.length-1])+1);
         console.log(num[num.length-1]);
-        $("#accordion").append(clickEdit(localStorage.getItem('id'), "add_team.php"));
+        $("#accordion").append(clickAdd(localStorage.getItem('id'), "add_team.php"));
 
     });
 

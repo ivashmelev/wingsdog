@@ -23,6 +23,7 @@ require_once ("include_attainment.php");
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="adm_attainment.js"></script>
+    <script src="../../js/textarea_panel.js"></script>
     <title>Достижения</title>
 </head>
 <body>
@@ -64,7 +65,7 @@ require_once ("include_attainment.php");
 <!--    </div>-->
 <!--
 <!--    <div id="collapseOne" class="collapse" aria-labelledby="heading10" data-parent="#accordion">-->
-<!--        <div class="card-body">-->
+       <!-- <div class="card-body">-->
 <!--            <div class="container-fluid">-->
 <!--                <div class="element-news">-->
 <!--                    <div class="row">-->
@@ -113,10 +114,24 @@ require_once ("include_attainment.php");
 <!--                    </div>-->
 <!--                </div>-->
 <!--            </div>-->
-<!--        </div>-->
+<!--        </div> -->
 <!--    </div>-->
 <!--</div>-->
 <!--</div>-->
+<!-- <div class="col-lg-8 col-xl-8">
+    <div class="btn custom" id="bold"><b>Ж</b></div>
+    <div class="btn custom" id="italics"><i>К</i></div>
+    <div class="btn custom" id="underline"><u>Ч</u></div>
+
+    <div style="margin-left: 10%;" class="btn custom" id="left">Слева</div>
+    <div class="btn custom" id="center">Центр</div>
+    <div class="btn custom" id="right">Справа</div>
+    <div class="btn custom" id="justify">По ширине</div>
+    
+
+    <textarea class="form-control" name="text" id="textarea" rows="9" placeholder="Введите текст. . ." required></textarea>
+</div> -->
+
 
 
 

@@ -260,6 +260,10 @@ $count_albom = $count_albom_rows;
                 }
             }
         }
+        function emptyAlboms(){
+            let photoGalary = $(".photo-galary");
+            $(photoGalary).append(`<h1 style="text-align: center; color: #b1abab61; margin: 25%; font-family:'Rewi'; ">На данный момент нет альбомов</h1>`);
+        }
     </script>
 </body>
 </html>
@@ -281,6 +285,11 @@ $count_albom = $count_albom_rows;
     $data_albom_id=json_encode($data_albom_id);
     echo "<script> 
     let dataPhotoName = $mass;
-    genPhoto($count_albom, $data_albom_id, $data_albom_name, $data_albom_text, $mass); 
+    if($count_albom>0){
+        genPhoto($count_albom, $data_albom_id, $data_albom_name, $data_albom_text, $mass); 
+    }
+    else{
+        emptyAlboms();
+    }
     </script>";
     ?>

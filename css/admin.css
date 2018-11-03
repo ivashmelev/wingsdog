@@ -65,6 +65,7 @@
 .adm-text-p{
     font-family: "Roboto";
     font-size: 18px;
+    white-space: pre-wrap;
 }
 
 .adm-subtext{
@@ -203,4 +204,10 @@
 
 }
 
-
+.custom{
+    margin: 2px;
+    border-radius: 0;
+    border-color: #000000;
+    padding: 1px 6px;
+    background-color: white;
+}

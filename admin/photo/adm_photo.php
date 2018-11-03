@@ -70,6 +70,9 @@ if($_GET["id"]!=null && $_GET["albom"]!=null){
                                     <div class="photo-adm" id="photo-`+id[i]+`">
                                         <img src="`+path[i]+`">
                                     </div>
+                                    <button type="button" class="btn btn-danger">
+                                      <div class="btn-del" id="btn-del-`+id[i]+`"></div>
+                                    </button>
                                 </div>`;
                     block_photo.append(content);
                 }
