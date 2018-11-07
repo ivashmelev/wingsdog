@@ -1,3 +1,13 @@
+<?php
+require_once("connection.php");
+$link = mysqli_connect($host, $user, $password, $database) or die("Ошибка".mysqli_error($link));
+$select_contacts = mysqli_query($link, "SELECT * from contacts") or die("Error".mysqli_error($link));
+$row = mysqli_fetch_array($select_contacts);
+$name = $row["name"];
+$phone = $row["phone"];
+$mail = $row["mail"];
+$addres = $row["addres"];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +31,10 @@
     <title>Крылатый Пёс</title>
 </head>
 <body>
+    <?php
+        echo "$name, $phone, $mail, $addres";
+        echo "<script> name = $name; phone = $phone; mail = $mail; addres = $addres; </script>";
+    ?>
     <div class="wrapper">
         <div class="header">
             <div class="container-fluid">
@@ -35,15 +49,15 @@
                                 </div>
                                 <div class="col-lg-6 col-md-8 col-sm-9">
                                     <div class="header__text">
-                                        <p class="head-text">Нижегородская региональная общественная организация<br>кинологический клуб "Крылатый Пёс"</p>
+                                        <p class="head-text"><?php echo $row["name"];?></p>
                                     </div>
                                 </div>
                                 <!-- <div class="col-lg-3">
                                 </div> -->
                                 <div class="col">
                                     <div class="header__text text_phone">
-                                        <p class="head-text">тел.&nbsp;8&nbsp;(831)&nbsp;298&nbsp;14&nbsp;88</p>
-                                        <p class="head-text">e-mail: info@mysite.ru</p>
+                                        <p class="head-text">тел. <?php echo $row["phone"];?></p>
+                                        <p class="head-text">e-mail: <?php echo $row["mail"];?></p>
                                     </div>
                                 </div>
                             </div>
@@ -205,6 +219,20 @@
             </div>
         </div>
     </div>
+    <script>
+        function writeContacts(name, phone, mail, addres){
+            console.log(1);
+            localStorage.setItem("name", name);
+            localStorage.setItem("phone", phone);
+            localStorage.setItem("mail", mail);
+            localStorage.setItem("addres", addres);            
+        }
+        writeContacts(name, phone, mail, addres);
+    </script>
+    <?php
+        echo "$name, $phone, $mail, $addres";
+        echo `<script>  writeContacts($name, $phone, $mail, $addres);</script>`;
+    ?>
     <!-- <div class="container-fluid">
     <form>
         <div class="form-row">

@@ -211,3 +211,101 @@
     padding: 1px 6px;
     background-color: white;
 }
+
+/* Меню */
+.menu{
+    /* width: 100%; */
+    height: 60px;
+    position: relative;
+    display: inline-block;
+    margin: unset;
+}
+
+.btn{
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 990px){
+    .menu-links {
+        width: 100%;
+        margin-top: 21px;
+        z-index: -1;
+        text-align: unset;
+        position: absolute;
+    }
+    /* .menu-links {
+        width: 100%; */
+        /* height: 100%; */
+        /* position: absolute; */
+        /* margin: 0 auto; */
+        
+    /* } */
+    .btn{
+        float: unset;
+        /* margin-top: 0px; */
+        margin-top: -5px;
+    }
+    .menu{
+        z-index: 2;
+    }
+    .menu-icon{
+        z-index: 1;
+    }
+}
+
+.menu-admin{
+    margin: 11% 14%;
+}
+
+.admin-form input{
+    margin-bottom:20px; 
+}
+
+.block-page input[type=checkbox]{
+    margin-left: 20px;
+    height: 20px;
+    width: 20px;
+    display: none;
+}
+
+.adm-text-p label{
+    line-height: 30px;
+    
+}
+
+.block-page{
+    width: 70px;
+    margin: 0 auto;
+}
+
+.admin-form label:hover{
+    cursor: pointer;
+}
+
+
+.strike:before{
+    content: "";
+    width: 0;
+    height: 1px;
+    left: -5px;
+    bottom: -14px;
+    background-color: red;
+    display: block;
+    position: relative;
+    transition: width 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+input:checked ~ .strike:before{
+    width: 110%;
+}
+
+.admin-btn{
+    border-radius: 0;
+    border: 1px solid black;
+    background-color: white;
+}
+
+
+
+
+

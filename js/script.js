@@ -45,19 +45,66 @@ $(function(){
     // else{
     //     console.log(false);
     // }
+    // if($("right").children("b").length >0 ){
+    //     console.log("it is b");
+    // }
     
     
     $("right").replaceWith(function(){
-        return `<p class="text-p" style="opacity:1;" align="right">`+$(this).text()+`</p>`;
+        if($(this).children("b").length>0){
+            return `<p class="text-p" style="opacity:1; font-weight: bold;" align="right">`+$(this).text()+`</p>`;
+        }
+        else if($(this).children("i").length>0){
+            return `<p class="text-p" style="opacity:1; font-style: italic;" align="right">`+$(this).text()+`</p>`;
+        }
+        else if($(this).children("u").length>0){
+            return `<p class="text-p" style="opacity:1; text-decoration: underline;" align="right">`+$(this).text()+`</p>`;
+        }
+        else{
+            return `<p class="text-p" style="opacity:1;" align="right">`+$(this).text()+`</p>`;
+        }
     });
     $("center").replaceWith(function(){
-        return `<p class="text-p" style="opacity:1;" align="center">`+$(this).text()+`</p>`;
+        if($(this).children("b").length>0){
+            return `<p class="text-p" style="opacity:1; font-weight: bold;" align="center">`+$(this).text()+`</p>`;
+        }
+        else if($(this).children("i").length>0){
+            return `<p class="text-p" style="opacity:1; font-style: italic;" align="center">`+$(this).text()+`</p>`;
+        }
+        else if($(this).children("u").length>0){
+            return `<p class="text-p" style="opacity:1; text-decoration: underline;" align="center">`+$(this).text()+`</p>`;
+        }
+        else{
+            return `<p class="text-p" style="opacity:1;" align="center">`+$(this).text()+`</p>`;
+        }
     });
     $("left").replaceWith(function(){
-        return `<p class="text-p" style="opacity:1;" align="left">`+$(this).text()+`</p>`;
+        if($(this).children("b").length>0){
+            return `<p class="text-p" style="opacity:1; font-weight: bold;" align="left">`+$(this).text()+`</p>`;
+        }
+        else if($(this).children("i").length>0){
+            return `<p class="text-p" style="opacity:1; font-style: italic;" align="left">`+$(this).text()+`</p>`;
+        }
+        else if($(this).children("u").length>0){
+            return `<p class="text-p" style="opacity:1; text-decoration: underline;" align="left">`+$(this).text()+`</p>`;
+        }
+        else{
+            return `<p class="text-p" style="opacity:1;" align="left">`+$(this).text()+`</p>`;
+        }
     });
     $("justify").replaceWith(function(){
-        return `<p class="text-p" style="opacity:1;" align="justify">`+$(this).text()+`</p>`;
+        if($(this).children("b").length>0){
+            return `<p class="text-p" style="opacity:1; font-weight: bold;" align="justify">`+$(this).text()+`</p>`;
+        }
+        else if($(this).children("i").length>0){
+            return `<p class="text-p" style="opacity:1; font-style: italic;" align="justify">`+$(this).text()+`</p>`;
+        }
+        else if($(this).children("u").length>0){
+            return `<p class="text-p" style="opacity:1; text-decoration: underline;" align="justify">`+$(this).text()+`</p>`;
+        }
+        else{
+            return `<p class="text-p" style="opacity:1;" align="justify">`+$(this).text()+`</p>`;
+        }
     });
 
 });

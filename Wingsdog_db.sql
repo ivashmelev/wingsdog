@@ -22,11 +22,13 @@ CREATE TABLE IF NOT EXISTS `albom` (
   `name` text NOT NULL,
   `text` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- Дамп данных таблицы Wingsdog_db.albom: ~1 rows (приблизительно)
 DELETE FROM `albom`;
 /*!40000 ALTER TABLE `albom` DISABLE KEYS */;
+INSERT INTO `albom` (`id`, `name`, `text`) VALUES
+	(1, 'тест 1', '1');
 /*!40000 ALTER TABLE `albom` ENABLE KEYS */;
 
 -- Дамп структуры для таблица Wingsdog_db.attainment
@@ -64,6 +66,23 @@ INSERT INTO `auth` (`id`, `login`, `password`, `mail`) VALUES
 	(1, 'newadmin', '21232f297a57a5a743894a0e4a801fc3', 'shmelevivan20@gmail.com');
 /*!40000 ALTER TABLE `auth` ENABLE KEYS */;
 
+-- Дамп структуры для таблица Wingsdog_db.contacts
+CREATE TABLE IF NOT EXISTS `contacts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` text NOT NULL,
+  `phone` text NOT NULL,
+  `mail` text NOT NULL,
+  `addres` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- Дамп данных таблицы Wingsdog_db.contacts: ~0 rows (приблизительно)
+DELETE FROM `contacts`;
+/*!40000 ALTER TABLE `contacts` DISABLE KEYS */;
+INSERT INTO `contacts` (`id`, `name`, `phone`, `mail`, `addres`) VALUES
+	(1, 'Нижегородская региональная общественная организация кинологический клуб "Крылатый Пёс"', '8 (831) 298 14 88', 'info@mysite.ru', 'п.Примерный, Нижегородская область');
+/*!40000 ALTER TABLE `contacts` ENABLE KEYS */;
+
 -- Дамп структуры для таблица Wingsdog_db.feedback
 CREATE TABLE IF NOT EXISTS `feedback` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -91,7 +110,7 @@ CREATE TABLE IF NOT EXISTS `news` (
   `img` text,
   `text` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
 -- Дамп данных таблицы Wingsdog_db.news: ~3 rows (приблизительно)
 DELETE FROM `news`;
@@ -99,7 +118,8 @@ DELETE FROM `news`;
 INSERT INTO `news` (`id`, `header`, `date`, `img`, `text`) VALUES
 	(21, '1', '23.03.275760', 'img-NaN.jpg', '132\r\n312\r\n13'),
 	(22, 'Достижение1', '06.07.275760', 'img-22.jpg', '678'),
-	(23, '123123', '12.03.0123', 'img-23.jpg', '<left>12</left>\r\n<right>23</right>\r\n<justify>65</justify>\r\n<center><b>567</b></center>');
+	(23, '123123', '12.03.0123', 'img-23.jpg', '<left>12</left>\r\n<right>23</right>\r\n<justify>65</justify>\r\n<center><b>567</b></center>'),
+	(24, 'Тест1', '11.11.111111', 'img-24.jpg', '<left><b>1</b></left>\r\n<center><i>2</i></center>\r\n<right><u>3</u></right>\r\n<left><b>4</b></left>');
 /*!40000 ALTER TABLE `news` ENABLE KEYS */;
 
 -- Дамп структуры для таблица Wingsdog_db.photo
