@@ -18,7 +18,7 @@ $path="../../img/";
 $ext=array_pop(explode('.', $_FILES['img']['name']));
 $new_name="img-$id.$ext";
 $full_path=$path.$new_name;
-
+print_r($full_path);
 if($_FILES['img']['error']==0){
     if(move_uploaded_file($_FILES['img']['tmp_name'], $full_path)){
         $add=queryMySQL("INSERT INTO team VALUES('$id', '$header', '$new_name', '$text')");

@@ -313,6 +313,10 @@ input:checked ~ .strike:before{
     color: black;
 }
 
+.menu-item a{
+    font-family: "Roboto";
+}
+
 
 
 

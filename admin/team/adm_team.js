@@ -71,13 +71,16 @@ $(function(){
         $(".card").addClass("disabled");
         $("#accordion-"+num[num.length-1]+"").append(clickEdit(localStorage.getItem("id"), "update_team.php"));
     });
-
     $(".btn-add").click(function(){
         if(!$("*").is("#InputHeader1")){
             id=$(this).prop("id");
             num=id.split("-");
-            localStorage.setItem("id", parseInt(num[num.length-1])+1);
+            localStorage.setItem("id", Number(num[num.length-1])+1);
             console.log(num[num.length-1]);
+            // id=localStorage.getItem("id");
+            // if(id==NaN){
+            //     localStorage.setItem("id", 0);
+            // }
             $("#accordion").append(clickAdd(localStorage.getItem('id'), "add_team.php"));
         }
     });

@@ -11,11 +11,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
-
--- Дамп структуры базы данных Wingsdog_db
-CREATE DATABASE IF NOT EXISTS `Wingsdog_db` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `Wingsdog_db`;
-
 -- Дамп структуры для таблица Wingsdog_db.albom
 CREATE TABLE IF NOT EXISTS `albom` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -36,16 +31,11 @@ CREATE TABLE IF NOT EXISTS `attainment` (
   `img` text,
   `text` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы Wingsdog_db.attainment: ~5 rows (приблизительно)
+-- Дамп данных таблицы Wingsdog_db.attainment: ~0 rows (приблизительно)
 DELETE FROM `attainment`;
 /*!40000 ALTER TABLE `attainment` DISABLE KEYS */;
-INSERT INTO `attainment` (`id`, `header`, `img`, `text`) VALUES
-	(6, 'Достижение1', 'img-NaN.png', 'Текст1\r\n2\r\n3'),
-	(7, 'Достижение2', 'img-7.jpg', '132'),
-	(8, 'Достижение3', 'img-8.jpg', '<left>Привет Мир</left>\r\n<center>Пишу тебе письмо</center>\r\n<right>Храни величие свое </right>\r\n<justify>Как можно дальше, высоко</justify>'),
-	(9, '123', 'img-9.jpg', '123');
 /*!40000 ALTER TABLE `attainment` ENABLE KEYS */;
 
 -- Дамп структуры для таблица Wingsdog_db.auth
@@ -57,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `auth` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы Wingsdog_db.auth: ~0 rows (приблизительно)
+-- Дамп данных таблицы Wingsdog_db.auth: ~1 rows (приблизительно)
 DELETE FROM `auth`;
 /*!40000 ALTER TABLE `auth` DISABLE KEYS */;
 INSERT INTO `auth` (`id`, `login`, `password`, `mail`) VALUES
@@ -74,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `contacts` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы Wingsdog_db.contacts: ~0 rows (приблизительно)
+-- Дамп данных таблицы Wingsdog_db.contacts: ~1 rows (приблизительно)
 DELETE FROM `contacts`;
 /*!40000 ALTER TABLE `contacts` DISABLE KEYS */;
 INSERT INTO `contacts` (`id`, `name`, `phone`, `mail`, `addres`) VALUES
@@ -89,15 +79,11 @@ CREATE TABLE IF NOT EXISTS `feedback` (
   `text` text,
   `mail` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=76 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы Wingsdog_db.feedback: ~3 rows (приблизительно)
+-- Дамп данных таблицы Wingsdog_db.feedback: ~0 rows (приблизительно)
 DELETE FROM `feedback`;
 /*!40000 ALTER TABLE `feedback` DISABLE KEYS */;
-INSERT INTO `feedback` (`id`, `name`, `date`, `text`, `mail`) VALUES
-	(73, 'name1', '25/09/2018 в 20:45', '1', '1@mail.ru'),
-	(74, 'name2', '25/09/2018 в 20:45', 'new2', '1@mail.ru'),
-	(75, '', '25/09/2018 в 22:21', '', '');
 /*!40000 ALTER TABLE `feedback` ENABLE KEYS */;
 
 -- Дамп структуры для таблица Wingsdog_db.hide_page
@@ -129,16 +115,11 @@ CREATE TABLE IF NOT EXISTS `news` (
   `img` text,
   `text` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы Wingsdog_db.news: ~3 rows (приблизительно)
+-- Дамп данных таблицы Wingsdog_db.news: ~0 rows (приблизительно)
 DELETE FROM `news`;
 /*!40000 ALTER TABLE `news` DISABLE KEYS */;
-INSERT INTO `news` (`id`, `header`, `date`, `img`, `text`) VALUES
-	(21, '1', '23.03.275760', 'img-NaN.jpg', '132\r\n312\r\n13'),
-	(22, 'Достижение1', '06.07.275760', 'img-22.jpg', '678'),
-	(23, '123123', '12.03.0123', 'img-23.jpg', '<left>12</left>\r\n<right>23</right>\r\n<justify>65</justify>\r\n<center><b>567</b></center>'),
-	(24, 'Тест1', '11.11.111111', 'img-24.jpg', '<left><b>1</b></left>\r\n<center><i>2</i></center>\r\n<right><u>3</u></right>\r\n<left><b>4</b></left>');
 /*!40000 ALTER TABLE `news` ENABLE KEYS */;
 
 -- Дамп структуры для таблица Wingsdog_db.photo
@@ -164,15 +145,11 @@ CREATE TABLE IF NOT EXISTS `team` (
   `img` text,
   `text` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы Wingsdog_db.team: ~2 rows (приблизительно)
+-- Дамп данных таблицы Wingsdog_db.team: ~0 rows (приблизительно)
 DELETE FROM `team`;
 /*!40000 ALTER TABLE `team` DISABLE KEYS */;
-INSERT INTO `team` (`id`, `header`, `img`, `text`) VALUES
-	(5, 'Дмитриев Юрий Алексеевич', 'img-5.jpg', 'Действующий инструктор, в кинологии с 1996г., фигурант РКФ - Специалист по рабочим качествам РКФ N3334, помощник судьи в защитном разделе; Подготовка собак по нормативу ЗКС; Постановка на охрану хозяина и территории; Бытовое послушание собак; Корректировка поведения собак.'),
-	(6, 'Варначева Елена Андреевна', 'img-6.jpg', 'инструктор-кинолог (спортивное послушание), действующий спортсмен по ОКД и международному нормативу Мондьоринг Личные собаки: малинуа Шерри - дипломы ОКД-1; ВН; квалификация по международному нормативу мондьоринг: - под судейством мадам Доминик Дюпперрэ, Щвейцария, 4 место, 177 баллов - под судейством Williiam Langlois, Франция, 2 место, 196 баллов - под судейством И.Аверин/И.Овсянников, Россия, Гранд При Чемпионата Рссии, 3 место, 196 баллов чемпион УС (полный балл); чемпион КЛЗ; чемпион собака-телохранитель; участник и победитель игровых видов спорта; стаффордширский терьер Макс - участник и призер соревнований УС; неоднократный победитель норматива КЛЗ'),
-	(7, '1', 'img-7.jpg', '2');
 /*!40000 ALTER TABLE `team` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

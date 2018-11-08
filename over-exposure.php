@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfYM34wyhKd80QdTH8Ren4q-1-4N6SKuI"></script>
     <!-- &callback=initMap -->
-    <script src="js/script.js"></script>
     <script src="js/map.js"></script>
     <script src="js/menu.js"></script>
     <link rel="icon" href=​img/favicon.ico type="image/x-icon" />
@@ -19,6 +18,7 @@
     <link rel="stylesheet" href="css/adaptiv.css"  type="text/css">
     <link rel="stylesheet" href="css/menu.css"  type="text/css">
     <link rel="stylesheet" href="css/team.css"  type="text/css">
+    <script src="js/script.js"></script>
     <title>Передержка</title>
 </head>
 <body>

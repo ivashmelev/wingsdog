@@ -82,6 +82,7 @@
         <div class="content-team">
             <div class="container-fluid">
                 <div class="team-block">
+                <h1 class="empty" style="text-align: center; color: #b1abab61; margin: 25%; font-family:'Rewi'; ">На данный момент нет достижений </h1>
                     <!-- <div class="person">
                         <div class="row justify-content-center">
                             <div class="col-xl-3 col-lg-4 col-md-8">
@@ -192,6 +193,7 @@
             </div> -->
     <script>
         function genAttainment(count=0, header='Header', img='img', text='text'){
+            if(count!=0){$(".empty").hide();}
             for(i=0; i<count; i++){
                 block_team=$(".team-block");
                 content='<div class="person"> <div class="row justify-content-center"> <div class="col-xl-3 col-lg-4 col-md-8"> <div style="background-image: url(img/'+img[i]+'); background-size: cover;" class="team-photo"></div> </div> <div class="col-xl-6 col-lg-6 col-md-8"> <div class="row justify-content-center"> <div class="col-lg-12"> <h2 class="head-h2">'+header[i]+'</h2> </div> </div> <div class="row justify-content-center"> <div class="col-lg-12 text-p" style="opacity:0;">'+text[i]+'</div> </div> </div> </div> </div>';

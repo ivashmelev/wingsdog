@@ -27,7 +27,7 @@ $(document).ready(function(){
 
     $("#button-feedback").click(function(){
         console.log("go");
-        $(".out-feedback-block").html('<form action="admin/feedback/add_feedback.php" method="POST" style="margin-left:0 auto;"> <label class="text-p" for="name">Имя</label> <br> <input class="form-block-input" type="text" name="name" id="name"> <br> <label class="text-p" for="feed_mail">Почта</label> <br> <input class="form-block-input" type="email" name="feed_mail" id="feed_mail"> <br> <label class="text-p" for="mess">Сообщение</label> <br> <textarea class="form-block-input" rows="6" type="text" name="mess" id="mess"></textarea> <br> <br> <input type="submit" class="form-block-submit" name="submit" value="Отправить"> </form>');
+        $(".out-feedback-block").html('<form action="admin/feedback/add_feedback.php" method="POST" style="margin-left:0 auto; opacity:1;"> <label class="text-p" style="opacity:1;" for="name">Имя</label> <br> <input class="form-block-input" type="text" name="name" id="name"> <br> <label style="opacity:1;" class="text-p" for="feed_mail">Почта</label> <br> <input class="form-block-input" type="email" name="feed_mail" id="feed_mail"> <br> <label style="opacity:1;" class="text-p" for="mess">Сообщение</label> <br> <textarea class="form-block-input" rows="6" type="text" name="mess" id="mess"></textarea> <br> <br> <input type="submit" class="form-block-submit" name="submit" value="Отправить"> </form>');
         $(this).hide();
     });
 

@@ -88,7 +88,7 @@ $(function(){
         if(!$("*").is("#InputHeader1")){
             id=$(this).prop("id");
             num=id.split("-");
-            localStorage.setItem("id", parseInt(num[num.length-1])+1);
+            localStorage.setItem("id", Number(num[num.length-1])+1);
             console.log(num[num.length-1]);
             $("#accordion").append(clickAdd(localStorage.getItem('id'), "add_attainment.php"));
             formatPanel();

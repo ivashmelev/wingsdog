@@ -76,6 +76,7 @@
     <div class="block-news">
         <div class="container-fluid">
             <div class="content-news">
+                <h1 class="empty" style="text-align: center; color: #b1abab61; margin: 25%; font-family:'Rewi'; ">На данный момент нет мероприятий</h1>
                 <!-- <div class="news-block"> -->
                     <!-- <div class="row">
                         <div class="col-lg-6">
@@ -136,6 +137,7 @@
     </div>
     <script>
         function genNews(count=0, header='Header', date='date', img='img', text='text'){
+            if(count!=0){$(".empty").hide();}
             for(i=0; i<count; i++){
                 block_news=$(".content-news");
                 content='<div class="news-block"><div class="row"><div class="col-xl-6"><h2 class="head-h2">'+header[i]+'</h2></div></div><div class="row"><div class="col-xl-6"><p class="text-p text-p-news">'+date[i]+'</p></div></div><div class="row"><div class="col-xl-6"><img class="news-image" src="img/'+img[i]+'"></div><div class="col-xl-6"><div class="news-block-text"><p class="text-p">'+text[i]+'</p></div></div</div></div>';
