@@ -22,13 +22,11 @@ CREATE TABLE IF NOT EXISTS `albom` (
   `name` text NOT NULL,
   `text` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы Wingsdog_db.albom: ~1 rows (приблизительно)
+-- Дамп данных таблицы Wingsdog_db.albom: ~0 rows (приблизительно)
 DELETE FROM `albom`;
 /*!40000 ALTER TABLE `albom` DISABLE KEYS */;
-INSERT INTO `albom` (`id`, `name`, `text`) VALUES
-	(1, 'тест 1', '1');
 /*!40000 ALTER TABLE `albom` ENABLE KEYS */;
 
 -- Дамп структуры для таблица Wingsdog_db.attainment
@@ -80,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `contacts` (
 DELETE FROM `contacts`;
 /*!40000 ALTER TABLE `contacts` DISABLE KEYS */;
 INSERT INTO `contacts` (`id`, `name`, `phone`, `mail`, `addres`) VALUES
-	(1, 'Нижегородская региональная общественная организация кинологический клуб "Крылатый Пёс"', '8 (831) 298 14 88', 'info@mysite.ru', 'п.Примерный, Нижегородская область');
+	(1, 'Нижегородская региональная общественная организация кинологический клуб Крылатый Пёс', '8 (831) 298 14 88', 'info@mysite.ru', 'п.Примерный, Нижегородская область');
 /*!40000 ALTER TABLE `contacts` ENABLE KEYS */;
 
 -- Дамп структуры для таблица Wingsdog_db.feedback
@@ -101,6 +99,27 @@ INSERT INTO `feedback` (`id`, `name`, `date`, `text`, `mail`) VALUES
 	(74, 'name2', '25/09/2018 в 20:45', 'new2', '1@mail.ru'),
 	(75, '', '25/09/2018 в 22:21', '', '');
 /*!40000 ALTER TABLE `feedback` ENABLE KEYS */;
+
+-- Дамп структуры для таблица Wingsdog_db.hide_page
+CREATE TABLE IF NOT EXISTS `hide_page` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `number` int(11) NOT NULL,
+  `page` text NOT NULL,
+  `status` tinytext NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+-- Дамп данных таблицы Wingsdog_db.hide_page: ~6 rows (приблизительно)
+DELETE FROM `hide_page`;
+/*!40000 ALTER TABLE `hide_page` DISABLE KEYS */;
+INSERT INTO `hide_page` (`id`, `number`, `page`, `status`) VALUES
+	(2, 0, 'Мероприятия', 'true'),
+	(3, 1, 'Инструктора', 'true'),
+	(4, 2, 'Достижение', 'true'),
+	(5, 3, 'Передержка', 'true'),
+	(6, 4, 'Фотоальбом', 'true'),
+	(7, 5, 'Контакты', 'true');
+/*!40000 ALTER TABLE `hide_page` ENABLE KEYS */;
 
 -- Дамп структуры для таблица Wingsdog_db.news
 CREATE TABLE IF NOT EXISTS `news` (
