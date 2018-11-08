@@ -7,8 +7,16 @@
 require_once("connection.php");
 $link = mysqli_connect($host, $user, $password, $database) or die("Ошибка".mysqli_error($link));
 $select_contacts = mysqli_query($link, "SELECT * from contacts") or die("Error".mysqli_error($link));
+$select_hide = mysqli_query($link, "SELECT * from hide_page") or die("Error".mysqli_error($link));
+$arr_hide = array();
 $row = mysqli_fetch_array($select_contacts);
-print_r($row);
+$i=0;
+while($row_hide = mysqli_fetch_array($select_hide)){
+    $arr_hide[$row_hide["page"]]=$row_hide["status"];
+    $arr_hide[$i]=$row_hide["status"];
+    $i++;
+}
+$arr_hide = json_encode($arr_hide);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,15 +27,17 @@ print_r($row);
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="icon" href=​img/favicon.ico type="image/x-icon" />
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../css/admin.css">
     <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/admin.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="../js/menu.js"></script>
+    <script src="../js/script.js"></script>
 
     <!-- <script src="news/adm_news.js"></script>  -->
     <title>Панель администратора</title>
 </head>
 <body>
+
 <div class="block-menu">
             <div class="container-fluid">
                 <div class="row">
@@ -61,17 +71,17 @@ print_r($row);
                             <p class="adm-text-p">Отредактировать контакты</p>
                             <hr>
                             <form class="admin-form" action="update_contacts.php" method="POST">
-                                <label class="adm-text-p" for="name_company">Название организации</label><br>
-                                <input type="text" class="form-control" id="name_company" name="name_company">
+                                <label class="adm-text-p" for="adm_company">Название организации</label><br>
+                                <input type="text" class="form-control" id="adm_company" name="adm_company" value="<?php echo $row["name"];?>">
                                 
                                 <label class="adm-text-p" for="adm_phone">Телефон</label><br>
-                                <input type="text" class="form-control" id="adm_phone" name="adm_phone">
+                                <input type="text" class="form-control" id="adm_phone" name="adm_phone" value="<?php echo $row["phone"];?>">
 
                                 <label class="adm-text-p" for="adm_email">Mail</label><br>
-                                <input type="email" class="form-control" id="adm_email" name="adm_email">
+                                <input type="email" class="form-control" id="adm_email" name="adm_email" value="<?php echo $row["mail"];?>">
 
                                 <label class="adm-text-p" for="adm_addres">Адрес</label><br>
-                                <input type="email" class="form-control" id="adm_addres" name="adm_addres">
+                                <input type="text" class="form-control" id="adm_addres" name="adm_addres" value="<?php echo $row["addres"];?>">
                             <!-- </form> -->
                             <hr style="margin-top: 40px;">
                         </div>
@@ -85,27 +95,27 @@ print_r($row);
                             <div class="block-page">
                                 <!-- <form class="admin-form" action="update_contacts.php" method="POST"> -->
                                     <div>
-                                        <input type="checkbox" name="hide_news" id="hide_news" class="form-check-input"><br>
+                                        <input type="checkbox" name="hide_news" id="hide_news" class="form-check-input" value="false"><br>
                                         <label class="adm-text-p strike" for="hide_news">Мероприятия</label>
                                     </div>
                                     <div>
-                                        <input type="checkbox" name="hide_team" id="hide_team" class="form-check-input"><br>
+                                        <input type="checkbox" name="hide_team" id="hide_team" class="form-check-input" value="false"><br>
                                         <label class="adm-text-p strike" for="hide_team">Инструктора</label>
                                     </div>
                                     <div>
-                                        <input type="checkbox" name="hide_attainment" id="hide_attainment" class="form-check-input"><br>
+                                        <input type="checkbox" name="hide_attainment" id="hide_attainment" class="form-check-input" value="false"><br>
                                         <label class="adm-text-p strike" for="hide_attainment">Достижение</label>
                                     </div>
                                     <div>
-                                        <input type="checkbox" name="hide_over-exposure" id="hide_over-exposure" class="form-check-input"><br>
+                                        <input type="checkbox" name="hide_over_exposure" id="hide_over-exposure" class="form-check-input" value="false"><br>
                                         <label class="adm-text-p strike" for="hide_over-exposure">Передержка</label>
                                     </div>
                                     <div>
-                                        <input type="checkbox" name="hide_photo" id="hide_photo" class="form-check-input"><br>
+                                        <input type="checkbox" name="hide_photo" id="hide_photo" class="form-check-input" value="false"><br>
                                         <label class="adm-text-p strike" for="hide_photo">Фотоальбом</label>
                                     </div>
                                     <div>
-                                        <input type="checkbox" name="hide_contacts" id="hide_contacts" class="form-check-input"><br>
+                                        <input type="checkbox" name="hide_contacts" id="hide_contacts" class="form-check-input" value="false"><br>
                                         <label class="adm-text-p strike" for="hide_contacts">Контакты</label>
                                     </div>
                                 </div> 
@@ -118,5 +128,16 @@ print_r($row);
         </div>
     </div>
 </div>
+<script> 
+    function doHide(arr_hide){
+        arrCheck = Array.from($("input[type='checkbox']"));
+        for(i in arr_hide){
+            if(arr_hide[i]=="false"){
+                $(arrCheck[i]).prop('checked', true);
+            }
+        }
+    }
+</script>
+<?php echo "<script> doHide($arr_hide);</script>";?>
 </body>
 </html>

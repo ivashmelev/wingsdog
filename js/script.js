@@ -1,8 +1,8 @@
-$(function(){
+$(document).ready(function(){
     // $(window).scroll(function(){
     //     $(".text-p, .text-photo").css({opacity:1});
     // });
-
+    console.log(1);
     $(".text-p").animate({opacity:1}, 1000);
 
 
@@ -106,6 +106,29 @@ $(function(){
             return `<p class="text-p" style="opacity:1;" align="justify">`+$(this).text()+`</p>`;
         }
     });
+
+    $(".storage_name").text(localStorage.getItem("name"));
+    $(".storage_phone").text(localStorage.getItem("phone"));
+    $(".storage_mail").text(localStorage.getItem("mail"));
+    $(".storage_addres").text(localStorage.getItem("addres"));
+
+    // $("#adm_company").val(localStorage.getItem("name"));
+    // $("#adm_phone").val(localStorage.getItem("phone"));
+    // $("#adm_email").val(localStorage.getItem("mail"));
+    // $("#adm_addres").val(localStorage.getItem("addres"));
+    function hideOther(){
+        if(location.pathname!="/admin/panel.php"){
+            localStorage.remove();
+            arrMenu = Array.from($(".menu-links-item"));
+            if(localStorage["Мероприятия"]=="false"){$(arrMenu[1]).parent().css({display:"none"});}
+            if(localStorage["Инструктора"]=="false"){$(arrMenu[2]).parent().css({display:"none"});}
+            if(localStorage["Достижение"]=="false"){$(arrMenu[3]).parent().css({display:"none"});}
+            if(localStorage["Передержка"]=="false"){$(arrMenu[4]).parent().css({display:"none"});}
+            if(localStorage["Фотоальбом"]=="false"){$(arrMenu[5]).parent().css({display:"none"});}
+            if(localStorage["Контакты"]=="false"){$(arrMenu[6]).parent().css({display:"none"});}
+        }
+    }
+    hideOther();
 
 });
 function showMenu(){

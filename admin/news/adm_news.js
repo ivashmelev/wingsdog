@@ -91,12 +91,17 @@ $(function(){
     });
 
     $(".btn-add").click(function(){
-        id=$(this).prop("id");
-        num=id.split("-");
-        localStorage.setItem("id", parseInt(num[num.length-1])+1);
-        console.log(num[num.length-1]);
-        $("#accordion").append(clickAdd(localStorage.getItem('id'), "add_news.php"));
-        formatPanel();
+        if($("*").is(".form-group")){
+
+        }
+        else{
+            id=$(this).prop("id");
+            num=id.split("-");
+            localStorage.setItem("id", parseInt(num[num.length-1])+1);
+            console.log(num[num.length-1]);
+            $("#accordion").append(clickAdd(localStorage.getItem('id'), "add_news.php"));
+            formatPanel();
+        }
     });
 
 

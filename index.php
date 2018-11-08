@@ -3,10 +3,20 @@ require_once("connection.php");
 $link = mysqli_connect($host, $user, $password, $database) or die("Ошибка".mysqli_error($link));
 $select_contacts = mysqli_query($link, "SELECT * from contacts") or die("Error".mysqli_error($link));
 $row = mysqli_fetch_array($select_contacts);
-$name = $row["name"];
-$phone = $row["phone"];
-$mail = $row["mail"];
-$addres = $row["addres"];
+$name = json_encode($row["name"]);
+$phone = json_encode($row["phone"]);
+$mail = json_encode($row["mail"]);
+$addres = json_encode($row["addres"]);
+
+$select_hide = mysqli_query($link, "SELECT * from hide_page") or die("Error".mysqli_error($link));
+$arr_hide = array();
+$i=0;
+while($row_hide = mysqli_fetch_array($select_hide)){
+    $arr_hide[$row_hide["page"]]=$row_hide["status"];
+    $arr_hide[$i]=$row_hide["status"];
+    $i++;
+}
+$arr_hide = json_encode($arr_hide);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,11 +40,19 @@ $addres = $row["addres"];
     <link rel="stylesheet" href="css/index.css"  type="text/css">
     <title>Крылатый Пёс</title>
 </head>
-<body>
+<script>
+        function writeContacts(name, phone, mail, addres){
+            console.log(1);
+            localStorage.setItem("name", name);
+            localStorage.setItem("phone", phone);
+            localStorage.setItem("mail", mail);
+            localStorage.setItem("addres", addres);            
+        }
+    </script>
     <?php
-        echo "$name, $phone, $mail, $addres";
-        echo "<script> name = $name; phone = $phone; mail = $mail; addres = $addres; </script>";
+        echo "<script>  writeContacts($name, $phone, $mail, $addres);</script>";
     ?>
+<body>
     <div class="wrapper">
         <div class="header">
             <div class="container-fluid">
@@ -49,15 +67,15 @@ $addres = $row["addres"];
                                 </div>
                                 <div class="col-lg-6 col-md-8 col-sm-9">
                                     <div class="header__text">
-                                        <p class="head-text"><?php echo $row["name"];?></p>
+                                        <p class="head-text storage_name" ><?php echo $row["name"];?></p>
                                     </div>
                                 </div>
                                 <!-- <div class="col-lg-3">
                                 </div> -->
                                 <div class="col">
                                     <div class="header__text text_phone">
-                                        <p class="head-text">тел. <?php echo $row["phone"];?></p>
-                                        <p class="head-text">e-mail: <?php echo $row["mail"];?></p>
+                                        <p class="head-text storage_phone" id="">тел. <?php echo $row["phone"];?></p>
+                                        <p class="head-text storage_mail" id="">e-mail: <?php echo $row["mail"];?></p>
                                     </div>
                                 </div>
                             </div>
@@ -219,20 +237,7 @@ $addres = $row["addres"];
             </div>
         </div>
     </div>
-    <script>
-        function writeContacts(name, phone, mail, addres){
-            console.log(1);
-            localStorage.setItem("name", name);
-            localStorage.setItem("phone", phone);
-            localStorage.setItem("mail", mail);
-            localStorage.setItem("addres", addres);            
-        }
-        writeContacts(name, phone, mail, addres);
-    </script>
-    <?php
-        echo "$name, $phone, $mail, $addres";
-        echo `<script>  writeContacts($name, $phone, $mail, $addres);</script>`;
-    ?>
+    
     <!-- <div class="container-fluid">
     <form>
         <div class="form-row">
@@ -245,6 +250,17 @@ $addres = $row["addres"];
                     </div>
                 </div>
             </div> -->
-            
+    <script>
+        function hidePage(arr_hide){
+            arrMenu = Array.from($(".menu-links-item"));
+            if(arr_hide["Мероприятия"]=="false"){$(arrMenu[1]).parent().css({display:"none"}); localStorage.setItem("Мероприятия", "false");}
+            if(arr_hide["Инструктора"]=="false"){$(arrMenu[2]).parent().css({display:"none"}); localStorage.setItem("Инструктора", "false");}
+            if(arr_hide["Достижение"]=="false"){$(arrMenu[3]).parent().css({display:"none"}); localStorage.setItem("Достижение", "false");}
+            if(arr_hide["Передержка"]=="false"){$(arrMenu[4]).parent().css({display:"none"}); localStorage.setItem("Передержка", "false");}
+            if(arr_hide["Фотоальбом"]=="false"){$(arrMenu[5]).parent().css({display:"none"}); localStorage.setItem("Фотоальбом", "false");}
+            if(arr_hide["Контакты"]=="false"){$(arrMenu[6]).parent().css({display:"none"}); localStorage.setItem("Контакты", "false");}
+        }
+    </script>
+    <?php echo "<script> hidePage($arr_hide); </script>"; ?>
 </body>
 </html>

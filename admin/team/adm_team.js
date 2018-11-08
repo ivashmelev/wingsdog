@@ -73,12 +73,13 @@ $(function(){
     });
 
     $(".btn-add").click(function(){
-        id=$(this).prop("id");
-        num=id.split("-");
-        localStorage.setItem("id", parseInt(num[num.length-1])+1);
-        console.log(num[num.length-1]);
-        $("#accordion").append(clickAdd(localStorage.getItem('id'), "add_team.php"));
-
+        if(!$("*").is("#InputHeader1")){
+            id=$(this).prop("id");
+            num=id.split("-");
+            localStorage.setItem("id", parseInt(num[num.length-1])+1);
+            console.log(num[num.length-1]);
+            $("#accordion").append(clickAdd(localStorage.getItem('id'), "add_team.php"));
+        }
     });
 
 

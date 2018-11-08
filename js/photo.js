@@ -26,6 +26,23 @@ $(document).ready(function(){
         });
     }
 
+    $(".storage_name").text(localStorage.getItem("name"));
+    $(".storage_phone").text(localStorage.getItem("phone"));
+    $(".storage_mail").text(localStorage.getItem("mail"));
+    $(".storage_addres").text(localStorage.getItem("addres"));
+
+    // function hideOther(){
+    //     if(location.pathname!="/admin/panel.php"){
+    //         arrMenu = Array.from($(".menu-links-item"));
+    //         if(localStorage["Мероприятия"]=="false"){$(arrMenu[1]).parent().css({display:"none"});}
+    //         if(localStorage["Инструктора"]=="false"){$(arrMenu[2]).parent().css({display:"none"});}
+    //         if(localStorage["Достижение"]=="false"){$(arrMenu[3]).parent().css({display:"none"});}
+    //         if(localStorage["Передержка"]=="false"){$(arrMenu[4]).parent().css({display:"none"});}
+    //         if(localStorage["Фотоальбом"]=="false"){$(arrMenu[5]).parent().css({display:"none"});}
+    //         if(localStorage["Контакты"]=="false"){$(arrMenu[6]).parent().css({display:"none"});}
+    //     }
+    // }
+    // hideOther();
 
     $("#album-2").click(function(){
         startCarousel(3, 4); 

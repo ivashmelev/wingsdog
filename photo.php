@@ -83,15 +83,15 @@ $count_albom = $count_albom_rows;
                                 </div>
                                 <div class="col-lg-6 col-md-8 col-sm-9">
                                     <div class="header__text">
-                                        <p class="head-text">Нижегородская региональная общественная организация <br>кинологический клуб "Крылатый Пёс"</p>
+                                        <p class="head-text storage_name" id=""></p>
                                     </div>
                                 </div>
                                 <!-- <div class="col-lg-3">
                                 </div> -->
                                 <div class="col">
                                     <div class="header__text text_phone">
-                                        <p class="head-text">тел.&nbsp;8&nbsp;(831)&nbsp;298&nbsp;14&nbsp;88</p>
-                                        <p class="head-text">e-mail: info@mysite.ru</p>
+                                        <p class="head-text storage_phone" id=""></p>
+                                        <p class="head-text storage_mail" id=""></p>
                                     </div>
                                 </div>
                             </div>

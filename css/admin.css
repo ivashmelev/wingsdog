@@ -221,7 +221,7 @@
     margin: unset;
 }
 
-.btn{
+.btn.btn-right{
     margin-top: 10px;
 }
 
@@ -305,6 +305,13 @@ input:checked ~ .strike:before{
     background-color: white;
 }
 
+.block-menu .container-fluid {
+    background-color: black;
+}
+
+.menu-item:hover a {
+    color: black;
+}
 
 
 
