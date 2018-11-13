@@ -45,7 +45,7 @@ require_once ("include_team.php");
                                 </button>
                                 <button type="button" class="btn btn-success btn-right">
                                     <?php $id=json_decode($data_id);?>
-                                    <div class="btn-add" id="btn-add-<?echo $id[0];?>"></div>
+                                    <div class="btn-add" id="btn-add-<?php echo $id[0];?>"></div>
                                 </button>
                                 <button type="button" class="btn btn-primary btn-right">
                                     <div class="btn-back"></div>

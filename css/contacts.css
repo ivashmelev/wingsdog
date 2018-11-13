@@ -1,0 +1,24 @@
+.contacts-list a:hover{
+    text-decoration: none;
+}
+
+.contacts-list h1{
+    text-align: center;
+}
+
+.image{
+    width: 100%;
+}
+
+.image-1{
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.image-2{
+    max-width: 420px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,178 @@
+.checkbox {
+	position:relative;
+    padding-left:25px;
+    line-height: 120%;
+    margin-top: 20px;
+}
+
+p{
+    /* text-align: left; */
+}
+
+label{
+    cursor: pointer;
+    margin-left: 5px;
+    margin-bottom: 500px;
+    color: #0000FF;
+    /* font-family: sans-serif; */
+    font-size: 20px;
+    font-weight: bold;
+}
+
+label:hover{
+    text-decoration: none;
+    color: #800080;    
+    /* font-family: sans-serif; */
+    font-size: 20px;
+    
+}
+
+/* .checkbox label:before{
+    display: block;
+    position: absolute;
+    background: #ec4444;
+    transition: width 0.2s ease-in-out;
+    height: 1px;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    content: "";
+}
+
+
+.checkbox label:hover:before{
+    width: 100%;
+} */
+
+
+.checkbox input[type=checkbox] {
+    display:none;
+}
+.checkbox label:after {
+	content:'';
+	height:14px;
+	width:14px;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+.checkbox input[type=checkbox]+label:after{
+    width: 20px;
+    height: 20px;
+    background: url("/img/icons8-play-20.png") no-repeat;
+    
+}
+.checkbox input[type=checkbox]:checked + label:after {
+	width:20px;
+	height:20px;
+    background: url("/img/icons8-delete.svg") no-repeat;
+}
+
+label + .open{
+  color: black;
+  /* width: 326px; */
+  height: 0px;
+  opacity: 0;
+  /* transition:  1.0s; */
+}
+
+input:checked ~ .open{
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.actions{
+    height: 100%;
+}
+
+hr{
+    margin: 50px 0;
+    /* background-color: black; */
+}
+
+.open b{
+    text-align: center;
+    width: 100%;
+    /* font-family: sans-serif; */
+    font-size: 22px;
+}
+
+.open p{
+    text-align: justify;
+    /* font-family: sans-serif; */
+    font-size: 20px;
+}
+
+.br{
+    margin: 35px;
+}
+
+.open{
+    width: 100%;
+    /* margin-top: 25px; */
+}
+
+i{
+    margin-left: 20px;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+strong{
+    text-align: center;
+}
+
+/* Меню тарифов */
+.rate-menu p{
+    display: inline-block;
+    position: relative;  
+    font-size: 20px;
+    text-align: center;
+    /* border-left: 1px solid #e9d3d3; */
+    padding: 10px;
+    text-align: center;
+}
+
+.rate-menu p:hover{
+    cursor: pointer;
+}
+
+.rate-menu p:before{
+    display: block;
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 0;
+    background: #ec4444;
+    transition: width 0.3s ease-in-out;
+    left: 0; /* С какой стороны рисовать линию */
+    bottom: 0;
+    margin-bottom: -5px;
+}
+
+.rate-menu p:hover:before{
+    width: 100%;
+}
+
+
+
+.rate-menu p{
+    margin: 10px;
+    font-weight: bold;
+}
+
+.rate-menu{
+    margin: 0 auto;
+    /* width: 80%; */
+    text-align: center;
+}
+
+.open {
+    background-color: #ffffff;
+    padding: 10px;
+    border: 10px solid transparent;
+    border-image: 10 repeating-linear-gradient(45deg, #304136, #304136 10px, transparent 10px, transparent 20px, #710525 20px, #710525 30px,transparent 30px, transparent 40px);
+    max-width: 1200px;
+}

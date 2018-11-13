@@ -1,0 +1,121 @@
+ul{
+    display: block;
+    padding: 10px;
+    list-style-type: none;
+    
+}
+
+li{
+    margin: 20px;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px;
+    padding-left: 13px;
+    
+}
+
+li:hover{
+    border-left:3px solid darkblue;
+    background-color: #749cbe;
+    cursor: pointer;
+    padding: 10px;
+    font-weight: bold;
+    width: 100%;
+    transition: 0.2s;
+}
+
+#rate-i-txt-2, #rate-txt-1, #rate-txt-2{
+    margin: 5px;
+    width: 100%;
+}
+
+input[type='submit']{
+    width: 50px;
+    padding: 5px 0;
+}
+
+h4{
+    background-color:#749cbe;
+    border-left: 3px solid darkblue;
+    padding: 10px;
+    font-size: 20px;
+    display: inline-block;
+    color: white;
+    text-shadow: 1px 1px 1px black ;
+}
+
+.output-links{
+    border-left: 3px solid darkblue;
+}
+
+.links-1, .links-2, .links-3, .links-4, .links-5, .links-6, .links-7, .links-8{
+    display: none;
+}
+
+#rate-i-txt-1{
+    background-color: #749cbe;
+    border-left: 3px solid darkblue;
+    padding: 10px;
+    display: inline-block;
+    text-shadow: 1px 1px 1px black ;
+    color: white;
+}
+
+.output-fields{
+    position: fixed;
+    right: 0;
+    top: 20px;
+    /* max-width: 200px; */
+    width: 48%;
+}
+
+.nav-menu__link{
+    z-index: 50;
+    margin-right: 2%;
+    font-size: 16px;
+}
+
+.nav-menu{
+    margin-left:4%;
+    margin-top:1%;
+}
+
+.form-change-email {
+    width: 250px;
+    margin-left: 4%;
+    margin-top: 2%;
+    display: none;
+    outline: none;
+}
+
+.form-change-email input{
+    border: none;
+    outline: none;
+    /* width: 200%; */
+
+}
+
+
+.form-change-email:after{
+    margin-left: 4%;
+    content: "";
+    width: 0;
+    position: absolute;
+    display: block;
+    height: 5px;
+    left: 0;
+    transition: width .3s ease-in-out;
+    background: darkblue;
+    outline: none;
+}
+
+.form-change-email:hover:after{
+    width: 229px;
+}
+
+
+
+.open{
+    display: block;
+    
+}

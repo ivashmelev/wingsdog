@@ -1,0 +1,21 @@
+body{
+    max-width: 1690px;
+    width: 80%;
+    margin: 50px auto;
+}
+
+form {
+    text-align: center;
+}
+
+input {
+    width: 250px;
+    height: 25px;
+    font-size: 20px;
+    margin-right: 50px;
+}
+
+.link{
+    float: right;
+    margin-top: 50px;
+}

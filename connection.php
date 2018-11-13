@@ -1,7 +1,7 @@
 <?php
 //Подключение к базе данных
 $host='localhost';
-$database = 'wingsdog_db';
+$database = 'Wingsdog_db';
 $user = 'root';
 $password = '';
 ?>
