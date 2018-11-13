@@ -1,6 +1,6 @@
 <?php
 require_once ("connection.php");
-$adm_company = strip_tags(htmlentities($_POST["adm_company"]));
+$adm_company = strip_tags(($_POST["adm_company"]));
 $adm_phone = strip_tags(htmlentities($_POST["adm_phone"]));
 $adm_email = strip_tags(htmlentities($_POST["adm_email"]));
 $adm_addres = strip_tags(htmlentities($_POST["adm_addres"]));

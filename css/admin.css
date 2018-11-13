@@ -317,6 +317,24 @@ input:checked ~ .strike:before{
     font-family: "Roboto";
 }
 
+.weekend_check{
+   display:none; 
+}
+
+.weekend_label{
+    font-weight: bold;
+    color: black;
+    font-style: normal;
+}
+
+.weekend_check:checked + .weekend_label{
+    font-weight: bold;
+    color: red;
+    font-style: normal;
+}
+
+
+
 
 
 

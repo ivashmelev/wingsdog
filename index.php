@@ -67,7 +67,7 @@ $arr_hide = json_encode($arr_hide);
                                 </div>
                                 <div class="col-lg-6 col-md-8 col-sm-9">
                                     <div class="header__text">
-                                        <p class="head-text storage_name" ><?php echo $row["name"];?></p>
+                                        <p class="head-text storage_name" style="white-space: pre-wrap;"><?php echo $row["name"];?></p>
                                     </div>
                                 </div>
                                 <!-- <div class="col-lg-3">
