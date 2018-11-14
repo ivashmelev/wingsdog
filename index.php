@@ -7,7 +7,7 @@ $name = json_encode($row["name"]);
 $phone = json_encode($row["phone"]);
 $mail = json_encode($row["mail"]);
 $addres = json_encode($row["addres"]);
-
+$img = $row["img"];
 $select_hide = mysqli_query($link, "SELECT * from hide_page") or die("Error".mysqli_error($link));
 $arr_hide = array();
 $i=0;
@@ -25,7 +25,8 @@ $arr_hide = json_encode($arr_hide);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="lib/bootstrap-4.0.0-dist/css/bootstrap.min.css">
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfYM34wyhKd80QdTH8Ren4q-1-4N6SKuI"></script>
     <!-- &callback=initMap -->
     <script src="js/script.js"></script>
@@ -54,7 +55,7 @@ $arr_hide = json_encode($arr_hide);
     ?>
 <body>
     <div class="wrapper">
-        <div class="header">
+        <div class="header" style="background-image: url(<?php echo $row["img"];?>);">
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-lg-12">

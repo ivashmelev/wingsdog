@@ -24,7 +24,9 @@ $arr_hide = json_encode($arr_hide);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href= -->
+    <link rel="stylesheet" href="/lib/bootstrap-4.0.0-dist/css/bootstrap.min.css">
     <link rel="icon" href=​img/favicon.ico type="image/x-icon" />
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../css/menu.css">
@@ -70,10 +72,13 @@ $arr_hide = json_encode($arr_hide);
                             <h2 class="adm-head-h2">Контакты</h2>
                             <p class="adm-text-p">Отредактировать контакты</p>
                             <hr>
-                            <form class="admin-form" action="update_contacts.php" method="POST">
+                            <form class="admin-form" action="update_contacts.php" method="POST" enctype="multipart/form-data">
                                 <label class="adm-text-p" for="adm_company">Название организации</label><br>
                                 <textarea type="text" class="form-control" id="adm_company" name="adm_company"><?php echo $row["name"];?></textarea>
-                                
+
+                                <label class="adm-text-p" for="adm_image">Фоновая картинка</label><br>
+                                <input type="file" class="form-control" id="adm_image" name="adm_image" accept="image/*,image/jpeg">
+
                                 <label class="adm-text-p" for="adm_phone">Телефон</label><br>
                                 <input type="text" class="form-control" id="adm_phone" name="adm_phone" value="<?php echo $row["phone"];?>">
 
@@ -87,34 +92,18 @@ $arr_hide = json_encode($arr_hide);
                                 <div class="row">
                                     <div class="col-xl-6">
                                         <label class="adm-text-p" for="adm_time_work" style="font-weight: bold;">В будни</label><br>
-                                        <input type="number" class="form-control" id="adm_time_work" name="adm_time_work" value="<?php echo $row["time_work"];?>">
+                                        <input type="text" class="form-control" id="adm_time_work" name="adm_time_work" value="<?php echo $row["time_work"];?>">
                                     </div>
                                     <div class="col-xl-6">
                                         <label class="adm-text-p" for="adm_time_half" style="font-weight: bold;">В сокращенные дни</label><br>    
-                                        <input type="number" class="form-control" id="adm_time_half" name="adm_time_half" value="<?php echo $row["time_half"];?>">
+                                        <input type="text" class="form-control" id="adm_time_half" name="adm_time_half" value="<?php echo $row["time_half"];?>">
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <input type="checkbox" class="weekend_check" id="weekend_pn" name="weekend_pn">
-                                    <label class="weekend_label" for="weekend_pn">Пн</label>
-
-                                    <input type="checkbox" class="weekend_check" id="weekend_vt" name="weekend_vt">
-                                    <label class="weekend_label" for="weekend_vt">Вт</label>
-
-                                    <input type="checkbox" class="weekend_check" id="weekend_sr" name="weekend_sr">
-                                    <label class="weekend_label" for="weekend_sr">Ср</label>
-
-                                    <input type="checkbox" class="weekend_check" id="weekend_cht" name="weekend_cht">
-                                    <label class="weekend_label" for="weekend_cht">Чт</label>
-
-                                    <input type="checkbox" class="weekend_check" id="weekend_pt" name="weekend_pt">
-                                    <label class="weekend_label" for="weekend_pt">Пт</label>
-
-                                    <input type="checkbox" class="weekend_check" id="weekend_sb" name="weekend_sb">
-                                    <label class="weekend_label" for="weekend_sb">Сб</label>
-
-                                    <input type="checkbox" class="weekend_check" id="weekend_vs" name="weekend_vs">
-                                    <label class="weekend_label" for="weekend_vs">Вс</label>
+                                    <div class="col-xl-6">
+                                        <label class="adm-text-p" for="adm_weekend" style="font-weight: bold;">Выходные: </label><br>    
+                                        <input type="text" class="form-control" id="adm_weekend" name="adm_weekend" value="<?php echo $row["weekend"];?>">
+                                    </div>
                                 </div>
                                     
                             <!-- </form> -->

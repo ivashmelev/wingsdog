@@ -1,3 +1,12 @@
+<?php
+require_once("connection.php");
+$link = mysqli_connect($host, $user, $password, $database) or die("Ошибка".mysqli_error($link));
+$select_contacts = mysqli_query($link, "SELECT * from contacts") or die("Error".mysqli_error($link));
+$row = mysqli_fetch_array($select_contacts);
+$time_work = $row["time_work"];
+$time_half = $row["time_half"];
+$weekend = $row["weekend"];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="lib/bootstrap-4.0.0-dist/css/bootstrap.min.css"><!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"> -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfYM34wyhKd80QdTH8Ren4q-1-4N6SKuI"></script>
     <!-- <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfYM34wyhKd80QdTH8Ren4q-1-4N6SKuI&callback=initMap">
@@ -96,11 +105,11 @@
                                     <br>
                                     <br>
                                     <p class="text-p">ЧАСЫ РАБОТЫ:</p>
-                                    <span class="text-p">пн-пт: </span><span class="text-p">10:00-19:00</span>
+                                    <span class="text-p"><?php echo $time_work; ?></span>
                                     <br>
-                                    <span class="text-p">сб:</span><span class="text-p">10:00-19:00</span>
+                                    <span class="text-p"><?php echo $time_half; ?></span>
                                     <br>
-                                    <span class="text-p">вс: </span><span class="text-p">выходной</span>
+                                    <span class="text-p">Выходные: <?php echo $weekend; ?></span>
                                 </div>                        
                             </div>    
                         </div>
