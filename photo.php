@@ -208,7 +208,7 @@ $count_albom = $count_albom_rows;
                                 <div class="col-lg-6">
                                     <div class="footer-text">
                                         <p class="head-text">
-                                            © НКО "Крылатый Пёс"
+                                            © НРОО КК "Крылатый Пёс"
                                         </p>
                                     </div>
                                 </div>

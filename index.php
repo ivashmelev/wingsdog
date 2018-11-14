@@ -17,6 +17,7 @@ while($row_hide = mysqli_fetch_array($select_hide)){
     $i++;
 }
 $arr_hide = json_encode($arr_hide);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -140,9 +141,9 @@ $arr_hide = json_encode($arr_hide);
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-8">
-                            <p class="text-p">Основные направления деятельности:<br> 
-- Проведение кинологических мероприятий<br> 
-- Дрессировка собак по разным дисциплинам <br>
+                            <p class="text-p">Основные направления деятельности:
+- Проведение кинологических мероприятий 
+- Дрессировка собак по разным дисциплинам 
 - Передержка собак</p>
                         </div>
                     </div>
@@ -177,9 +178,9 @@ $arr_hide = json_encode($arr_hide);
                         </div>
                         <div class="col-xl-2 col-lg-2 col-md-8 order-lg-first">
                             <p class="text-p">
- - соревнования<br>
- - выставки<br>
- - семинары <br>
+ - соревнования
+ - выставки
+ - семинары 
  - тренинги</p>
                         </div>
                     </div>
@@ -192,14 +193,14 @@ $arr_hide = json_encode($arr_hide);
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-8">
-                            <p class="text-p">- общий курс дрессировки (ОКД)<br> 
-- защитно-караульная служба (ЗКС) <br>
-- международный стандарт BH(собака-компаньон)<br> 
-- международный вид спорта мондьоринг (послушание+защита+прыжки)<br> 
-- курс «Управляемая собака» <br>
-- защита хозяина (собака-телохранитель)<br> 
-- охрана территории <br>
-- коррекция нежелательного поведения собак<br> 
+                            <p class="text-p">- общий курс дрессировки (ОКД) 
+- защитно-караульная служба (ЗКС) 
+- международный стандарт BH(собака-компаньон) 
+- международный вид спорта мондьоринг (послушание+защита+прыжки) 
+- курс «Управляемая собака» 
+- защита хозяина (собака-телохранитель) 
+- охрана территории 
+- коррекция нежелательного поведения собак 
 - игровые виды спорта</p>
                         </div>
                     </div>
@@ -215,7 +216,7 @@ $arr_hide = json_encode($arr_hide);
                                 <div class="col-lg-6">
                                     <div class="footer-text">
                                         <p class="head-text">
-                                            © НКО "Крылатый Пёс"
+                                            © НРОО КК "Крылатый Пёс"
                                         </p>
                                     </div>
                                 </div>
@@ -262,6 +263,7 @@ $arr_hide = json_encode($arr_hide);
             if(arr_hide["Контакты"]=="false"){$(arrMenu[6]).parent().css({display:"none"}); localStorage.setItem("Контакты", "false");}
         }
     </script>
-    <?php echo "<script> hidePage($arr_hide); </script>"; ?>
+    <?php echo "<script> hidePage($arr_hide); </script>"; 
+    echo "<script> localStorage.setItem('mainImg', '$img');</script>";?>
 </body>
 </html>

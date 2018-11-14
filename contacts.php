@@ -6,6 +6,7 @@ $row = mysqli_fetch_array($select_contacts);
 $time_work = $row["time_work"];
 $time_half = $row["time_half"];
 $weekend = $row["weekend"];
+$requisites = $row["requisites"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -102,6 +103,7 @@ $weekend = $row["weekend"];
                                     <p class="text-p storage_addres"></p>
                                     <p class="text-p storage_mail"></p>
                                     <span class="text-p storage_phone"></span><span class="text-p"></span>
+                                    <p class="text-p">Реквизиты: <?php echo $requisites ?></p>
                                     <br>
                                     <br>
                                     <p class="text-p">ЧАСЫ РАБОТЫ:</p>
@@ -169,7 +171,7 @@ $weekend = $row["weekend"];
                                 <div class="col-lg-6">
                                     <div class="footer-text">
                                         <p class="head-text">
-                                            © НКО "Крылатый Пёс"
+                                        © НРОО КК "Крылатый Пёс"
                                         </p>
                                     </div>
                                 </div>

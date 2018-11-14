@@ -18,7 +18,7 @@ $date;
 $date=explode("-", $date);
 $date="$date[2].$date[1].$date[0]";
 
-$path="../../img/";
+$path="../../img/news/";
 $ext=array_pop(explode('.', $_FILES['img']['name']));
 $new_name="img-$id.$ext";
 $full_path=$path.$new_name;

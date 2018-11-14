@@ -8,8 +8,22 @@
 }
 
 .photo-adm img{
-  max-width: 339px;
+  /* max-width: 339px; */
   width: 100%;
-  padding: 3px;
+  /* border: 1px solid black; */
+}
+
+.photo-adm{
+  overflow: hidden;
+  /* max-width: 339px; */
+  width: 100%;
+  height: 235px;
   border: 1px solid black;
+  margin: 10px auto;
+
+}
+
+.btn-danger.ph{
+  margin-top: -121%;
+  margin-left: 86%;
 }

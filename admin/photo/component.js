@@ -36,17 +36,16 @@ function addPhoto(){
     albom = albom[1];
     console.log(id);
     console.log(albom);
-    let content = `
+    let content = `<center style="margin-top:16%;">
     <div class="custom-file">
         <form method="POST" enctype="multipart/form-data" action="add_photo.php">    
-            <input type="file" class="custom-file-input" id="customFile" name="img" multiple accept="image/*,image/jpeg">
+            <input type="file" class="form-control" id="customFile" name="img[]" multiple accept="image/*,image/jpeg">
             <input type="hidden" name="id" value="`+id+`">
             <input type="hidden" name="albom" value="`+albom+`">
-            <label class="custom-file-label" for="customFile">Выберите файл</label>
             <button type="submit" class="btn btn-primary" style="margin-top:10px; margin-left:0;">
                 <div class="btn-ok"></div>
             </button>
         </form>
-    </div>`;
+    </div></center>`;
     return content;
 }

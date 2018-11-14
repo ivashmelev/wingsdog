@@ -88,6 +88,9 @@ $arr_hide = json_encode($arr_hide);
                                 <label class="adm-text-p" for="adm_addres">Адрес</label><br>
                                 <input type="text" class="form-control" id="adm_addres" name="adm_addres" value="<?php echo $row["addres"];?>">
 
+                                <label class="adm-text-p" for="adm_requisites">Реквизиты</label><br>
+                                <input type="text" class="form-control" id="adm_requisites" name="adm_requisites" value="<?php echo $row["requisites"];?>">
+
                                 <label class="adm-text-p" for="adm_time">Часы работы</label><br>
                                 <div class="row">
                                     <div class="col-xl-6">

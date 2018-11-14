@@ -66,7 +66,7 @@ if($_GET["id"]!=null && $_GET["albom"]!=null){
                 </div>
             </div>
         </div>
-        <div class="content">
+        <div class="content container-fluid">
           <div class="row" id="content">
             <!-- <div class="col-xl-3 col-lg-4 col-md-6">
               <div class="photo">
@@ -83,7 +83,7 @@ if($_GET["id"]!=null && $_GET["albom"]!=null){
                                     <div class="photo-adm" id="photo-`+id[i]+`">
                                         <img src="`+path[i]+`">
                                     </div>
-                                    <button type="button" class="btn btn-danger">
+                                    <button type="button" class="btn btn-danger ph">
                                       <div class="btn-del" id="btn-del-`+id[i]+`"></div>
                                     </button>
                                 </div>`;

@@ -2,12 +2,14 @@
 require_once ("connection.php");
 $link = mysqli_connect($host, $user, $password, $database);
 $adm_company = strip_tags(($_POST["adm_company"]));
-$adm_phone = strip_tags(htmlentities($_POST["adm_phone"]));
-$adm_email = strip_tags(htmlentities($_POST["adm_email"]));
-$adm_addres = strip_tags(htmlentities($_POST["adm_addres"]));
+$adm_phone = strip_tags($_POST["adm_phone"]);
+$adm_email = strip_tags($_POST["adm_email"]);
+$adm_addres = strip_tags($_POST["adm_addres"]);
+$adm_requisites = strip_tags($_POST["adm_requisites"]);
 $adm_time_work = strip_tags($_POST["adm_time_work"]);
 $adm_time_half = strip_tags($_POST["adm_time_half"]);
 $adm_weekend = strip_tags($_POST["adm_weekend"]);
+
 // $adm_img = strip_tags($_POST["adm_image"]);
 $path = "../img/";
 $ext = array_pop(explode('.', $_FILES["adm_image"]["name"]));
@@ -29,7 +31,8 @@ $update_contacts = mysqli_query($link, "UPDATE contacts SET
                                        name='$adm_company', 
                                        phone='$adm_phone', 
                                        mail='$adm_email', 
-                                       addres='$adm_addres', 
+                                       addres='$adm_addres',
+                                       requisites='$adm_requisites',
                                        time_work='$adm_time_work', 
                                        time_half='$adm_time_half', 
                                        weekend='$adm_weekend'");

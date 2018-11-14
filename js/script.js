@@ -118,7 +118,7 @@ $(document).ready(function(){
     // $("#adm_addres").val(localStorage.getItem("addres"));
     function hideOther(){
         if(location.pathname!="/admin/panel.php"){
-            localStorage.remove();
+            // localStorage.clear();
             arrMenu = Array.from($(".menu-links-item"));
             if(localStorage["Мероприятия"]=="false"){$(arrMenu[1]).parent().css({display:"none"});}
             if(localStorage["Инструктора"]=="false"){$(arrMenu[2]).parent().css({display:"none"});}
@@ -129,6 +129,8 @@ $(document).ready(function(){
         }
     }
     hideOther();
+
+    $(".header").css({"background-image":"url("+localStorage.getItem("mainImg")+")"});
 
 });
 function showMenu(){

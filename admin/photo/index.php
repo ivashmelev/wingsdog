@@ -61,7 +61,7 @@ require_once ("include_albom.php");
                 </div>
             </div>
         </div>
-        <div class="content">
+        <div class="content container-fluid">
           <div class="row" id="content">
             
 

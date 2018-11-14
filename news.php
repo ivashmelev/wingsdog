@@ -111,7 +111,7 @@
                             <div class="col-lg-6">
                                 <div class="footer-text">
                                     <p class="head-text">
-                                        © НКО "Крылатый Пёс"
+                                    © НРОО КК "Крылатый Пёс"
                                     </p>
                                 </div>
                             </div>
@@ -140,7 +140,7 @@
             if(count!=0){$(".empty").hide();}
             for(i=0; i<count; i++){
                 block_news=$(".content-news");
-                content='<div class="news-block"><div class="row"><div class="col-xl-6"><h2 class="head-h2">'+header[i]+'</h2></div></div><div class="row"><div class="col-xl-6"><p class="text-p text-p-news">'+date[i]+'</p></div></div><div class="row"><div class="col-xl-6"><img class="news-image" src="img/'+img[i]+'"></div><div class="col-xl-6"><div class="news-block-text"><p class="text-p">'+text[i]+'</p></div></div</div></div>';
+                content='<div class="news-block"><div class="row"><div class="col-xl-6"><h2 class="head-h2">'+header[i]+'</h2></div></div><div class="row"><div class="col-xl-6"><p class="text-p text-p-news">'+date[i]+'</p></div></div><div class="row"><div class="col-xl-6"><img class="news-image" src="img/news/'+img[i]+'"></div><div class="col-xl-6"><div class="news-block-text"><p class="text-p">'+text[i]+'</p></div></div</div></div>';
                 // $(".content-news").append('<div class="news-block"></div>');
                 block_news.append(content);
                 // block_news.append(content);
