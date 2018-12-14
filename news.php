@@ -1,4 +1,5 @@
-<?php require_once ("admin/query_mysql.php"); require_once ("admin/news/include_news.php");?>
+<?php require_once ("admin/news/include_news.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,8 +78,9 @@
         <div class="container-fluid">
             <div class="content-news">
                 <h1 class="empty" style="text-align: center; color: #b1abab61; margin: 25%; font-family:'Rewi'; ">На данный момент нет мероприятий</h1>
-                <!-- <div class="news-block"> -->
-                    <!-- <div class="row">
+                <!-- start -->
+                <div class="news-block">
+                    <div class="row">
                         <div class="col-lg-6">
                             <h2 class="head-h2">"Кубок хвостатого-2018"</h2>
                         </div>
@@ -96,9 +98,13 @@
                             <div class="news-block-text">
                                 <p class="text-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus laborum id earum sint, quod, praesentium maxime magni dolores corrupti ut obcaecati placeat. Deleniti commodi debitis hic quo, eum sequi! Officia.</p>
                             </div>
+                            <div class="news-block-photo">
+
+                            </div>
                         </div>
-                    </div> -->
-                <!-- </div>     -->
+                    </div>
+                </div>
+                <!-- end -->
             </div>
         </div>
     </div>
@@ -136,7 +142,7 @@
         </div>
     </div>
     <script>
-        function genNews(count=0, header='Header', date='date', img='img', text='text'){
+        function genNews(count=0, header='Header', date='date', img='img', text='text', href=""){
             if(count!=0){$(".empty").hide();}
             for(i=0; i<count; i++){
                 block_news=$(".content-news");
@@ -144,7 +150,10 @@
                 // $(".content-news").append('<div class="news-block"></div>');
                 block_news.append(content);
                 // block_news.append(content);
-            }
+								// if(href==""){
+									// }
+								}
+								$("<a href="+href+">Просмотр фото</a>").appendTo($(".news-block-text"));
             replaceForHead();
         console.log(count, header, date, img, text);
     }
@@ -162,9 +171,14 @@
                     console.log(false);
                 }
             }
-        }
+				}
+			
     </script>
 
-    <?php echo  "<script> genNews($count_rows, $data_header, $data_date, $data_img, $data_text);</script>"?>
+		<?php 
+			$href = $_SERVER['HTTP_HOST'].'/?id_albom='.$data_href[0];
+			echo $href;
+		echo  "<script> genNews($count_rows, $data_header, $data_date, $data_img, $data_text, $href);</script>"?>
+		<!-- Ошибка возникает из-за использования функции в которую обернута sql в файле include_news.php, если делаю все без функции, то не работает include_news, а если с ней, то news -->
 </body>
 </html>

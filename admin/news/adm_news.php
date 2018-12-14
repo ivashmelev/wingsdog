@@ -5,6 +5,7 @@ session_start();
 // }
 require_once ("../query_mysql.php"); 
 require_once ("include_news.php");
+// 
 ?>
 
 <!DOCTYPE html>
@@ -144,8 +145,23 @@ require_once ("include_news.php");
         function clickClose(){
             location.reload();
         }
+
+        
+
+        function setStorage(count=0, options=""){
+            localStorage.setItem("data_options", options);
+            localStorage.setItem("count_options", count);
+        }
+        
+        // localStorage.setItem("data_options", 1);
+        // localStorage.setItem("count_options", 2);
+
     </script>
 
-    <?php echo  "<script> genNews($data_id ,$count_rows, $data_header, $data_date, $data_img, $data_text);</script>"?>
+    <?php
+        echo  "<script> genNews($data_id ,$count_rows, $data_header, $data_date, $data_img, $data_text);</script>";
+        print_r($data_options);
+        echo  "<script> setStorage($count_options, $data_options);</script>";
+    ?>
 </body>
 </html>
