@@ -36,7 +36,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-8 col-sm-9">
                                     <div class="header__text">
-                                        <p class="head-text storage_name" id=""></p>
+                                        <p class="head-text storage_name" id="" style="white-space: pre-wrap;"></p>
                                     </div>
                                 </div>
                                 <!-- <div class="col-lg-3">

@@ -17,7 +17,6 @@ while($row_hide = mysqli_fetch_array($select_hide)){
     $i++;
 }
 $arr_hide = json_encode($arr_hide);
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
