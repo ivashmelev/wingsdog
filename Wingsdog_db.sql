@@ -11,20 +11,31 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
+
+-- Дамп структуры базы данных Wingsdog_db
+DROP DATABASE IF EXISTS `Wingsdog_db`;
+CREATE DATABASE IF NOT EXISTS `Wingsdog_db` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `Wingsdog_db`;
+
 -- Дамп структуры для таблица Wingsdog_db.albom
+DROP TABLE IF EXISTS `albom`;
 CREATE TABLE IF NOT EXISTS `albom` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` text NOT NULL,
   `text` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы Wingsdog_db.albom: ~1 rows (приблизительно)
+-- Дамп данных таблицы Wingsdog_db.albom: ~2 rows (приблизительно)
 DELETE FROM `albom`;
 /*!40000 ALTER TABLE `albom` DISABLE KEYS */;
+INSERT INTO `albom` (`id`, `name`, `text`) VALUES
+	(1, 'One', '1'),
+	(2, 'Two', '2');
 /*!40000 ALTER TABLE `albom` ENABLE KEYS */;
 
 -- Дамп структуры для таблица Wingsdog_db.attainment
+DROP TABLE IF EXISTS `attainment`;
 CREATE TABLE IF NOT EXISTS `attainment` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `header` text,
@@ -42,6 +53,7 @@ INSERT INTO `attainment` (`id`, `header`, `img`, `text`) VALUES
 /*!40000 ALTER TABLE `attainment` ENABLE KEYS */;
 
 -- Дамп структуры для таблица Wingsdog_db.auth
+DROP TABLE IF EXISTS `auth`;
 CREATE TABLE IF NOT EXISTS `auth` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `login` varchar(50) DEFAULT NULL,
@@ -50,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `auth` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы Wingsdog_db.auth: ~1 rows (приблизительно)
+-- Дамп данных таблицы Wingsdog_db.auth: ~0 rows (приблизительно)
 DELETE FROM `auth`;
 /*!40000 ALTER TABLE `auth` DISABLE KEYS */;
 INSERT INTO `auth` (`id`, `login`, `password`, `mail`) VALUES
@@ -58,6 +70,7 @@ INSERT INTO `auth` (`id`, `login`, `password`, `mail`) VALUES
 /*!40000 ALTER TABLE `auth` ENABLE KEYS */;
 
 -- Дамп структуры для таблица Wingsdog_db.contacts
+DROP TABLE IF EXISTS `contacts`;
 CREATE TABLE IF NOT EXISTS `contacts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` text NOT NULL,
@@ -80,6 +93,7 @@ INSERT INTO `contacts` (`id`, `name`, `img`, `phone`, `mail`, `addres`, `requisi
 /*!40000 ALTER TABLE `contacts` ENABLE KEYS */;
 
 -- Дамп структуры для таблица Wingsdog_db.feedback
+DROP TABLE IF EXISTS `feedback`;
 CREATE TABLE IF NOT EXISTS `feedback` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` text,
@@ -95,6 +109,7 @@ DELETE FROM `feedback`;
 /*!40000 ALTER TABLE `feedback` ENABLE KEYS */;
 
 -- Дамп структуры для таблица Wingsdog_db.hide_page
+DROP TABLE IF EXISTS `hide_page`;
 CREATE TABLE IF NOT EXISTS `hide_page` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `number` int(11) NOT NULL,
@@ -116,21 +131,28 @@ INSERT INTO `hide_page` (`id`, `number`, `page`, `status`) VALUES
 /*!40000 ALTER TABLE `hide_page` ENABLE KEYS */;
 
 -- Дамп структуры для таблица Wingsdog_db.news
+DROP TABLE IF EXISTS `news`;
 CREATE TABLE IF NOT EXISTS `news` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `header` text,
   `date` text,
   `img` text,
   `text` text,
+  `href_albom` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы Wingsdog_db.news: ~0 rows (приблизительно)
+-- Дамп данных таблицы Wingsdog_db.news: ~3 rows (приблизительно)
 DELETE FROM `news`;
 /*!40000 ALTER TABLE `news` DISABLE KEYS */;
+INSERT INTO `news` (`id`, `header`, `date`, `img`, `text`, `href_albom`) VALUES
+	(1, 'One', '11.11.111111', 'img-1.jpeg', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus laborum id earum sint, quod, praesentium maxime magni dolores corrupti ut obcaecati placeat. Deleniti commodi debitis hic quo, eum sequi! Officia.', ''),
+	(2, '2', '22.02.222222', 'img-2.jpg', '2', ''),
+	(3, '3', '31.03.275760', 'img-3.jpeg', '3', 'One');
 /*!40000 ALTER TABLE `news` ENABLE KEYS */;
 
 -- Дамп структуры для таблица Wingsdog_db.photo
+DROP TABLE IF EXISTS `photo`;
 CREATE TABLE IF NOT EXISTS `photo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `albom_id` int(11) NOT NULL,
@@ -139,14 +161,19 @@ CREATE TABLE IF NOT EXISTS `photo` (
   PRIMARY KEY (`id`),
   KEY `albom` (`albom_id`),
   CONSTRAINT `albom` FOREIGN KEY (`albom_id`) REFERENCES `albom` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=82 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы Wingsdog_db.photo: ~7 rows (приблизительно)
+-- Дамп данных таблицы Wingsdog_db.photo: ~3 rows (приблизительно)
 DELETE FROM `photo`;
 /*!40000 ALTER TABLE `photo` DISABLE KEYS */;
+INSERT INTO `photo` (`id`, `albom_id`, `name`, `path`) VALUES
+	(1, 1, 'img-1544778279-0.jpg', '../../img/album-1/img-1544778279-0.jpg'),
+	(2, 1, 'img-1544778279-1.jpg', '../../img/album-1/img-1544778279-1.jpg'),
+	(3, 1, 'img-1544778279-2.jpg', '../../img/album-1/img-1544778279-2.jpg');
 /*!40000 ALTER TABLE `photo` ENABLE KEYS */;
 
 -- Дамп структуры для таблица Wingsdog_db.team
+DROP TABLE IF EXISTS `team`;
 CREATE TABLE IF NOT EXISTS `team` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `header` text,

@@ -1,4 +1,9 @@
-<?php require_once ("admin/news/include_news.php");
+<?php 
+// require ("connection.php");
+require_once ("admin/query_mysql.php");
+require_once ("admin/news/include_news.php");
+require_once ("admin/news/href_news.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -152,8 +157,9 @@
                 // block_news.append(content);
 								// if(href==""){
 									// }
-								}
-								$("<a href="+href+">Просмотр фото</a>").appendTo($(".news-block-text"));
+								$("<a href=<?php echo "?id_albom="; ?>"+href[i]+">Просмотр фото</a>").appendTo($(".news-block-text"));
+            }
+                     
             replaceForHead();
         console.log(count, header, date, img, text);
     }
@@ -176,8 +182,9 @@
     </script>
 
 		<?php 
-			$href = $_SERVER['HTTP_HOST'].'/?id_albom='.$data_href[0];
-			echo $href;
+            $href = $data_href;
+            // $href = htmlentities($href);
+			print_r($href);
 		echo  "<script> genNews($count_rows, $data_header, $data_date, $data_img, $data_text, $href);</script>"?>
 		<!-- Ошибка возникает из-за использования функции в которую обернута sql в файле include_news.php, если делаю все без функции, то не работает include_news, а если с ней, то news -->
 </body>

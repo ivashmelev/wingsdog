@@ -3,13 +3,16 @@ session_start();
 //if(!$_SESSION['auth']){ //Если не прошла авторизация, то переносит на форму авторизации
 //    header("Location: ./auth.php");
 //}
+// require ("../connection.php");
 
-    // $query=queryMySQL("SELECT * FROM news ORDER BY id DESC");
-    require_once ("connection.php");
-    $link = mysqli_connect($host, $user, $password, $database);
+    // require_once ("../query_mysql.php");
+    $query=queryMySQL("SELECT * FROM news ORDER BY id DESC");
+    // $query=queryMySQL("SELECT name FROM albom");
+    // require ("../connection.php");
+    // $link = mysqli_connect($host, $user, $password, $database);
 
-    $query = mysqli_query($link, "SELECT * FROM news ORDER BY id DESC");
-    $query_options = mysqli_query($link, "SELECT name FROM albom");
+    // $query = mysqli_query($link, "SELECT * FROM news ORDER BY id DESC");
+    // $query_options = mysqli_query($link, "SELECT name FROM albom");
 
     $count_rows=mysqli_num_rows($query);
     $count_fields=mysqli_num_fields($query);
@@ -22,11 +25,11 @@ session_start();
     $data_text=array();
     $data_href=array();
 
-    while($row = mysqli_fetch_array($query_options)){
-        array_push($data_options, $row['name']);
-    }
+    // while($row = mysqli_fetch_array($query_options)){
+    //     array_push($data_options, $row['name']);
+    // }
 
-    print_r($data_options);
+    // print_r($data_options);
     $count_options = count($data_options);
 
     while ($row = mysqli_fetch_array($query)) {
@@ -43,7 +46,7 @@ session_start();
     $data_date=json_encode($data_date);
     $data_img=json_encode($data_img);
     $data_text=json_encode($data_text);
-    // $data_href=json_encode($data_href);
+    $data_href=json_encode($data_href);
 
     $data_options = json_encode($data_options);
 

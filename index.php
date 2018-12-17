@@ -1,5 +1,6 @@
 <?php
-require_once("connection.php");
+
+require_once ("connection.php");
 $link = mysqli_connect($host, $user, $password, $database) or die("Ошибка".mysqli_error($link));
 $select_contacts = mysqli_query($link, "SELECT * from contacts") or die("Error".mysqli_error($link));
 $row = mysqli_fetch_array($select_contacts);

@@ -160,7 +160,7 @@ require_once ("include_news.php");
 
     <?php
         echo  "<script> genNews($data_id ,$count_rows, $data_header, $data_date, $data_img, $data_text);</script>";
-        print_r($data_options);
+        // print_r($data_options);
         echo  "<script> setStorage($count_options, $data_options);</script>";
     ?>
 </body>
