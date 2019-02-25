@@ -81,7 +81,9 @@ $(function(){
                   <div class="form-group"> <label for="InputText1">Текст</label>
                     <div class="col-lg-8 col-xl-8">
                       <textarea class="form-control" name="text" id="textarea" rows="9" placeholder="Введите текст. . ." required>'`+localStorage.getItem("text")+`'</textarea></div>
-                      <script> $(document).ready(function () { $("#textarea").cleditor(); }); </script>
+                      <script>
+                        var editor = CKEDITOR.replace('textarea',{height: 250});
+                      </script>
                     <div class="valid-feedback">Good!</div>
                     <div class="invalid-feedback">Bad!</div>
                   </div> <button type="submit" class="btn btn-primary" style="margin-left:0px;"> <div class="btn-ok"></div> </button> <button type="button" id="btn-close-edit" class="btn btn-danger" onclick="clickClose()" )> <div class="btn-del" ></div> </button>            </form>

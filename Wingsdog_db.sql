@@ -1,7 +1,7 @@
 -- --------------------------------------------------------
 -- Хост:                         127.0.0.1
--- Версия сервера:               5.6.37 - MySQL Community Server (GPL)
--- Операционная система:         Win32
+-- Версия сервера:               5.7.19-log - MySQL Community Server (GPL)
+-- Операционная система:         Win64
 -- HeidiSQL Версия:              9.4.0.5125
 -- --------------------------------------------------------
 
@@ -26,12 +26,9 @@ CREATE TABLE IF NOT EXISTS `albom` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы Wingsdog_db.albom: ~2 rows (приблизительно)
+-- Дамп данных таблицы Wingsdog_db.albom: ~0 rows (приблизительно)
 DELETE FROM `albom`;
 /*!40000 ALTER TABLE `albom` DISABLE KEYS */;
-INSERT INTO `albom` (`id`, `name`, `text`) VALUES
-	(1, 'One', '1'),
-	(2, 'Two', '2');
 /*!40000 ALTER TABLE `albom` ENABLE KEYS */;
 
 -- Дамп структуры для таблица Wingsdog_db.attainment
@@ -42,14 +39,11 @@ CREATE TABLE IF NOT EXISTS `attainment` (
   `img` text,
   `text` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы Wingsdog_db.attainment: ~2 rows (приблизительно)
+-- Дамп данных таблицы Wingsdog_db.attainment: ~0 rows (приблизительно)
 DELETE FROM `attainment`;
 /*!40000 ALTER TABLE `attainment` DISABLE KEYS */;
-INSERT INTO `attainment` (`id`, `header`, `img`, `text`) VALUES
-	(1, '1', 'img-1.jpg', '1'),
-	(2, 'fdasfs', 'img-2.ico', '2');
 /*!40000 ALTER TABLE `attainment` ENABLE KEYS */;
 
 -- Дамп структуры для таблица Wingsdog_db.auth
@@ -85,11 +79,11 @@ CREATE TABLE IF NOT EXISTS `contacts` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы Wingsdog_db.contacts: ~1 rows (приблизительно)
+-- Дамп данных таблицы Wingsdog_db.contacts: ~0 rows (приблизительно)
 DELETE FROM `contacts`;
 /*!40000 ALTER TABLE `contacts` DISABLE KEYS */;
 INSERT INTO `contacts` (`id`, `name`, `img`, `phone`, `mail`, `addres`, `requisites`, `time_work`, `time_half`, `weekend`) VALUES
-	(1, 'Нижегородская региональная общественная организация \r\nкинологический клуб "Крылатый Пёс"', '../img/mainimg.png', '8 (831) 298 14 88', 'info@mysite.ru', 'п.Примерный, Нижегородская область', '40817810099910004312', 'Пн-Пт: 10:00-19:00', 'Cб: 10:00-19:00 ', 'Вс');
+	(1, 'Нижегородская региональная общественная организация \r\nкинологический клуб "Крылатый Пёс"', '../img/mainimg.jpg', '8 (831) 298 14 88', 'info@mysite.ru', 'п.Примерный, Нижегородская область', '40817810099910004312', 'Пн-Пт: 10:00-19:00', 'Cб: 10:00-19:00 ', 'Вс');
 /*!40000 ALTER TABLE `contacts` ENABLE KEYS */;
 
 -- Дамп структуры для таблица Wingsdog_db.feedback
@@ -140,15 +134,11 @@ CREATE TABLE IF NOT EXISTS `news` (
   `text` text,
   `href_albom` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы Wingsdog_db.news: ~3 rows (приблизительно)
+-- Дамп данных таблицы Wingsdog_db.news: ~0 rows (приблизительно)
 DELETE FROM `news`;
 /*!40000 ALTER TABLE `news` DISABLE KEYS */;
-INSERT INTO `news` (`id`, `header`, `date`, `img`, `text`, `href_albom`) VALUES
-	(1, 'One', '11.11.111111', 'img-1.jpeg', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus laborum id earum sint, quod, praesentium maxime magni dolores corrupti ut obcaecati placeat. Deleniti commodi debitis hic quo, eum sequi! Officia.', ''),
-	(2, '2', '22.02.222222', 'img-2.jpg', '2', ''),
-	(3, '3', '31.03.275760', 'img-3.jpeg', '3', 'One');
 /*!40000 ALTER TABLE `news` ENABLE KEYS */;
 
 -- Дамп структуры для таблица Wingsdog_db.photo
@@ -161,15 +151,11 @@ CREATE TABLE IF NOT EXISTS `photo` (
   PRIMARY KEY (`id`),
   KEY `albom` (`albom_id`),
   CONSTRAINT `albom` FOREIGN KEY (`albom_id`) REFERENCES `albom` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы Wingsdog_db.photo: ~3 rows (приблизительно)
+-- Дамп данных таблицы Wingsdog_db.photo: ~0 rows (приблизительно)
 DELETE FROM `photo`;
 /*!40000 ALTER TABLE `photo` DISABLE KEYS */;
-INSERT INTO `photo` (`id`, `albom_id`, `name`, `path`) VALUES
-	(1, 1, 'img-1544778279-0.jpg', '../../img/album-1/img-1544778279-0.jpg'),
-	(2, 1, 'img-1544778279-1.jpg', '../../img/album-1/img-1544778279-1.jpg'),
-	(3, 1, 'img-1544778279-2.jpg', '../../img/album-1/img-1544778279-2.jpg');
 /*!40000 ALTER TABLE `photo` ENABLE KEYS */;
 
 -- Дамп структуры для таблица Wingsdog_db.team
@@ -180,14 +166,11 @@ CREATE TABLE IF NOT EXISTS `team` (
   `img` text,
   `text` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы Wingsdog_db.team: ~2 rows (приблизительно)
+-- Дамп данных таблицы Wingsdog_db.team: ~0 rows (приблизительно)
 DELETE FROM `team`;
 /*!40000 ALTER TABLE `team` DISABLE KEYS */;
-INSERT INTO `team` (`id`, `header`, `img`, `text`) VALUES
-	(1, '1  ', 'img-1.png', '1'),
-	(2, '2', 'img-2.jpg', '2');
 /*!40000 ALTER TABLE `team` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

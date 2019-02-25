@@ -133,6 +133,7 @@ $(document).ready(function(){
     $(".header").css({"background-image":"url("+localStorage.getItem("mainImg")+")"});
 
     $(".news-block-text > div, .news-block-text > span, .news-block-text > p").addClass("text-p").css({fontSize: "24px"});
+    $(".person > div, .personblock-text > span, .person > p").addClass("text-p").css({fontSize: "24px"});
 
 
 
