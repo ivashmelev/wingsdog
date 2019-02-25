@@ -2,8 +2,6 @@
 // require ("connection.php");
 require_once ("admin/query_mysql.php");
 require_once ("admin/news/include_news.php");
-require_once ("admin/news/href_news.php");
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -84,31 +82,7 @@ require_once ("admin/news/href_news.php");
             <div class="content-news">
                 <h1 class="empty" style="text-align: center; color: #b1abab61; margin: 25%; font-family:'Rewi'; ">На данный момент нет мероприятий</h1>
                 <!-- start -->
-                <div class="news-block">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <h2 class="head-h2">"Кубок хвостатого-2018"</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <p class="text-p text-p-news">20.08.2018</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <img class="news-image" src="img/news1.jpg">
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="news-block-text">
-                                <p class="text-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus laborum id earum sint, quod, praesentium maxime magni dolores corrupti ut obcaecati placeat. Deleniti commodi debitis hic quo, eum sequi! Officia.</p>
-                            </div>
-                            <div class="news-block-photo">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
                 <!-- end -->
             </div>
         </div>
@@ -151,13 +125,17 @@ require_once ("admin/news/href_news.php");
             if(count!=0){$(".empty").hide();}
             for(i=0; i<count; i++){
                 block_news=$(".content-news");
-                content='<div class="news-block"><div class="row"><div class="col-xl-6"><h2 class="head-h2">'+header[i]+'</h2></div></div><div class="row"><div class="col-xl-6"><p class="text-p text-p-news">'+date[i]+'</p></div></div><div class="row"><div class="col-xl-6"><img class="news-image" src="img/news/'+img[i]+'"></div><div class="col-xl-6"><div class="news-block-text"><p class="text-p">'+text[i]+'</p></div></div</div></div>';
+                if(href[i]){
+                    content='<div class="news-block"><div class="row"><div class="col-xl-6"><h2 class="head-h2">'+header[i]+'</h2></div></div><div class="row"><div class="col-xl-6"><p class="text-p text-p-news">'+date[i]+'</p></div></div><div class="row"><div class="col-xl-6"><img class="news-image" src="img/news/'+img[i]+'"></div><div class="col-xl-6"><div class="news-block-text"><p class="text-p">'+text[i]+'</p><a href='+href[i]+'>Посмотреть фото</a></div></div</div></div><hr>';                
+                }
+                else{
+                    content='<div class="news-block"><div class="row"><div class="col-xl-6"><h2 class="head-h2">'+header[i]+'</h2></div></div><div class="row"><div class="col-xl-6"><p class="text-p text-p-news">'+date[i]+'</p></div></div><div class="row"><div class="col-xl-6"><img class="news-image" src="img/news/'+img[i]+'"></div><div class="col-xl-6"><div class="news-block-text"><p class="text-p">'+text[i]+'</p></div></div</div></div><hr>';
+                }
                 // $(".content-news").append('<div class="news-block"></div>');
                 block_news.append(content);
                 // block_news.append(content);
 								// if(href==""){
 									// }
-								$("<a href=<?php echo "?id_albom="; ?>"+href[i]+">Просмотр фото</a>").appendTo($(".news-block-text"));
             }
                      
             replaceForHead();
@@ -183,9 +161,6 @@ require_once ("admin/news/href_news.php");
 
 		<?php 
             $href = $data_href;
-            // $href = htmlentities($href);
-			print_r($href);
 		echo  "<script> genNews($count_rows, $data_header, $data_date, $data_img, $data_text, $href);</script>"?>
-		<!-- Ошибка возникает из-за использования функции в которую обернута sql в файле include_news.php, если делаю все без функции, то не работает include_news, а если с ней, то news -->
 </body>
 </html>

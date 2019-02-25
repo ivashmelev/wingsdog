@@ -36,6 +36,10 @@
     text-decoration: none;
 }
 
+.card{
+    margin: 15px 0;
+}
+
 .news{
     padding: 10px;
     border: none;

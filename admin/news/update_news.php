@@ -10,9 +10,10 @@ require_once ("../query_mysql.php");
 $id=strip_tags(htmlentities($_POST['id']));
 $header=strip_tags(htmlentities($_POST['header']));
 $date=strip_tags(htmlentities($_POST['date']));
+$select=strip_tags(htmlentities($_POST['select']));
 // $img=strip_tags(htmlentities($_POST['img']));
 // $text=strip_tags(htmlentities($_POST['text']));
-$text=strip_tags($_POST['text'], "<b><i><u><left><center><right><justify>");
+$text=$_POST['text'];
 
 $date;
 $date=explode("-", $date);
@@ -25,7 +26,7 @@ $full_path=$path.$new_name;
 
 if($_FILES['img']['error']==0){
     if(move_uploaded_file($_FILES['img']['tmp_name'], $full_path)){
-        $update=queryMySQL("UPDATE news SET id='$id', header='$header', date='$date', img='$new_name', text='$text' WHERE id='$id'");
+        $update=queryMySQL("UPDATE news SET id='$id', header='$header', date='$date', img='$new_name', text='$text', href_albom='$select' WHERE id='$id'");
     }
 }
 

@@ -11,7 +11,8 @@ $date=strip_tags(htmlentities($_POST['date']));
 $select=strip_tags(htmlentities($_POST['select']));
 // $img=strip_tags(htmlentities($_POST['img']));
 // $text=strip_tags(htmlentities($_POST['text']));
-$text=strip_tags($_POST['text'], "<b><i><u><left><center><right><justify>");
+// $text=strip_tags($_POST['text'], "<b><i><u><left><center><right><justify>");
+$text=$_POST['text'];
 
 $date;
 $date=explode("-", $date);

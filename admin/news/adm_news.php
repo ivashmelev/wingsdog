@@ -20,11 +20,14 @@ require_once ("include_news.php");
     <link rel="stylesheet" href="../../css/menu.css">
     <link rel="stylesheet" href="../../css/admin.css">
     <link rel="stylesheet" href="../../css/style.css">
+    <!-- <link rel="stylesheet" href="../../lib/cleditor1_4_4/jquery.cleditor.css"> -->
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="../../lib/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <!-- <script src="../../lib/cleditor1_4_4/jquery.cleditor.min.js"></script> -->
+    <script src="../../lib/ckeditor/ckeditor.js"></script>
     <script src="adm_news.js"></script>
     <title>Мероприятия</title>
 </head>
@@ -66,6 +69,8 @@ require_once ("include_news.php");
         </div>
     <!-- Генерация новостей -->
     <div id="accordion"></div>
+    <div class="block-news"></div>
+
         <!--<div class="card">
             <div class="card-header" id="heading10">
             <h5 class="mb-0">
@@ -135,7 +140,7 @@ require_once ("include_news.php");
     <script>
         function genNews(id=0, count=0, header='Header', date='date', img='img', text='text'){
             for(i=0; i<count; i++){
-                block_news=$("body");
+                block_news=$(".block-news");
                 content='<div id="accordion-'+id[i]+'"> <div class="card"> <div class="card-header" id="heading'+i+'"> <h5 class="mb-0"> <button class="btn btn-link adm-element-head" data-toggle="collapse" data-target="#collapse'+i+'" aria-expanded="false" aria-controls="collapseOne"> '+header[i]+' </button> <span class="adm-path-text">'+date[i]+'</span><span class="adm-path-text">/</span><span class="adm-path-text">'+text[i]+'</span> </h5> </div> <div id="collapse'+i+'" class="collapse" aria-labelledby="heading'+i+'" data-parent="#accordion"> <div class="card-body"> <div class="container-fluid"> <div class="element-news"> <div class="row"> <div class="col-lg-4"> <h2 class="adm-head-h2">'+header[i]+'</h2> <p class="adm-subtext">'+date[i]+'</p> <img style=" max-width: 100%; height: 200px; border: 2px solid black; text-align: center;" src="../../img/news/'+img[i]+'"></img> </div> <div class="col-lg-4"> <p class="adm-text-p">'+text[i]+'</p> </div> <div class="col-lg-4"> <button type="button" class="btn btn-danger btn-right"> <div class="btn-del" id="btn-del-news-'+id[i]+'"></div> </button> <button type="button" class="btn btn-primary btn-right"> <div class="btn-edit" id="btn-edit-'+id[i]+'"></div> </button>  </div> </div> </div> </div> </div> </div> </div> </div>';
                 block_news.append(content);
             }
@@ -161,7 +166,7 @@ require_once ("include_news.php");
     <?php
         echo  "<script> genNews($data_id ,$count_rows, $data_header, $data_date, $data_img, $data_text);</script>";
         // print_r($data_options);
-        echo  "<script> setStorage($count_options, $data_options);</script>";
+        echo  "<script> setStorage($count_options, $data_href);</script>";
     ?>
 </body>
 </html>

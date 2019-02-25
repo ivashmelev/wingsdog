@@ -1,5 +1,10 @@
+let look = () => {
+  return $("iframe").contents().find('body').html();
+}
+
 $(function(){
-    console.log(11);
+  
+
     loc=document.title;
     switch(loc){
         case "Главная": $("a:nth-child(1)").addClass("underline");
@@ -49,12 +54,12 @@ $(function(){
             <div class="row">
               <div class="col-lg-8 col-xl-8">
                 <form method="POST" action="`+url+`" enctype="multipart/form-data">
-                  <div class="form-group"> <label for="InputHeader1">Заголовок</label> <input type="hidden" name="id" value="`+id+`"><input type="text" class="form-control" name="header" id="InputHeader1" aria-describedby="headerHelp" placeholder="Введите заголовок. . ." value='+localStorage.getItem("head")+'
+                  <div class="form-group"> <label for="InputHeader1">Заголовок</label> <input type="hidden" name="id" value="`+id+`"><input type="text" class="form-control" name="header" id="InputHeader1" aria-describedby="headerHelp" placeholder="Введите заголовок. . ." value='`+localStorage.getItem("head")+`'
                       required>
                     <div class="valid-feedback">Good!</div>
                     <div class="invalid-feedback">Bad!</div>
                   </div>
-                  <div class="form-group col-lg-6" style="padding-left: 0px;"> <label for="InputDate1">Дата</label> <input type="date" name="date" class="form-control" id="InputDate1" placeholder="" value='+localStorage.getItem("date")+' required>
+                  <div class="form-group col-lg-6" style="padding-left: 0px;"> <label for="InputDate1">Дата</label> <input type="date" name="date" class="form-control" id="InputDate1" placeholder="" value='`+localStorage.getItem("date")+`' required>
                     <div class="valid-feedback">Good!</div>
                     <div class="invalid-feedback">Bad!</div>
                   </div>
@@ -67,15 +72,16 @@ $(function(){
                       <div class="input-group-append"> <button class="btn btn-outline-secondary" style="margin-left:0px;" type="button">Загрузить</button> </div>
                     </div>
                   </div>
+                  <div class="form-group col-lg-4" style="padding-left:0;">
+                    <label for="inputState">Привязать фотоальбом</label>
+                        <select id="inputPhotoAlbom" class="form-control" name="select">
+                            <option></option>
+                        </select>
+                    </div>
                   <div class="form-group"> <label for="InputText1">Текст</label>
                     <div class="col-lg-8 col-xl-8">
-                      <div class="btn custom" id="bold"><b>Ж</b></div>
-                      <div class="btn custom" id="italics"><i>К</i></div>
-                      <div class="btn custom" id="underline"><u>Ч</u></div>
-                      <div style="margin-left: 10%;" class="btn custom" id="left">Слева</div>
-                      <div class="btn custom" id="center">Центр</div>
-                      <div class="btn custom" id="right">Справа</div>
-                      <div class="btn custom" id="justify">По ширине</div> <textarea class="form-control" name="text" id="textarea" rows="9" placeholder="Введите текст. . ." required>'+localStorage.getItem("text")+'</textarea></div>
+                      <textarea class="form-control" name="text" id="textarea" rows="9" placeholder="Введите текст. . ." required>'`+localStorage.getItem("text")+`'</textarea></div>
+                      <script> $(document).ready(function () { $("#textarea").cleditor(); }); </script>
                     <div class="valid-feedback">Good!</div>
                     <div class="invalid-feedback">Bad!</div>
                   </div> <button type="submit" class="btn btn-primary" style="margin-left:0px;"> <div class="btn-ok"></div> </button> <button type="button" id="btn-close-edit" class="btn btn-danger" onclick="clickClose()" )> <div class="btn-del" ></div> </button>            </form>
@@ -114,28 +120,31 @@ $(function(){
                   <div class="form-group col-lg-4" style="padding-left:0;">
                     <label for="inputState">Привязать фотоальбом</label>
                         <select id="inputPhotoAlbom" class="form-control" name="select">
-                            <option>...</option>
+                            <option></option>
                         </select>
                     </div>
                   <div class="form-group"> <label for="InputText1">Текст</label>
                     <div class="col-lg-8 col-xl-8">
-                      <div class="btn custom" id="bold"><b>Ж</b></div>
-                      <div class="btn custom" id="italics"><i>К</i></div>
-                      <div class="btn custom" id="underline"><u>Ч</u></div>
-                      <div style="margin-left: 10%;" class="btn custom" id="left">Слева</div>
-                      <div class="btn custom" id="center">Центр</div>
-                      <div class="btn custom" id="right">Справа</div>
-                      <div class="btn custom" id="justify">По ширине</div> <textarea class="form-control" name="text" id="textarea" rows="9" placeholder="Введите текст. . ." required></textarea> </div>
+                      <textarea class="form-control" name="text" id="textarea" rows="9" placeholder="Введите текст. . ." required></textarea> </div>
+                      <script>
+                        var editor = CKEDITOR.replace('textarea',{height: 250});
+                      </script>
                     <div class="valid-feedback">Good!</div>
                     <div class="invalid-feedback">Bad!</div>
-                  </div> <button type="submit" class="btn btn-primary" style="margin-left:0px;"> <div class="btn-ok"></div> </button> <button type="button" id="btn-close-edit" class="btn btn-danger" onclick="clickClose()" )> <div class="btn-del" ></div> </button>            </form>
+                  </div> <button type="submit" class="btn btn-primary" style="margin-left:0px;"> <div class="btn-ok"></div> </button> <button type="button" id="btn-close-edit" class="btn btn-danger" onclick="clickClose()" )> <div class="btn-del" ></div> </button> </form>
               </div>
             </div>
           </div>
         </div>
       </div>`;
-        return content;
+      
+
+      return content;
     }
+
+      
+
+    
 
     function formatPanel(){
         $(".btn.custom").click(function(){
@@ -173,6 +182,11 @@ $(function(){
         $(".card").addClass("disabled");
         $("#accordion-"+num[num.length-1]+"").append(clickEdit(localStorage.getItem("id"), "update_news.php"));
         formatPanel();
+        options = localStorage.getItem("data_options");
+        options = options.split(",");
+        for(i=0; i<arrAlbom.length; i++){
+          $("<option>"+arrAlbom[i]+"</option>").appendTo($("#inputPhotoAlbom"));
+        }
     });
 
     $(".btn-add").click(function(){
@@ -189,8 +203,13 @@ $(function(){
             options = localStorage.getItem("data_options");
             options = options.split(",");
 
-            for(i in options){
-                $("<option>"+options[i]+"</option>").appendTo($("#inputPhotoAlbom"));
+            // for(i=0; i<options.length; i++){
+            //     $("<option>"+options[i]+"</option>").appendTo($("#inputPhotoAlbom"));
+            // }
+            // arrAlbom=localStorage.getItem("arrAlbom");
+            // arrAlbom=JSON.stringify(arrAlbom);
+            for(i=0; i<arrAlbom.length; i++){
+              $("<option>"+arrAlbom[i]+"</option>").appendTo($("#inputPhotoAlbom"));
             }
         }
     });
@@ -211,7 +230,9 @@ $(function(){
         location.href="../exit.php";
     });
 
-    
+    $("form").submit(() => {
+      $("textarea").val($("iframe").contents().find('body').html());
+    });
 
     
 

@@ -6,13 +6,37 @@ session_start();
 // require ("../connection.php");
 
     // require_once ("../query_mysql.php");
-    $query=queryMySQL("SELECT * FROM news ORDER BY id DESC");
+    // $query=queryMySQL("SELECT * FROM news ORDER BY id DESC");
     // $query=queryMySQL("SELECT name FROM albom");
-    // require ("../connection.php");
-    // $link = mysqli_connect($host, $user, $password, $database);
+    if($_SERVER["PHP_SELF"]=="/admin/news/adm_news.php"){
+        require_once ("../connection.php");
+    }
+    else{
+        require_once ("connection.php");
+    }
+    // require ("connection.php");
+    $link = mysqli_connect($host, $user, $password, $database);
 
-    // $query = mysqli_query($link, "SELECT * FROM news ORDER BY id DESC");
-    // $query_options = mysqli_query($link, "SELECT name FROM albom");
+    $query = mysqli_query($link, "SELECT * FROM news ORDER BY id DESC");
+    $query_options = mysqli_query($link, "SELECT header, href_albom FROM news WHERE href_albom!=''");
+
+    $queryAlbom = mysqli_query($link, "SELECT name FROM albom");
+
+    $arrAlbom=[];
+
+    while($row = mysqli_fetch_array($queryAlbom)){
+        array_push($arrAlbom, $row["name"]);
+    }
+
+    $arrAlbom = json_encode($arrAlbom);
+
+    echo "<script>
+            // localStorage.setItem('arrAlbom', $arrAlbom);
+            let arrAlbom = $arrAlbom;
+        </script>";
+
+    // $query_options = mysqli_fetch_object($query_options);
+    // print_r($query_options);
 
     $count_rows=mysqli_num_rows($query);
     $count_fields=mysqli_num_fields($query);
