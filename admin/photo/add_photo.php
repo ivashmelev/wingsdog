@@ -1,26 +1,15 @@
 <?
 session_start();
-// if(!$_SESSION['auth']){ //Если не прошла авторизация, то переносит на форму авторизации
-//     header("Location: ../admin/auth.php");
-// }
-// require_once ("../query_mysql.php");
+
 require_once ("../connection.php");
 $link=mysqli_connect($host, $user, $password, $database) or die("Error".mysqli_error($link));
 mysqli_set_charset($link, 'utf8');
 $id=strip_tags(htmlentities($_POST['id']));
 $albom=strip_tags(htmlentities($_POST['albom']));
 $header=strip_tags(htmlentities($_POST['header']));
-// $date=strip_tags(htmlentities($_POST['date']));
-// $img=strip_tags(htmlentities($_POST['img']));
+
 $text=strip_tags(htmlentities($_POST['text']));
 
-// $date;
-// $date=explode("-", $date);
-// $date="$date[2].$date[1].$date[0]";
-// echo "<pre>";
-// print_r($_FILES);
-// print_r(count($_FILES));
-// echo "</pre>";
 $img_mass = $_FILES['img']['name'];
 $path="../../img/album-$id/";
 $time = time();
@@ -38,6 +27,6 @@ for($i=0; $i<count($img_mass); $i++){
     }
 }
 mysqli_close($link);
-// for($i=0; $i<count($_FILE)
+
 header("Location: adm_photo.php?id=$id&albom=$albom");
 ?>

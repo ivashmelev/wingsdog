@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 // require_once ("../query_mysql.php");
 require_once ("../connection.php");
 // $id=strip_tags(htmlentities(($_GET['id'])));
@@ -12,8 +11,6 @@ $add=mysqli_query($link, "INSERT INTO albom VALUES(NULL, '$name', '$text')") or 
 $query_albom = mysqli_query($link, "SELECT * FROM albom ORDER BY id DESC") or die("Error".mysqli_error($link));
 $row_albom = mysqli_fetch_array($query_albom);
 $id = $row_albom["id"];
-
 mkdir("../../img/album-$id");
-
 header("Location: index.php");
 ?>
