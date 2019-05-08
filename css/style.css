@@ -53,8 +53,8 @@ html{
 }
 
 .header__logo{
-    width: 125px;
-    height: 125px;
+    width: 150px;
+    height: 150px;
     /* height: 100%; */
     background-image: url('../img/logo_white.png');
     background-size: cover;

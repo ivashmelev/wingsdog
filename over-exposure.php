@@ -90,7 +90,7 @@
                                 
                                 <div class="row justify-content-center">
                                     <div class="col-lg-8">
-                                    <p class="text-p" align="center" style="margin: 40px;">ПЕРЕДЕРЖКА СОБАК
+                                    <p class="text-p" align="justify" style="margin: 40px;">ПЕРЕДЕРЖКА СОБАК
 в вольерах и помещении.
 Основные правила передачи: собака старше 3-х месяцев должна быть:
 -вакцинирована не ранее, чем за 21 день и не позднее, чем за 1 год до принятия на передержку;

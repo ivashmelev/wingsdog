@@ -1,0 +1,15 @@
+.card {
+  margin: 50px 25px 25px 50px;
+}
+
+.custom-file{
+  width: 50%;
+  margin: 50px;
+}
+
+.photo-adm img{
+  max-width: 339px;
+  width: 100%;
+  padding: 3px;
+  border: 1px solid black;
+}

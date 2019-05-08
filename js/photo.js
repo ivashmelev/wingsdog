@@ -15,6 +15,17 @@ $(document).ready(function(){
             // }
         }
     }
+    
+    if(typeof nameShowAlbom != "undefined"){
+      for(let i in dataAlbomName){
+        if(nameShowAlbom == dataAlbomName[i]){
+          index=$("#"+dataAlbomId[i]).prop("id");
+          console.log(index);
+          console.log(dataPhotoName);
+          startCarousel(index, dataPhotoName[index]);        
+        }
+      }
+    }
 
     console.log(dataPhotoName);
     for(i in dataAlbomId){

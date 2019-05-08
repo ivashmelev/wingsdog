@@ -41,6 +41,14 @@ $data_photo_path=json_encode($data_photo_path);
 // $count_albom = ceil($count_albom_rows/2);
 $count_albom = $count_albom_rows;
 
+if(isset($_GET["name"])){
+  $nameShowAlbom = $_GET["name"];
+  echo "<script> var nameShowAlbom = $nameShowAlbom; </script>";
+}
+else{
+  echo "<script> var nameShowAlbom = undefined; </script>";
+}
+
 
 ?>
 <!DOCTYPE html>
@@ -240,7 +248,7 @@ $count_albom = $count_albom_rows;
             for(i=0; i<countAlbom; i++){
                 
                 content=`<div class="col-lg-6">
-                                    <div class="photo" id="`+dataAlbomId[i]+`">
+                                    <div class="photo" id="`+dataAlbomId[i]+`" data-albom-name=`+dataAlbomName[i]+`">
                                         <img src="img/album-`+dataAlbomId[i]+`/`+preview[dataAlbomId[i]][0]+`" alt="">
                                         <div class="context">
                                             <b>`+dataAlbomName[i]+`</b>

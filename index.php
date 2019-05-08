@@ -9,6 +9,7 @@ $phone = json_encode($row["phone"]);
 $mail = json_encode($row["mail"]);
 $addres = json_encode($row["addres"]);
 $img = $row["img"];
+$mainimg = $row["img_on_main"];
 $select_hide = mysqli_query($link, "SELECT * from hide_page") or die("Error".mysqli_error($link));
 $arr_hide = array();
 $i=0;
@@ -33,7 +34,7 @@ $arr_hide = json_encode($arr_hide);
     <script src="js/script.js"></script>
     <script src="js/map.js"></script>
     <script src="js/menu.js"></script>
-    <link rel="icon" href=​img/favicon.ico type="image/x-icon" />
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU"> </script>
     <link rel="stylesheet" href="css/style.css"  type="text/css">
@@ -126,7 +127,7 @@ $arr_hide = json_encode($arr_hide);
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-8 order-lg-first">
-                            <p class="text-p">Наша площадка начала свою деятельность в августе 2017 года. 
+                            <p class="text-p" align="justify">Наша площадка начала свою деятельность в августе 2017 года. 
 Местонахождение: Нижегородская область, поселок Большое Козино. 
 Площадка оборудована всеми необходимыми снарядами, для подготовки к нормативам, 
 имеет ограждение, подъездные пути, туалет.</p>
@@ -141,17 +142,17 @@ $arr_hide = json_encode($arr_hide);
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-8">
-                            <p class="text-p">Основные направления деятельности:
-- Проведение кинологических мероприятий 
-- Дрессировка собак по разным дисциплинам 
-- Передержка собак</p>
+                            <p class="text-p">Основные направления деятельности:<br/>
+- Проведение кинологических мероприятий<br/> 
+- Дрессировка собак по разным дисциплинам<br/> 
+- Передержка собак<br/></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="content-back">
+        <div class="content-back" style="background-image: url(<?php echo $row["img_on_main"];?>);">
             <div class="content-back-txt">
                 <div class="margin-text mt-up">
                     <p class="text-back">Тренировка собак</p>
@@ -178,10 +179,10 @@ $arr_hide = json_encode($arr_hide);
                         </div>
                         <div class="col-xl-2 col-lg-2 col-md-8 order-lg-first">
                             <p class="text-p">
- - соревнования
- - выставки
- - семинары 
- - тренинги</p>
+ - соревнования<br/>
+ - выставки<br/>
+ - семинары<br/> 
+ - тренинги<br/></p>
                         </div>
                     </div>
                 </div>
@@ -193,15 +194,15 @@ $arr_hide = json_encode($arr_hide);
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-8">
-                            <p class="text-p">- общий курс дрессировки (ОКД) 
-- защитно-караульная служба (ЗКС) 
-- международный стандарт BH(собака-компаньон) 
-- международный вид спорта мондьоринг (послушание+защита+прыжки) 
-- курс «Управляемая собака» 
-- защита хозяина (собака-телохранитель) 
-- охрана территории 
-- коррекция нежелательного поведения собак 
-- игровые виды спорта</p>
+                            <p class="text-p">- общий курс дрессировки (ОКД)<br/> 
+- защитно-караульная служба (ЗКС)<br/> 
+- международный стандарт BH(собака-компаньон)<br/> 
+- международный вид спорта мондьоринг (послушание+защита+прыжки)<br/> 
+- курс «Управляемая собака»<br/> 
+- защита хозяина (собака-телохранитель)<br/>
+- охрана территории <br/>
+- коррекция нежелательного поведения собак <br/>
+- игровые виды спорта<br/></p>
                         </div>
                     </div>
                 </div>
@@ -221,10 +222,10 @@ $arr_hide = json_encode($arr_hide);
                                     </div>
                                 </div>
                                 <div class="social">
-                                    <img src="img/vk.png" alt="vk.com">
+                                    <a href=""> <img src="img/vk.png" alt="vk.com"></a>
                                 </div>
                             </div>                                
-                            <div class="row justify-content-center">
+                            <!-- <div class="row justify-content-center">
                                 <div class="col-lg-12">
                                     <div class="footer-text">
                                         <p class="head-text" style="text-align: right;">
@@ -232,7 +233,7 @@ $arr_hide = json_encode($arr_hide);
                                         </p>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>

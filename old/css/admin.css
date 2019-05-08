@@ -1,0 +1,322 @@
+@font-face{
+    font-family: 'Rewi';
+    src: url('../font/REWI_M.TTF');
+}
+
+@font-face{
+    font-family: "Roboto";
+    src: url('../font/Roboto/Roboto-Regular.ttf');
+}
+
+@font-face{
+    font-family: "Roboto Bold";
+    src: url('../font/Roboto/Roboto-Bold.ttf')
+}
+
+@font-face{
+    font-family: "Roboto Italic";
+    src: url('../font/Roboto/Roboto-Italic.ttf');
+}
+
+
+
+.menu{
+    margin: 20px;
+}
+
+.menu-a{
+    padding: 10px;
+    font-family: "Roboto";
+    text-decoration: none;
+    color: #002a56;
+    border: 2px solid rgba(255, 255, 255, 0);
+}
+
+.menu a{
+    text-decoration: none;
+}
+
+.news{
+    padding: 10px;
+    border: none;
+    border-top: 1px solid #00000032;
+    border-bottom: 1px solid #00000032;
+    margin-bottom: 25px;
+}
+
+.news:hover{
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+}
+
+.news a:hover{
+    text-decoration: none;
+}
+
+.btn-right{
+    float: right;
+    margin-top: -7px;
+}
+
+.adm-head-h2{
+    font-family: "Roboto Bold";
+}
+
+.adm-text-p{
+    font-family: "Roboto";
+    font-size: 18px;
+    white-space: pre-wrap;
+}
+
+.adm-subtext{
+    font-family: "Roboto Italic";
+    font-size: 16px;
+    color: #808080b6;
+}
+
+.adm-path-text{
+    font-family: "Roboto Italic";
+    font-size: 14px;
+    color: #808080b6;
+    float: right;
+    margin-top: 7px;
+}
+
+.adm-element-head{
+    font-family: "Roboto Bold";
+    font-size: 18px;
+    text-decoration: none;
+    color: #002a56;
+}
+
+
+
+.btn-edit{
+    background-image: url('../img/ico/document-sheet.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+}
+
+.btn-add{
+    background-image: url('../img/ico/add-file-button.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+}
+
+.btn-del{
+    background-image: url('../img/ico/close-button.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+    
+}
+/* .btn-danger{
+    box-shadow: 0px 4px 0px 0px #7e222b;
+}
+
+.btn-primary{
+    box-shadow: 0px 4px 0px 0px #0157b3;
+}
+
+.btn-success{
+    box-shadow: 0px 4px 0px 0px #1c7531;
+} */
+
+.btn-back{
+    background-image: url('../img/ico/back-track.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+}
+
+.btn-exit{
+    background-image: url('../img/ico/emergency-exit.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+}
+
+.btn-ok{
+    background-image: url('../img/ico/work-done.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+}
+
+.btn{
+    margin-left:15px;
+}
+
+.disabled{
+    opacity: .4;
+    pointer-events: none;
+}
+
+
+
+.btn:hover, .btn, .btn:focus {
+    text-decoration: none;
+}
+
+.underline{
+    background-color: #002a56;
+    color: white;
+    padding: 10px;
+    transition: 0.5s;
+    font-weight: bold; 
+    font-family: "Roboto Bold";
+}
+
+.menu-a:hover{
+    border: 2px solid #002a56;
+    background-color: white;
+    color: #002a56;
+    /* font-weight: bold; */
+    /* font-family: "Roboto Bold"; */
+    transition: 0.3s;
+}
+
+.form-control{
+    border-color: #002a56;
+    border-radius: 0;
+}
+
+.card-title{
+    line-height: 38px;
+    text-align: center;
+    font-family: "Rewi";
+}
+
+.card-text{
+    
+    text-align: center;
+}
+
+.card-body{
+
+}
+
+.custom{
+    margin: 2px;
+    border-radius: 0;
+    border-color: #000000;
+    padding: 1px 6px;
+    background-color: white;
+}
+
+/* Меню */
+.menu{
+    /* width: 100%; */
+    height: 60px;
+    position: relative;
+    display: inline-block;
+    margin: unset;
+}
+
+.btn.btn-right{
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 990px){
+    .menu-links {
+        width: 100%;
+        margin-top: 21px;
+        z-index: -1;
+        text-align: unset;
+        position: absolute;
+    }
+    /* .menu-links {
+        width: 100%; */
+        /* height: 100%; */
+        /* position: absolute; */
+        /* margin: 0 auto; */
+        
+    /* } */
+    .btn{
+        float: unset;
+        /* margin-top: 0px; */
+        margin-top: -5px;
+    }
+    .menu{
+        z-index: 2;
+    }
+    .menu-icon{
+        z-index: 1;
+    }
+}
+
+.menu-admin{
+    margin: 11% 14%;
+}
+
+.admin-form input{
+    margin-bottom:20px; 
+}
+
+.block-page input[type=checkbox]{
+    margin-left: 20px;
+    height: 20px;
+    width: 20px;
+    display: none;
+}
+
+.adm-text-p label{
+    line-height: 30px;
+    
+}
+
+.block-page{
+    width: 70px;
+    margin: 0 auto;
+}
+
+.admin-form label:hover{
+    cursor: pointer;
+}
+
+
+.strike:before{
+    content: "";
+    width: 0;
+    height: 1px;
+    left: -5px;
+    bottom: -14px;
+    background-color: red;
+    display: block;
+    position: relative;
+    transition: width 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+input:checked ~ .strike:before{
+    width: 110%;
+}
+
+.admin-btn{
+    border-radius: 0;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.block-menu .container-fluid {
+    background-color: black;
+}
+
+.menu-item:hover a {
+    color: black;
+}
+
+.menu-item a{
+    font-family: "Roboto";
+}
+
+
+
+

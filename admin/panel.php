@@ -79,6 +79,9 @@ $arr_hide = json_encode($arr_hide);
                                 <label class="adm-text-p" for="adm_image">Фоновая картинка</label><br>
                                 <input type="file" class="form-control" id="adm_image" name="adm_image" accept="image/*,image/jpeg">
 
+                                <label class="adm-text-p" for="adm_image">Картинка на главной</label><br>
+                                <input type="file" class="form-control" id="img_on_main" name="img_on_main" accept="image/*,image/jpeg">
+
                                 <label class="adm-text-p" for="adm_phone">Телефон</label><br>
                                 <input type="text" class="form-control" id="adm_phone" name="adm_phone" value="<?php echo $row["phone"];?>">
 

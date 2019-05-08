@@ -7,9 +7,6 @@ $feed_mail=strip_tags(htmlentities($_POST['feed_mail']));
 // $img=strip_tags(htmlentities($_POST['img']));
 $mess=strip_tags(htmlentities($_POST['mess']));
 $date=date("d/m/Y в G:i");
-
-echo $date;
-
 $add=queryMySQL("INSERT INTO feedback VALUES(NULL, '$name', '$date', '$mess', '$feed_mail')");
 header("Location: ../../over-exposure.php");
 ?>

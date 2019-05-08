@@ -77,17 +77,40 @@ if($_GET["id"]!=null && $_GET["albom"]!=null){
         </div>
         <script>
             function genPhoto(id=0, count=0, path=""){
-                for(i=0; i<count; i++){
-                    block_photo = $("#content");
-                    content = `<div class="col-xl-3 col-lg-4 col-md-6">
-                                    <div class="photo-adm" id="photo-`+id[i]+`">
-                                        <img src="`+path[i]+`">
-                                    </div>
-                                    <button type="button" class="btn btn-danger ph">
-                                      <div class="btn-del" id="btn-del-`+id[i]+`"></div>
-                                    </button>
-                                </div>`;
-                    block_photo.append(content);
+                block_photo = $(".content");
+                if(count == 0){
+                    let id = location.search.split("&");
+                    id = id[0].split("=");
+                    id = id[1];
+                    let albom = location.search.split("&");
+                    albom = albom[1].split("=");
+                    albom = albom[1];
+                    content = `<center style="margin-top:16%;">
+                        <div class="custom-file">
+                            <form method="POST" enctype="multipart/form-data" action="add_photo.php">    
+                                <input type="file" class="form-control" id="customFile" name="img[]" multiple accept="image/*,image/jpeg">
+                                <input type="hidden" name="id" value="`+id+`">
+                                <input type="hidden" name="albom" value="`+albom+`">
+                                <button type="submit" class="btn btn-primary" style="margin-top:10px; margin-left:0;">
+                                    <div class="btn-ok"></div>
+                                </button>
+                            </form>
+                        </div></center>`
+                    block_photo.prepend(content);
+                }
+                else{
+                    for(i=0; i<count; i++){
+                        block_photo = $("#content");
+                        content = `<div class="col-xl-3 col-lg-4 col-md-6">
+                                        <div class="photo-adm" id="photo-`+id[i]+`">
+                                            <img src="`+path[i]+`">
+                                        </div>
+                                        <button type="button" class="btn btn-danger ph">
+                                        <div class="btn-del" id="btn-del-`+id[i]+`"></div>
+                                        </button>
+                                    </div>`;
+                        block_photo.append(content);
+                    }
                 }
             }
         </script>

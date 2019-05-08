@@ -1,0 +1,78 @@
+
+.content{
+    margin: 30px auto;
+}
+
+.content-text{
+    margin: 30px auto;
+}
+
+.text-photo{
+    /* transition: 1.3s; */
+    /* opacity: 0; */
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 0 auto;
+    background-color: #002a56;
+}
+
+#main_img1{
+    background-image: url("/img/main_img1.jpg");
+    background-size: cover;
+}
+
+#main_img2{
+    background-image: url("/img/main_img2.jpg");
+    background-size: cover;
+}
+
+#main_img3{
+    background-image: url("/img/main_img3.jpg");
+    background-size: cover;
+}
+
+#main_img4{
+    background-image: url("/img/main_img4.jpg");
+    background-size: cover;
+}
+
+.content-back{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/back-dog.jpg');
+    background-size: cover;
+    /* background-position: center center; */
+    box-shadow:0 0 0 5000px rgba(0, 0, 0, 0.120) inset;
+    text-align: center;
+}
+
+.text-back{
+    font-family: 'Rewi';
+    color: #ffffff;
+    font-size: 50px;
+}
+
+.content-back-txt{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.margin-text{
+    width: 100%;
+    position: absolute;
+}
+.mt-up{
+    top: 0;
+}
+
+.mt-down{
+    bottom: 0;
+}
+
+@media only screen and (max-width: 930px){
+    .text-back{
+        font-size: 40px;
+    }
+}

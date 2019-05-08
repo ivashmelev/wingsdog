@@ -20,6 +20,17 @@ if($_FILES['img']['error']==0){
     $add = mysqli_query($link, "UPDATE contacts SET img = '$full_path'");
   }
 }
+
+$path = "../img/";
+$ext = array_pop(explode('.', $_FILES["img_on_main"]["name"]));
+$new_name = "imgonmain.$ext";
+$full_path=$path.$new_name;
+if($_FILES['img']['error']==0){
+  if(move_uploaded_file($_FILES['img_on_main']['tmp_name'], $full_path)){
+    $add = mysqli_query($link, "UPDATE contacts SET img_on_main = '$full_path'");
+  }
+}
+
 $hide_news = $_POST["hide_news"];
 $hide_team = $_POST["hide_team"];
 $hide_attainment = $_POST["hide_attainment"];
